@@ -21,11 +21,11 @@ Read the [series bible](series-bible.md) for continuity, relationships and cast.
 ## Build and edit
 
 Follow [the authoring guide](docs/authoring.md) for setup, scoped builds and
-package creation. Run from this repository with the sibling quest builder compiled:
+package creation. Run from this repository with the quest builder on PATH:
 
 ```powershell
-../quest-builder/target/release/ghostline-quest-builder.exe series . --out work/builds --game 'path/to/Cyberpunk 2077'
-../quest-builder/target/release/ghostline-quest-builder.exe package packaging/love-actually.json --out work/packages/love-actually --plan
+ghostline-quest-builder series . --out work/builds --game 'path/to/Cyberpunk 2077'
+ghostline-quest-builder package packaging/love-actually.json --out work/packages/love-actually --plan
 ```
 
 The series command generates ready quests and reports planned entries separately. VK001 uses the `vk001` runtime namespace throughout. Its `lipsync/love-actually.anims` maps to `mod\vk001\localization\en-us\lipsync\love-actually.anims`; generated scene references and the registered lipmap select that asset. Character exports own `mod\velvet-kade\characters\<character>\`. The quest compiler generates custom FX from `quests/vk001/fx/velvet-crash.fx.json` and its texture frames. Package dependency checks report missing resources.

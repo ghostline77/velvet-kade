@@ -1,18 +1,14 @@
 # Build and edit the series
 
-Edit the authored quest, scene and world inputs, then compile them with the sibling Quest Builder. The series manifest selects quests and shared character projects.
+Edit the authored quest, scene and world inputs, then compile them with the installed Quest Builder. The series manifest selects quests and shared character projects.
 
 ## Setup
 
-Keep the sibling `quest-builder`, `ghostline-red` and the other crates declared
-by Quest Builder available. Character and building inputs use their respective
-builders. Install the parent `ghostline77` JavaScript workspace with `npm ci`
-before a fresh tool build.
-
-Run from this repository:
+Install the tools with Rust and Node.js 20+ using an account with repository access. Run the authoring commands from this project.
 
 ```powershell
-cargo build --release --locked --manifest-path ../quest-builder/Cargo.toml
+cargo install --locked --git https://github.com/ghostline77/quest-builder
+cargo install --locked --git https://github.com/ghostline77/character-builder
 ```
 
 Use an installed game for native resource resolution. Reflection metadata loads
@@ -40,7 +36,7 @@ a separate workflow; compiling a quest does not synthesize missing performances.
 ## Compile a quest
 
 ```powershell
-../quest-builder/target/release/ghostline-quest-builder.exe series . --quest vk001 --out work/builds --game 'path/to/Cyberpunk 2077'
+ghostline-quest-builder series . --quest vk001 --out work/builds --game 'path/to/Cyberpunk 2077'
 ```
 
 Use a fresh destination. For another build, choose a new directory and update the
@@ -57,8 +53,8 @@ Inspect [the love-actually profile](../packaging/love-actually.json). Its `build
 paths select generated output directories, not authored quest folders.
 
 ```powershell
-../quest-builder/target/release/ghostline-quest-builder.exe package packaging/love-actually.json --plan
-../quest-builder/target/release/ghostline-quest-builder.exe package packaging/love-actually.json --out work/packages/love-actually
+ghostline-quest-builder package packaging/love-actually.json --plan
+ghostline-quest-builder package packaging/love-actually.json --out work/packages/love-actually
 ```
 
 The first command reviews the package plan. The second creates the package at a
