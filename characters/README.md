@@ -8,11 +8,12 @@ The shared `items` catalogue supplies their asset identities.
 the series build exports each required project once and automatically collects
 its native resources and TweakXL records for packaging.
 
-For an independent character export, replace `<character>` with `velvet`, `mara`
-or `latch`:
+For an independent character export, set `GHOSTLINE_ITEMS_CATALOGUE` to the unpacked item catalogue and `GAME_ROOT` to your game installation. Choose the character by name:
 
 ```powershell
-../character-builder/target/release/ghostline-character-builder.exe build characters/<character>.character.json --catalogue ../items/dist/catalogue --game <game-directory> --out work/characters/<character> --export
+cargo install --locked --git https://github.com/ghostline77/character-builder
+$character = "velvet"
+ghostline-character-builder build "characters/$character.character.json" --catalogue $env:GHOSTLINE_ITEMS_CATALOGUE --game $env:GAME_ROOT --out "work/characters/$character" --export
 ```
 
 Character resources live under `mod/velvet-kade/characters/<character>/` in the
