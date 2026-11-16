@@ -1,0 +1,23 @@
+{
+  "revision": "31ec02fb871747842d8ab07017419c7c3728eb68",
+  "fonts": [
+    {
+      "file": "LibreCaslonText-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/31ec02fb871747842d8ab07017419c7c3728eb68/ofl/librecaslontext/LibreCaslonText-Regular.ttf",
+      "sha256": "b8a8395ada81aba88932378c7c0c338154cadf77fd1a404cc2c174fbf61dd297",
+      "bytes": 94380
+    },
+    {
+      "file": "LibreCaslonText-Italic.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/31ec02fb871747842d8ab07017419c7c3728eb68/ofl/librecaslontext/LibreCaslonText-Italic.ttf",
+      "sha256": "b60822407e3fc62ba0b0faf002af6466ba75d1b4e951926bc63bab24a5dae957",
+      "bytes": 104828
+    },
+    {
+      "file": "OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/31ec02fb871747842d8ab07017419c7c3728eb68/ofl/librecaslontext/OFL.txt",
+      "sha256": "e990619d801d87a57b24c95482efe768e34fb40954ed3b7ba968165be49557f5",
+      "bytes": 4405
+    }
+  ]
+}

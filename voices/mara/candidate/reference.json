@@ -1,0 +1,25 @@
+{
+  "schema": "ghostline-voice-reference-v1",
+  "fingerprint": "486e682d5c39aab4ebf1ce1cdddc7c3212559a43eef8831bb659f3a5561a21fe",
+  "speaker": "mara",
+  "variant": "candidate",
+  "mode": "full_reference",
+  "reference_text": "Sit down. I'll bring the drinks. Try not to complicate dinner.",
+  "instruction": "",
+  "tensors": "reference.safetensors",
+  "audio": "reference.wav",
+  "frame_count": 99,
+  "code_groups": 16,
+  "sha256": {
+    "reference.safetensors": "f34dbe95d5cd8b9db678d4dc448345e621b73692bc2c4e9636bc2e0a2c4d845f",
+    "reference.wav": "18c85b8ad8a51b283cf94c8248a759a8606840f55ac0c285fbaa10788734ff64"
+  },
+  "source_sha256": {
+    "embedding": "a2b9fe177c51972a2d88d4a9098d024a093e5753f9e6af5629b84dcd20d3358e",
+    "codes": "f8356956f50d69ba0bf6451e5aaac7d7e049d41c5ffeacd2c6f5e1e83bad0b7e",
+    "audio": "18c85b8ad8a51b283cf94c8248a759a8606840f55ac0c285fbaa10788734ff64"
+  },
+  "selection": {
+    "status": "unreviewed"
+  }
+}

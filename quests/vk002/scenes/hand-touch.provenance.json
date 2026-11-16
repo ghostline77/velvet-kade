@@ -1,0 +1,13 @@
+{
+  "source_scene": "base\\quest\\main_quests\\part1\\q108\\scenes\\q108_05_backalley.scene",
+  "npc_instance": 1332,
+  "player_instance": 1334,
+  "entry": 2,
+  "duration_ms": 2500,
+  "rigs": [
+    "player_man_skeleton",
+    "player_woman_skeleton",
+    "woman_base"
+  ],
+  "placement": "Original paired local transform rebased to V; native workSyncAnimClip sync_tag and syncOffset preserved."
+}

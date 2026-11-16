@@ -1,0 +1,381 @@
+{
+  "name": "vk002_09_latch",
+  "manifest": "../script/vk002_09_latch_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_09_latch.scene",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "lipsync_animset": "mod\\vk002\\localization\\en-us\\lipsync\\second-date.anims",
+  "actors": [
+    {
+      "key": "latch",
+      "name": "Latch",
+      "kind": "community",
+      "lipsync": true,
+      "appearance": "vk002_latch_default",
+      "entry": "latch",
+      "community_ref": "#vk002_com_latch",
+      "voicetag": "142764438043663289"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "lipsync": true,
+      "appearance": "default",
+      "record": "Character.Player_Puppet_Base"
+    },
+    {
+      "lipsync": false,
+      "community_ref": "#vk002_com_velvet",
+      "kind": "community",
+      "appearance": "ghostline_velvet_default",
+      "name": "Velvet",
+      "entry": "velvet",
+      "key": "velvet",
+      "voicetag": "5506207259407814236"
+    }
+  ],
+  "spoken_line_order": [
+    "vk002_09_latch_opening_latch_01",
+    "vk002_09_latch_opening_v_02",
+    "vk002_09_latch_opening_latch_03",
+    "vk002_09_latch_negotiate_v_01",
+    "vk002_09_latch_negotiate_latch_02",
+    "vk002_09_latch_expose_v_01",
+    "vk002_09_latch_expose_latch_02",
+    "vk002_09_latch_threat_v_01",
+    "vk002_09_latch_threat_latch_02"
+  ],
+  "choice_line_order": [
+    "vk002_09_latch_response_choice_01",
+    "vk002_09_latch_response_choice_02",
+    "vk002_09_latch_response_choice_03"
+  ],
+  "exit_points": [
+    {
+      "name": "surrender",
+      "node": "exit_surrender"
+    },
+    {
+      "name": "combat",
+      "node": "exit_combat"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "exit_surrender"
+    },
+    {
+      "key": "exit_combat"
+    }
+  ],
+  "sections": [
+    {
+      "key": "opening",
+      "lines": [
+        "vk002_09_latch_opening_latch_01",
+        "vk002_09_latch_opening_v_02",
+        "vk002_09_latch_opening_latch_03"
+      ],
+      "on_end": [
+        {
+          "node": "draw_weapon"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 1600
+        },
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 0,
+          "duration_ms": 1600
+        },
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 1850,
+          "duration_ms": 2640
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 1850,
+          "duration_ms": 2640
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 4740,
+          "duration_ms": 4640
+        },
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 4740,
+          "duration_ms": 4640
+        }
+      ]
+    },
+    {
+      "key": "negotiate",
+      "lines": [
+        "vk002_09_latch_negotiate_v_01",
+        "vk002_09_latch_negotiate_latch_02"
+      ],
+      "on_end": [
+        {
+          "node": "remember_negotiate"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 0,
+          "duration_ms": 3520
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 3520
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 3770,
+          "duration_ms": 4880
+        },
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 3770,
+          "duration_ms": 4880
+        }
+      ]
+    },
+    {
+      "key": "expose",
+      "lines": [
+        "vk002_09_latch_expose_v_01",
+        "vk002_09_latch_expose_latch_02"
+      ],
+      "on_end": [
+        {
+          "node": "remember_expose"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 0,
+          "duration_ms": 6000
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 6000
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 6250,
+          "duration_ms": 3840
+        },
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 6250,
+          "duration_ms": 3840
+        }
+      ]
+    },
+    {
+      "key": "threat",
+      "lines": [
+        "vk002_09_latch_threat_v_01",
+        "vk002_09_latch_threat_latch_02"
+      ],
+      "on_end": [
+        {
+          "node": "remember_threat"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 0,
+          "duration_ms": 1120
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 1120
+        },
+        {
+          "actor": "latch",
+          "target": "v",
+          "start_ms": 1370,
+          "duration_ms": 1040
+        },
+        {
+          "actor": "v",
+          "target": "latch",
+          "start_ms": 1370,
+          "duration_ms": 1040
+        }
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "key": "response",
+      "options": [
+        {
+          "choice_key": "vk002_09_latch_response_choice_01",
+          "caption": "Keep your fee.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "negotiate"
+        },
+        {
+          "choice_key": "vk002_09_latch_response_choice_02",
+          "caption": "Got you on camera.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "expose"
+        },
+        {
+          "choice_key": "vk002_09_latch_response_choice_03",
+          "caption": "Lower the gun.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "threat"
+        }
+      ],
+      "actor": "latch"
+    }
+  ],
+  "entry_points": [
+    {
+      "name": "start",
+      "node": "entry_start"
+    },
+    {
+      "name": "joint",
+      "node": "entry_joint"
+    }
+  ],
+  "start_nodes": [
+    {
+      "on_start": [
+        {
+          "node": "release_latch_idle"
+        }
+      ],
+      "key": "entry_start"
+    },
+    {
+      "on_start": [
+        {
+          "node": "release_latch_idle"
+        }
+      ],
+      "key": "entry_joint"
+    }
+  ],
+  "quest_nodes": [
+    {
+      "kind": "equip_actor",
+      "slot_id": "AttachmentSlots.WeaponRight",
+      "item_id": "Items.Preset_Unity_Default",
+      "entry": "latch",
+      "on_out": [
+        {
+          "node": "response"
+        }
+      ],
+      "entity_ref": "#vk002_com_latch",
+      "key": "draw_weapon",
+      "by_item": true,
+      "instant": true
+    },
+    {
+      "key": "remember_negotiate",
+      "kind": "fact",
+      "fact": "vk002_latch_resolution",
+      "value": 1,
+      "on_out": [
+        {
+          "node": "lower_weapon"
+        }
+      ]
+    },
+    {
+      "key": "remember_expose",
+      "kind": "fact",
+      "fact": "vk002_latch_resolution",
+      "value": 2,
+      "on_out": [
+        {
+          "node": "lower_weapon"
+        }
+      ]
+    },
+    {
+      "key": "remember_threat",
+      "kind": "fact",
+      "fact": "vk002_latch_resolution",
+      "value": 3,
+      "on_out": [
+        {
+          "node": "exit_combat"
+        }
+      ]
+    },
+    {
+      "key": "release_latch_idle",
+      "kind": "stop_workspot",
+      "entity_ref": "#vk002_com_latch",
+      "entry": "latch",
+      "workspot_ref": "current",
+      "instant": true,
+      "finish_animation": false,
+      "repeat_on_interrupt": false,
+      "on_success": [
+        {
+          "node": "opening"
+        }
+      ]
+    },
+    {
+      "key": "lower_weapon",
+      "kind": "unequip_actor",
+      "entity_ref": "#vk002_com_latch",
+      "entry": "latch",
+      "slot_id": "AttachmentSlots.WeaponRight",
+      "item_id": "Items.Preset_Unity_Default",
+      "by_item": true,
+      "instant": false,
+      "on_out": [
+        {
+          "node": "exit_surrender"
+        }
+      ]
+    }
+  ]
+}

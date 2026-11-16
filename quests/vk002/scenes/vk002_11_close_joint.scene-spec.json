@@ -1,0 +1,982 @@
+{
+  "name": "vk002_11_close_joint",
+  "manifest": "../script/vk002_11_close_joint_complete_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_11_close_joint.scene",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "lipsync_animset": "mod\\vk002\\localization\\en-us\\lipsync\\second-date.anims",
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "lipsync": true,
+      "appearance": "ghostline_velvet_default",
+      "entry": "velvet",
+      "community_ref": "#vk002_com_velvet",
+      "voicetag": "5506207259407814236"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "lipsync": true,
+      "appearance": "default",
+      "record": "Character.Player_Puppet_Base"
+    }
+  ],
+  "spoken_line_order": [
+    "vk002_11_close_joint_reflection_velvet_01",
+    "vk002_11_close_joint_reflection_v_02",
+    "vk002_11_close_joint_reflection_velvet_03",
+    "vk002_12_goodnight_phrase_velvet_01",
+    "vk002_12_goodnight_phrase_v_02",
+    "vk002_12_goodnight_phrase_velvet_03",
+    "vk002_12_goodnight_phrase_velvet_04",
+    "vk002_12_goodnight_friends_reply_v_01",
+    "vk002_12_goodnight_friends_reply_velvet_02",
+    "vk002_12_goodnight_interest_reply_v_01",
+    "vk002_12_goodnight_interest_reply_velvet_02",
+    "vk002_12_goodnight_open_reply_v_01",
+    "vk002_12_goodnight_open_reply_velvet_02",
+    "vk002_12_goodnight_touch_ask_v_01",
+    "vk002_12_goodnight_touch_yes_velvet_02",
+    "vk002_12_professional_goodnight_velvet_01",
+    "vk002_12_professional_goodnight_v_02",
+    "vk002_12_professional_goodnight_velvet_03"
+  ],
+  "choice_line_order": [
+    "vk002_12_goodnight_relationship_choice_01",
+    "vk002_12_goodnight_relationship_choice_02",
+    "vk002_12_goodnight_relationship_choice_03",
+    "vk002_12_goodnight_touch_choice_01",
+    "vk002_12_goodnight_touch_choice_02"
+  ],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "start_node": {
+    "on_start": [
+      {
+        "node": "player_at_seats"
+      }
+    ],
+    "key": "entry_start"
+  },
+  "exit_points": [
+    {
+      "name": "warm_close",
+      "node": "exit_warm_close"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "exit_warm_close"
+    }
+  ],
+  "sections": [
+    {
+      "key": "reflection",
+      "lines": [
+        "vk002_11_close_joint_reflection_velvet_01",
+        "vk002_11_close_joint_reflection_v_02",
+        "vk002_11_close_joint_reflection_velvet_03"
+      ],
+      "on_end": [
+        {
+          "node": "closing_invitation"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 3200
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 3200
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 3450,
+          "duration_ms": 2400
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 3450,
+          "duration_ms": 2400
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 6100,
+          "duration_ms": 2480
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 6100,
+          "duration_ms": 2480
+        }
+      ]
+    },
+    {
+      "key": "sit_transition",
+      "lines": [],
+      "section_duration_ms": 3067,
+      "on_end": []
+    },
+    {
+      "key": "gn_phrase",
+      "lines": [
+        "vk002_12_goodnight_phrase_velvet_01",
+        "vk002_12_goodnight_phrase_v_02",
+        "vk002_12_goodnight_phrase_velvet_03",
+        "vk002_12_goodnight_phrase_velvet_04"
+      ],
+      "on_end": [
+        {
+          "node": "gn_relationship"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 5360
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 5360
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 5610,
+          "duration_ms": 2320
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 5610,
+          "duration_ms": 2320
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 8180,
+          "duration_ms": 1920
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 8180,
+          "duration_ms": 1920
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 10350,
+          "duration_ms": 6160
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 10350,
+          "duration_ms": 6160
+        }
+      ]
+    },
+    {
+      "key": "gn_friends_reply",
+      "lines": [
+        "vk002_12_goodnight_friends_reply_v_01",
+        "vk002_12_goodnight_friends_reply_velvet_02"
+      ],
+      "on_end": [
+        {
+          "node": "friends_stand_v"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 2800
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 2800
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 3050,
+          "duration_ms": 3760
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 3050,
+          "duration_ms": 3760
+        }
+      ]
+    },
+    {
+      "key": "gn_interest_reply",
+      "lines": [
+        "vk002_12_goodnight_interest_reply_v_01",
+        "vk002_12_goodnight_interest_reply_velvet_02"
+      ],
+      "on_end": [
+        {
+          "node": "gn_touch_choice"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 3120
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 3120
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 3370,
+          "duration_ms": 3360
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 3370,
+          "duration_ms": 3360
+        }
+      ]
+    },
+    {
+      "key": "gn_open_reply",
+      "lines": [
+        "vk002_12_goodnight_open_reply_v_01",
+        "vk002_12_goodnight_open_reply_velvet_02"
+      ],
+      "on_end": [
+        {
+          "node": "open_stand_v"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 2080
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 2080
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 2330,
+          "duration_ms": 3520
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 2330,
+          "duration_ms": 3520
+        }
+      ]
+    },
+    {
+      "key": "gn_touch_consent",
+      "lines": [
+        "vk002_12_goodnight_touch_ask_v_01",
+        "vk002_12_goodnight_touch_yes_velvet_02"
+      ],
+      "on_end": [
+        {
+          "node": "gn_touch_consented"
+        }
+      ]
+    },
+    {
+      "key": "pro_goodnight",
+      "lines": [
+        "vk002_12_professional_goodnight_velvet_01",
+        "vk002_12_professional_goodnight_v_02",
+        "vk002_12_professional_goodnight_velvet_03"
+      ],
+      "on_end": [
+        {
+          "node": "professional_stand_v"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 5520
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 5520
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 5770,
+          "duration_ms": 2640
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 5770,
+          "duration_ms": 2640
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 8660,
+          "duration_ms": 1840
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 8660,
+          "duration_ms": 1840
+        }
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "key": "gn_relationship",
+      "options": [
+        {
+          "choice_key": "vk002_12_goodnight_relationship_choice_01",
+          "caption": "[Friends] Dinner again?",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "gn_friends_reply"
+        },
+        {
+          "choice_key": "vk002_12_goodnight_relationship_choice_02",
+          "caption": "[Romance] A date next time.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "gn_interest_reply"
+        },
+        {
+          "choice_key": "vk002_12_goodnight_relationship_choice_03",
+          "caption": "Let's see.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "gn_open_reply"
+        }
+      ],
+      "actor": "velvet"
+    },
+    {
+      "key": "gn_touch_choice",
+      "actor": "velvet",
+      "options": [
+        {
+          "choice_key": "vk002_12_goodnight_touch_choice_01",
+          "caption": "[Offer your hand]",
+          "target": "gn_touch_consent"
+        },
+        {
+          "choice_key": "vk002_12_goodnight_touch_choice_02",
+          "caption": "[Leave it there]",
+          "target": "interested_stand_v"
+        }
+      ]
+    }
+  ],
+  "quest_nodes": [
+    {
+      "key": "sit_v",
+      "kind": "use_scene_workspot",
+      "is_player": true,
+      "workspot": "player_couch",
+      "entry_id": 2,
+      "jump_to_entry": true,
+      "enable_idle_mode": true,
+      "finish_animation": false,
+      "repeat_on_interrupt": false,
+      "player_params": {
+        "$type": "questUseWorkspotPlayerParams",
+        "cameraSettings": {
+          "$type": "gameTier3CameraSettings",
+          "yawLeftLimit": 89.94906616210938,
+          "yawRightLimit": 75.05093383789062,
+          "pitchTopLimit": 27.773075103759766,
+          "pitchBottomLimit": 62.226924896240234,
+          "pitchSpeedMultiplier": 0.75,
+          "yawSpeedMultiplier": 0.75
+        },
+        "emptyHands": true,
+        "vehicleProceduralCameraWeight": 0.0
+      },
+      "on_success": [],
+      "on_work_started": [
+        {
+          "node": "reflection"
+        }
+      ]
+    },
+    {
+      "key": "player_at_seats",
+      "kind": "pause_condition",
+      "trigger_ref": "#vk002_tr_rooftop_engage",
+      "on_out": [
+        {
+          "node": "sit_transition"
+        }
+      ]
+    },
+    {
+      "key": "gn_touch_consented",
+      "kind": "fact",
+      "fact": "vk002_touch_consented",
+      "value": 1,
+      "on_out": [
+        {
+          "node": "touch_exit_stand_v"
+        }
+      ]
+    },
+    {
+      "key": "gn_reset_touch_ready",
+      "kind": "fact",
+      "fact": "vk002_touch_velvet_ready",
+      "value": 0,
+      "on_out": [
+        {
+          "node": "gn_start_touch"
+        }
+      ]
+    },
+    {
+      "key": "gn_start_touch",
+      "kind": "scene_tier",
+      "tier": "Tier3",
+      "on_out": [
+        {
+          "node": "gn_touch_v"
+        },
+        {
+          "node": "gn_touch_velvet"
+        }
+      ]
+    },
+    {
+      "key": "gn_touch_v",
+      "kind": "use_scene_workspot",
+      "is_player": true,
+      "workspot": "touch_player",
+      "entry_id": 2,
+      "jump_to_entry": true,
+      "enable_idle_mode": true,
+      "finish_animation": false,
+      "repeat_on_interrupt": false,
+      "player_params": {
+        "$type": "questUseWorkspotPlayerParams",
+        "emptyHands": true,
+        "applyCameraParams": true,
+        "vehicleProceduralCameraWeight": 0,
+        "parallaxWeight": 0,
+        "cameraSettings": {
+          "$type": "gameTier3CameraSettings",
+          "yawLeftLimit": 58.23762512207031,
+          "yawRightLimit": 61.76237487792969,
+          "pitchTopLimit": 58.75944519042969,
+          "pitchBottomLimit": 46.24055480957031
+        }
+      },
+      "on_success": [],
+      "on_work_started": [
+        {
+          "node": "gn_wait_touch_partner"
+        }
+      ]
+    },
+    {
+      "key": "gn_touch_velvet",
+      "kind": "use_scene_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot": "touch_velvet",
+      "entry_id": 2,
+      "jump_to_entry": true,
+      "enable_idle_mode": true,
+      "finish_animation": false,
+      "repeat_on_interrupt": false,
+      "on_success": [],
+      "on_work_started": [
+        {
+          "node": "gn_touch_velvet_ready"
+        }
+      ]
+    },
+    {
+      "key": "gn_touch_velvet_ready",
+      "kind": "fact",
+      "fact": "vk002_touch_velvet_ready",
+      "value": 1
+    },
+    {
+      "key": "gn_wait_touch_partner",
+      "kind": "wait_fact",
+      "fact": "vk002_touch_velvet_ready",
+      "on_out": [
+        {
+          "node": "gn_hold_hands"
+        }
+      ]
+    },
+    {
+      "key": "gn_hold_hands",
+      "kind": "realtime_delay",
+      "milliseconds": 2500,
+      "on_out": [
+        {
+          "node": "gn_release_touch_v"
+        }
+      ]
+    },
+    {
+      "key": "gn_release_touch_v",
+      "kind": "stop_workspot",
+      "is_player": true,
+      "workspot_ref": "current",
+      "instant": false,
+      "finish_animation": false,
+      "repeat_on_interrupt": false,
+      "on_success": [
+        {
+          "node": "gn_release_touch_velvet"
+        }
+      ]
+    },
+    {
+      "key": "gn_release_touch_velvet",
+      "kind": "stop_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot_ref": "current",
+      "instant": false,
+      "finish_animation": false,
+      "repeat_on_interrupt": false,
+      "on_success": [
+        {
+          "node": "gn_release_touch_camera"
+        }
+      ]
+    },
+    {
+      "key": "gn_release_touch_camera",
+      "kind": "scene_tier",
+      "tier": "Tier1",
+      "on_out": [
+        {
+          "node": "gn_remember_touch"
+        }
+      ]
+    },
+    {
+      "key": "gn_remember_touch",
+      "kind": "fact",
+      "fact": "vk002_hand_touch_shared",
+      "value": 1,
+      "on_out": [
+        {
+          "node": "touch_relationship"
+        }
+      ]
+    },
+    {
+      "key": "closing_invitation",
+      "kind": "fact_condition",
+      "fact": "vk_professional_invitation_preferred",
+      "on_true": [
+        {
+          "node": "pro_goodnight"
+        }
+      ],
+      "on_false": [
+        {
+          "node": "gn_phrase"
+        }
+      ]
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "friends_stand_velvet"
+        }
+      ],
+      "instant": false,
+      "is_player": true,
+      "key": "friends_stand_v",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "exit_entry_id": 20,
+      "exit_animation": "sit_couch_lean0__rf_on_couch__01__to__stand__2h_on_sides__01__turn45__01",
+      "enable_idle_mode": false
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "friends_controls"
+        }
+      ],
+      "instant": false,
+      "entity_ref": "#vk002_com_velvet",
+      "key": "friends_stand_velvet",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "entry": "velvet"
+    },
+    {
+      "key": "friends_controls",
+      "kind": "scene_tier",
+      "tier": "Tier1",
+      "on_out": [
+        {
+          "node": "friends_fact_0"
+        }
+      ]
+    },
+    {
+      "key": "friends_fact_0",
+      "kind": "fact",
+      "fact": "vk_relationship",
+      "value": 1,
+      "on_out": [
+        {
+          "node": "friends_fact_1"
+        }
+      ]
+    },
+    {
+      "key": "friends_fact_1",
+      "kind": "fact",
+      "fact": "vk_professional_invitation_preferred",
+      "value": 0,
+      "on_out": [
+        {
+          "node": "exit_warm_close"
+        }
+      ]
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "open_stand_velvet"
+        }
+      ],
+      "instant": false,
+      "is_player": true,
+      "key": "open_stand_v",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "exit_entry_id": 20,
+      "exit_animation": "sit_couch_lean0__rf_on_couch__01__to__stand__2h_on_sides__01__turn45__01",
+      "enable_idle_mode": false
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "open_controls"
+        }
+      ],
+      "instant": false,
+      "entity_ref": "#vk002_com_velvet",
+      "key": "open_stand_velvet",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "entry": "velvet"
+    },
+    {
+      "key": "open_controls",
+      "kind": "scene_tier",
+      "tier": "Tier1",
+      "on_out": [
+        {
+          "node": "exit_warm_close"
+        }
+      ]
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "interested_stand_velvet"
+        }
+      ],
+      "instant": false,
+      "is_player": true,
+      "key": "interested_stand_v",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "exit_entry_id": 20,
+      "exit_animation": "sit_couch_lean0__rf_on_couch__01__to__stand__2h_on_sides__01__turn45__01",
+      "enable_idle_mode": false
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "interested_controls"
+        }
+      ],
+      "instant": false,
+      "entity_ref": "#vk002_com_velvet",
+      "key": "interested_stand_velvet",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "entry": "velvet"
+    },
+    {
+      "key": "interested_controls",
+      "kind": "scene_tier",
+      "tier": "Tier1",
+      "on_out": [
+        {
+          "node": "interested_fact_0"
+        }
+      ]
+    },
+    {
+      "key": "interested_fact_0",
+      "kind": "fact",
+      "fact": "vk_relationship",
+      "value": 2,
+      "on_out": [
+        {
+          "node": "interested_fact_1"
+        }
+      ]
+    },
+    {
+      "key": "interested_fact_1",
+      "kind": "fact",
+      "fact": "vk_professional_invitation_preferred",
+      "value": 0,
+      "on_out": [
+        {
+          "node": "exit_warm_close"
+        }
+      ]
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "touch_exit_stand_velvet"
+        }
+      ],
+      "instant": false,
+      "is_player": true,
+      "key": "touch_exit_stand_v",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "exit_entry_id": 20,
+      "exit_animation": "sit_couch_lean0__rf_on_couch__01__to__stand__2h_on_sides__01__turn45__01",
+      "enable_idle_mode": false
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "touch_exit_controls"
+        }
+      ],
+      "instant": false,
+      "entity_ref": "#vk002_com_velvet",
+      "key": "touch_exit_stand_velvet",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "entry": "velvet"
+    },
+    {
+      "key": "touch_exit_controls",
+      "kind": "scene_tier",
+      "tier": "Tier1",
+      "on_out": [
+        {
+          "node": "gn_reset_touch_ready"
+        }
+      ]
+    },
+    {
+      "key": "touch_relationship",
+      "kind": "fact",
+      "fact": "vk_relationship",
+      "value": 2,
+      "on_out": [
+        {
+          "node": "touch_preference"
+        }
+      ]
+    },
+    {
+      "key": "touch_preference",
+      "kind": "fact",
+      "fact": "vk_professional_invitation_preferred",
+      "value": 0,
+      "on_out": [
+        {
+          "node": "exit_warm_close"
+        }
+      ]
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "professional_stand_velvet"
+        }
+      ],
+      "instant": false,
+      "is_player": true,
+      "key": "professional_stand_v",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "exit_entry_id": 20,
+      "exit_animation": "sit_couch_lean0__rf_on_couch__01__to__stand__2h_on_sides__01__turn45__01",
+      "enable_idle_mode": false
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "professional_controls"
+        }
+      ],
+      "instant": false,
+      "entity_ref": "#vk002_com_velvet",
+      "key": "professional_stand_velvet",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "entry": "velvet"
+    },
+    {
+      "key": "professional_controls",
+      "kind": "scene_tier",
+      "tier": "Tier1",
+      "on_out": [
+        {
+          "node": "exit_warm_close"
+        }
+      ]
+    }
+  ],
+  "player_couch_sits": [
+    {
+      "key": "sit_transition",
+      "section": "sit_transition",
+      "actor": "v",
+      "workspot": "player_couch",
+      "hold": "sit_v"
+    }
+  ],
+  "workspots": [
+    {
+      "key": "player_couch",
+      "resource": "base\\workspots\\player\\couch\\player__sit_couch__talk__01.workspot",
+      "origin": "#vk002_seat_v"
+    },
+    {
+      "key": "touch_player",
+      "resource": "base\\workspots\\quest\\main_quests\\part1\\q108\\q108_05_backalley\\synced__player_johnny__ground__johnny_hold_alt_hands__01.workspot",
+      "origin": "#vk002_sm_dinner",
+      "offset": {
+        "position": {"X": 0, "Y": 0, "Z": 0, "W": 0},
+        "orientation": {
+          "i": 0,
+          "j": 0,
+          "k": 0.8906142004593685,
+          "r": -0.45475965733574025
+        }
+      }
+    },
+    {
+      "key": "touch_velvet",
+      "resource": "base\\workspots\\quest\\main_quests\\part1\\q108\\q108_05_backalley\\synced__alt__ground__johnny_hold_alt_hands__01.workspot",
+      "offset": {
+        "position": {
+          "X": 0.4650882177961949,
+          "Y": -0.2117896467475504,
+          "Z": 0.0,
+          "W": 0
+        },
+        "orientation": {
+          "i": 0,
+          "j": 0,
+          "k": 0.8987504325626123,
+          "r": 0.4384605569130674
+        }
+      },
+      "origin": "#vk002_sm_dinner"
+    }
+  ],
+  "speaker_distance_interruptions": false
+}

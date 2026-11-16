@@ -1,0 +1,8 @@
+Items.VK002RecoveredRelayReceipt:
+  $base: Items.sts_wbr_jpn_01_shard_002
+  itemSecondaryAction: Items.VK002RecoveredRelayReceipt_read
+  localizedName: gl_vk002_recovered_relay_title
+
+Items.VK002RecoveredRelayReceipt_read:
+  $base: Items.sts_wbr_jpn_01_shard_002_inline0
+  journalEntry: onscreens/emails/quests/minor_quest/vk002/shards/recovered_relay

@@ -1,0 +1,115 @@
+{
+  "name": "vk002_09a_walk_relay",
+  "manifest": "../script/vk002_09a_walk_relay_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_09a_walk_relay.scene",
+  "speaker_distance_interruptions": false,
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "community_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "appearance": "ghostline_velvet_default",
+      "voicetag": "5506207259407814236",
+      "lipsync": false
+    }
+  ],
+  "spoken_line_order": [],
+  "choice_line_order": [],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "start_node": {
+    "key": "entry_start",
+    "on_start": [
+      {
+        "node": "release_previous"
+      }
+    ]
+  },
+  "exit_points": [
+    {
+      "name": "arrived",
+      "node": "exit_arrived"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "exit_arrived"
+    }
+  ],
+  "sections": [],
+  "choices": [],
+  "quest_nodes": [
+    {
+      "key": "release_previous",
+      "kind": "stop_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot_ref": "current",
+      "instant": true,
+      "finish_animation": false,
+      "on_success": [
+        {
+          "node": "cinematic_ai"
+        }
+      ]
+    },
+    {
+      "key": "cinematic_ai",
+      "kind": "puppet_ai",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "ai_tier": "Cinematic",
+      "on_out": [
+        {
+          "node": "walk_to_relay"
+        }
+      ]
+    },
+    {
+      "key": "walk_to_relay",
+      "kind": "move_to",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "destination_ref": "#vk002_spot_velvet_relay",
+      "movement_type": "Run",
+      "on_out": [
+        {
+          "node": "relay_idle"
+        }
+      ]
+    },
+    {
+      "key": "relay_idle",
+      "kind": "use_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot_ref": "#vk002_spot_velvet_relay",
+      "teleport": false,
+      "instant": false,
+      "finish_animation": false,
+      "enable_idle_mode": true,
+      "is_workspot_infinite": true,
+      "repeat_on_interrupt": false,
+      "on_success": [],
+      "on_work_started": [
+        {
+          "node": "player_at_relay"
+        }
+      ]
+    },
+    {
+      "key": "player_at_relay",
+      "kind": "pause_condition",
+      "trigger_ref": "#vk002_tr_relay_engage",
+      "on_out": [
+        {
+          "node": "exit_arrived"
+        }
+      ]
+    }
+  ]
+}

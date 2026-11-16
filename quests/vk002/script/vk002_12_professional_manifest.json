@@ -1,0 +1,45 @@
+{
+  "sequence_id": "vk002_12_professional",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_12_professional_goodnight_velvet_01",
+      "string_id": "13750362384865037761",
+      "female_lipsync_animation": "f_BED319BC8AC60DC1",
+      "male_lipsync_animation": "f_BED319BC8AC60DC1",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "I've covered dinner. If Aster turns into a job, I'll send the details and a rate.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_velvet_01.wem",
+      "duration_ms": 5520,
+      "beat": "goodnight"
+    },
+    {
+      "key": "vk002_12_professional_goodnight_v_02",
+      "string_id": "248813809298034410",
+      "female_lipsync_animation": "f_0373F6D75E6BCEEA",
+      "male_lipsync_animation": "m_0373F6D75E6BCEEA",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "All right. Get home safe.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_v_02_f.wem",
+      "duration_ms": 2640,
+      "beat": "goodnight",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_v_02_m.wem"
+    },
+    {
+      "key": "vk002_12_professional_goodnight_velvet_03",
+      "string_id": "13750360185841781339",
+      "female_lipsync_animation": "f_BED317BC8AC60A5B",
+      "male_lipsync_animation": "f_BED317BC8AC60A5B",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "You too, V.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_velvet_03.wem",
+      "duration_ms": 1840,
+      "beat": "goodnight"
+    }
+  ],
+  "choice_lines": []
+}

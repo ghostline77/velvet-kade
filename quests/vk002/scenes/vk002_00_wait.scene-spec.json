@@ -1,0 +1,38 @@
+{
+  "name": "vk002_00_wait",
+  "manifest": "../script/vk002_00_wait_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_00_wait.scene",
+  "actors": [{"key": "v", "name": "V", "kind": "player", "record": "Character.Player_Puppet_Base"}],
+  "spoken_line_order": [],
+  "choice_line_order": ["vk002_00_wait_until_dinner"],
+  "entry_point": {"name": "start", "node": "entry_start"},
+  "start_node": {
+    "key": "entry_start",
+    "on_start": [{"node": "wait_choice"}, {"node": "await_dinner_arrival"}]
+  },
+  "exit_points": [{"name": "ready", "node": "exit_ready"}],
+  "end_nodes": [{"key": "exit_ready"}],
+  "choices": [{
+    "key": "wait_choice",
+    "disable_auto_look_at": true,
+    "position": {"x": 0, "y": 0, "z": 0.5},
+    "activation_range": 2,
+    "indication_range": 4,
+    "options": [{
+      "choice_key": "vk002_00_wait_until_dinner",
+      "caption": "Wait until 18:00",
+      "available_time": {"begin_seconds": 0, "end_seconds": 64799},
+      "target": "waiting_controls"
+    }]
+  }],
+  "quest_nodes": [
+    {"key": "await_dinner_arrival", "kind": "time_period", "begin_seconds": 64800, "end_seconds": 86399, "trigger_ref": "#vk002_tr_bar_engage", "on_out": [{"node": "exit_ready"}]},
+    {"key": "waiting_controls", "kind": "scene_tier", "tier": "Tier3", "force_empty_hands": true, "on_out": [{"node": "fade_out"}]},
+    {"key": "fade_out", "kind": "render_fade", "fade_in": false, "duration_seconds": 0.5, "on_out": [{"node": "fade_out_delay"}]},
+    {"key": "fade_out_delay", "kind": "realtime_delay", "duration_ms": 600, "on_out": [{"node": "advance_to_dinner"}]},
+    {"key": "advance_to_dinner", "kind": "set_time", "hours": 18, "source": "vk002_dinner_wait", "on_out": [{"node": "fade_in"}]},
+    {"key": "fade_in", "kind": "render_fade", "fade_in": true, "duration_seconds": 0.5, "on_out": [{"node": "fade_in_delay"}]},
+    {"key": "fade_in_delay", "kind": "realtime_delay", "duration_ms": 600, "on_out": [{"node": "release_controls"}]},
+    {"key": "release_controls", "kind": "scene_tier", "tier": "Tier1", "on_out": []}
+  ]
+}

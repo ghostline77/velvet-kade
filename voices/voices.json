@@ -1,0 +1,19 @@
+{
+  "schema": "ghostline-voice-library-v1",
+  "voices": {
+    "Latch": {
+      "full_reference": "latch/candidate/reference.json",
+      "instruction": "",
+      "status": "candidate"
+    },
+    "Mara": {
+      "full_reference": "mara/candidate/reference.json",
+      "instruction": "",
+      "status": "candidate"
+    },
+    "Velvet": {
+      "full_reference": "velvet/selected/reference.json",
+      "instruction": ""
+    }
+  }
+}

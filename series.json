@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "characters": {
+    "velvet": "characters/velvet.character.json",
+    "mara": "characters/mara.character.json",
+    "latch": "characters/latch.character.json"
+  },
+  "quests": [
+    {
+      "id": "vk001",
+      "manifest": "quests/vk001/quest.json"
+    },
+    {
+      "id": "vk002",
+      "manifest": "quests/vk002/quest.json"
+    },
+    {
+      "id": "vk003",
+      "plans": [
+        "quests/vk003/README.md"
+      ]
+    },
+    {
+      "id": "vk004",
+      "plans": [
+        "quests/vk004/README.md"
+      ]
+    },
+    {
+      "id": "vk005",
+      "plans": [
+        "quests/vk005/README.md"
+      ]
+    },
+    {
+      "id": "vk006",
+      "plans": [
+        "quests/vk006/README.md"
+      ]
+    },
+    {
+      "id": "vk007",
+      "plans": [
+        "quests/vk007/README.md"
+      ]
+    }
+  ]
+}

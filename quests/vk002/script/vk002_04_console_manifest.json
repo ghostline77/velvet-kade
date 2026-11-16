@@ -1,0 +1,94 @@
+{
+  "sequence_id": "vk002_04_console",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_03_spoof_mara_mara_01",
+      "string_id": "8953145335647134152",
+      "female_lipsync_animation": "f_7C3FF63F39B161C8",
+      "male_lipsync_animation": "f_7C3FF63F39B161C8",
+      "speaker": "Mara",
+      "addressee": "V",
+      "text": "If you're heading downstairs, service stairs are shut.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_03_spoof_mara_mara_01.wem",
+      "duration_ms": 3120,
+      "beat": "mara"
+    },
+    {
+      "key": "vk002_03_spoof_mara_v_02",
+      "string_id": "7364248917765759548",
+      "female_lipsync_animation": "f_6633115F8CFBA23C",
+      "male_lipsync_animation": "m_6633115F8CFBA23C",
+      "speaker": "V",
+      "addressee": "Mara",
+      "text": "Something happen?",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_03_spoof_mara_v_02_f.wem",
+      "duration_ms": 1200,
+      "beat": "mara",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_03_spoof_mara_v_02_m.wem"
+    },
+    {
+      "key": "vk002_03_spoof_mara_mara_03",
+      "string_id": "8953147534670390574",
+      "female_lipsync_animation": "f_7C3FF83F39B1652E",
+      "male_lipsync_animation": "f_7C3FF83F39B1652E",
+      "speaker": "Mara",
+      "addressee": "V",
+      "text": "Courier had the lift panel open. Claimed he was maintenance. Couldn't tell me who sent him.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_03_spoof_mara_mara_03.wem",
+      "duration_ms": 5520,
+      "beat": "mara"
+    },
+    {
+      "key": "vk002_03_spoof_mara_velvet_04",
+      "string_id": "1491422435828664768",
+      "female_lipsync_animation": "f_14B298CDB19D89C0",
+      "male_lipsync_animation": "f_14B298CDB19D89C0",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Need to find out where that message came from. What else they copied.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_03_spoof_mara_velvet_04.wem",
+      "duration_ms": 4080,
+      "beat": "mara"
+    },
+    {
+      "key": "vk002_04_console_access_v_01",
+      "string_id": "788516239596115799",
+      "female_lipsync_animation": "f_0AF15F5798C0D757",
+      "male_lipsync_animation": "m_0AF15F5798C0D757",
+      "speaker": "V",
+      "addressee": "Mara",
+      "text": "Mara. Need a look at your booking system.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_04_console_access_v_01_f.wem",
+      "duration_ms": 3040,
+      "beat": "access",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_04_console_access_v_01_m.wem"
+    },
+    {
+      "key": "vk002_04_console_access_mara_02",
+      "string_id": "16956956181088898259",
+      "female_lipsync_animation": "f_EB5335CE0DAB0CD3",
+      "male_lipsync_animation": "f_EB5335CE0DAB0CD3",
+      "speaker": "Mara",
+      "addressee": "V",
+      "text": "Maintenance computer. Lounge floor, by the street lift. I'll unlock it. Leave the shift records alone.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_04_console_access_mara_02.wem",
+      "duration_ms": 6960,
+      "beat": "access"
+    },
+    {
+      "key": "vk002_04_console_access_velvet_03",
+      "string_id": "13075505072255041019",
+      "female_lipsync_animation": "f_B575869612947DFB",
+      "male_lipsync_animation": "f_B575869612947DFB",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Start with the service log. Then we'll check that link.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_04_console_access_velvet_03.wem",
+      "duration_ms": 3360,
+      "beat": "access"
+    }
+  ],
+  "choice_lines": []
+}

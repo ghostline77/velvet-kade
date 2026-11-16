@@ -1,0 +1,686 @@
+{
+  "text_status": "approved_in_chat",
+  "audio_status": "generated_staged_for_listening_review",
+  "new_takes": 57,
+  "reused_takes": 6,
+  "facial_clips": 90,
+  "native_dialogue_resources_verified": true,
+  "performances": [
+    {
+      "key": "vk001_01_velvet_hello",
+      "id": "16980408628996069129",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "V. Thanks for coming.",
+      "sha256": "de60f1b7e6d850ed71711703252f7c87f607d9d58747ed18e1a036d7a549a7ec",
+      "duration_seconds": 1.6,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 4,
+        "batch": "vk001-extra-takes-20261111",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_01_v_hello",
+      "id": "15175627852896059917",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Said somebody stole your work.",
+      "sha256": "d5ef1360e33528416e4883c894fe43b58308f01f07a54400f8a351f5513c9e35",
+      "duration_seconds": 2.0,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_v_hello",
+      "id": "15175627852896059917",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Said somebody stole your work.",
+      "sha256": "d70a66239435f3ada2f6b70f8b69d31ba5d791863791e1368108dc14cf4c7073",
+      "duration_seconds": 2.32,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_velvet_job",
+      "id": "3897210614595280370",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Heartbreaker Protocol. The Claws changed it, started selling copies. I need the prototype and its signing key back. Get those out and I'll make you a clean build.",
+      "sha256": "7863e57bc3e526a30b7787f151d2ea8875513a5617424ca452e3ebe0a932007c",
+      "duration_seconds": 9.68,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_v_hack",
+      "id": "2827355708979248330",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Heartbreaker. What does it actually do?",
+      "sha256": "21de7cc98c606e57544f46f35919af7627416077c722abae0dcf912c1ce25629",
+      "duration_seconds": 3.44,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_v_hack",
+      "id": "2827355708979248330",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Heartbreaker. What does it actually do?",
+      "sha256": "fc016e265e83cede6c4ad37daa4daf5d4233bbd98f2e124fc986be44c1712864",
+      "duration_seconds": 3.52,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_velvet_hack",
+      "id": "14981997704910797886",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Mine interrupts a conditioning signal. Gives someone a few seconds with their own head clear. Theirs holds them in the loop. They took the cutoff out.",
+      "sha256": "8fed9c8bdb78912129d929356a8e446195b4fbc9483923ce50f9d91cebb5ed74",
+      "duration_seconds": 8.96,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_v_recover",
+      "id": "12750871977998759661",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Why not wipe their server?",
+      "sha256": "7e26ca585d787ab149eca7c49829f03a02e9d043072b6884532bddbda8c0199c",
+      "duration_seconds": 1.12,
+      "review_status": "existing_take_reused"
+    },
+    {
+      "key": "vk001_01_v_recover",
+      "id": "12750871977998759661",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Why not wipe their server?",
+      "sha256": "b5a9489ad64f9445ab854f740ebd9db321722d1803f3be9a5de5ee733d9f6d94",
+      "duration_seconds": 1.68,
+      "review_status": "existing_take_reused"
+    },
+    {
+      "key": "vk001_01_velvet_recover",
+      "id": "15538076547907395033",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "The signing key's on it. I need that to revoke their batch. Copy the code and key first. Then we can shut it down.",
+      "sha256": "899a455f6dd0566e1df028c52073bf3312e9928ff4185475ac897a5dc4c352ff",
+      "duration_seconds": 9.84,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_v_name",
+      "id": "13541029791074301620",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Do you always flirt when you need something fixed?",
+      "sha256": "1b9956ca9131095868aa9a908c014e8a9c76e6ff67c3b41a8d48e945dfc7fe53",
+      "duration_seconds": 3.12,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 3,
+        "batch": "vk001-question-takes-20261112",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_01_v_name",
+      "id": "13541029791074301620",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Do you always flirt when you need something fixed?",
+      "sha256": "92379360a06315980c4487f467dfe2dc1d29b4cb57f0c02214ab231a37136037",
+      "duration_seconds": 2.8,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 3,
+        "batch": "vk001-question-takes-20261112",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_01_velvet_name",
+      "id": "10364372180465013600",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Only when it's urgent.",
+      "sha256": "9e0981ce4f82a1bd6d5d5ec47aac664413381b10cb6608598b2430e9eb6d946b",
+      "duration_seconds": 1.36,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_v_accept",
+      "id": "1619376887455519035",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "I'll get it. Show me where.",
+      "sha256": "c8f887269b4452c05a31ba09697dd3c201abfadb847bcbd79de2209e3deb6028",
+      "duration_seconds": 2.24,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 3,
+        "batch": "vk001-extra-takes-20261111",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_01_v_accept",
+      "id": "1619376887455519035",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "I'll get it. Show me where.",
+      "sha256": "a1378096b0d670e9a07118721ad15b151a238d1f984aa30fa7f1cd7fca35bb2d",
+      "duration_seconds": 1.92,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_velvet_route",
+      "id": "18019278892928713928",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Three Claws watching the place. Two access points. First one has the prototype and key. Second one distributes their build. Keep both intact.",
+      "sha256": "1264ca0e215444395671c77b195bcf291c4cfff1149e3474ce5eb4950213ce3c",
+      "duration_seconds": 10.0,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_velvet_bows",
+      "id": "3543934580879065958",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "You'll see little black bows in the interface. Those were there before the Claws got involved.",
+      "sha256": "bf0352687c78089ca44d63059b47484d95224b5cabbe3c15e73db358baf5b10b",
+      "duration_seconds": 5.2,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 3,
+        "batch": "vk001-extra-takes-20261111",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_01_v_later",
+      "id": "10858545669338369451",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Got something else to finish. I'll come back.",
+      "sha256": "d51202e5643180cf06d8cce3d826522860eabe6e4e23d2f878c44a394bdc74ef",
+      "duration_seconds": 2.24,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 2,
+        "batch": "vk001-extra-takes-20261111",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_01_v_later",
+      "id": "10858545669338369451",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Got something else to finish. I'll come back.",
+      "sha256": "aef13fbaa51d965220df879b9017321869f2526720a19a147224ef1661d80810",
+      "duration_seconds": 3.12,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_01_velvet_later",
+      "id": "8857389735383609999",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "All right. I'll keep watching the relay.",
+      "sha256": "eaa085e2160518ff7d16941c0769f5e96003408005e555ac73560c343d614beb",
+      "duration_seconds": 4.24,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_velvet_arrive",
+      "id": "16139508725363668641",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Right box. Keep the connection up.",
+      "sha256": "bc29702b575a94d03b4e33b47dc32b79b06c99a8cbd5a03aecf3ea2371230eed",
+      "duration_seconds": 2.72,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_ledger",
+      "id": "9557674294730147421",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Charging extra to leave the loop running.",
+      "sha256": "124495195e769c1e42f6a79a8be6949569774648af997296a5b6b8d21193dc1d",
+      "duration_seconds": 2.48,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_ledger",
+      "id": "9557674294730147421",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Charging extra to leave the loop running.",
+      "sha256": "e47db51657df3a3c278e8d2ba3e3dfa7e251386b10a8dcbe54f7a4a5a886dab2",
+      "duration_seconds": 2.56,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_velvet_ledger",
+      "id": "9914711321515010935",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "They removed the cutoff and put it on a price list. Keep that ledger.",
+      "sha256": "d1b50d0e79113cf03e0210aea32840ec083119f71d74725da4d8698ac8b46b05",
+      "duration_seconds": 4.24,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_archive",
+      "id": "7550691409743714602",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Your notes. You were trying to stop somebody else's conditioning.",
+      "sha256": "715abee41c1516b77609e99653b57669023d6b586b9101a8a0d3003ff3694601",
+      "duration_seconds": 3.52,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_archive",
+      "id": "7550691409743714602",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Your notes. You were trying to stop somebody else's conditioning.",
+      "sha256": "9590df1db169e523e83644996bb974cdd682dbc39fb3fc907867a3df4dbaa8ba",
+      "duration_seconds": 3.92,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_velvet_archive",
+      "id": "6115249606000592236",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Yeah. Read the deployment instructions. I'll explain when you're clear.",
+      "sha256": "2aeffe59be1eae570f5e612c49369b6f1988d0238180abf0c6d9fd5de6370638",
+      "duration_seconds": 4.64,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_velvet_recovery",
+      "id": "4336984750713796585",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Copy the prototype and its signing key. Don't change anything on their server yet.",
+      "sha256": "eb6fdbcdfe5175fa07112850a4e244ccccc028c7ab7dd671276d0e42bcea1541",
+      "duration_seconds": 5.12,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_copy",
+      "id": "10765950938436872729",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Copy's clean. Got the key.",
+      "sha256": "a407fc346bd8c8cbd23c27f35dbbaa0dcba37b2520de808ad33c99139fd7d545",
+      "duration_seconds": 2.64,
+      "review_status": "existing_take_reused"
+    },
+    {
+      "key": "vk001_02_v_copy",
+      "id": "10765950938436872729",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Copy's clean. Got the key.",
+      "sha256": "1b2f84071a3804da1f6d76af45ad1a95b23adc7b6f242a795eb4573cd3be9a57",
+      "duration_seconds": 2.48,
+      "review_status": "existing_take_reused"
+    },
+    {
+      "key": "vk001_02_velvet_patch",
+      "id": "276855759636062308",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Use the second access point. My build will replace theirs and revoke the stolen batch.",
+      "sha256": "cf4f4442a1881fa27c1017aba146a262214769543cb80a758d7a8051f6496bc3",
+      "duration_seconds": 5.28,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_brand",
+      "id": "17004599629921782473",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Velvet Crash?",
+      "sha256": "e32aad71c6176adb21f412c8098771f2091b47cb26dda4fa3e69c052358eca7b",
+      "duration_seconds": 1.52,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_brand",
+      "id": "17004599629921782473",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Velvet Crash?",
+      "sha256": "a1bd25f65c8073bc95ffe6005cfb3284fd12d8c5866261c15b0f0b76c66b322e",
+      "duration_seconds": 1.36,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 4,
+        "batch": "vk001-extra-takes-20261111",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_02_velvet_brand",
+      "id": "1979828368096402787",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "That's the clean build. Keep the link in.",
+      "sha256": "4fb57e4431d27f9eaea37819fcaf2b4ec431b53cd2a3b86adeb8c0601e4d8b5d",
+      "duration_seconds": 2.8,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_velvet_success",
+      "id": "4990069799116463401",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Accepted. Their batch's revoked.",
+      "sha256": "3f56a24fda4cec2c7773770b868c017f85e62771fadb17440dd0638a9d066630",
+      "duration_seconds": 3.92,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_v_success",
+      "id": "10292433490235235167",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "And your patch?",
+      "sha256": "d789cea36e6e4410d7caa80514a992e48689a6da29f77c0f6af5b69230b1761a",
+      "duration_seconds": 0.72,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 2,
+        "batch": "vk001-extra-takes-20261111",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_02_v_success",
+      "id": "10292433490235235167",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "And your patch?",
+      "sha256": "4e8b2d9ff59615dc69c43e6b788ecc4a89bdc5b8ef007868a998c3a26e8cb032",
+      "duration_seconds": 1.68,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_velvet_exit",
+      "id": "6785582190925036662",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Six seconds without optics for anyone still on their network. Get clear.",
+      "sha256": "83b63eee710e19c690e499a01df5e988aa216ef2f2b361d86d1695121f506f61",
+      "duration_seconds": 4.64,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_02_velvet_retry",
+      "id": "4710777629599113492",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Link dropped. That transfer didn't finish. Plug back in when you can.",
+      "sha256": "3361cc6b224bce1a62654cefc0e4f618a9e19f6e2bd6acdbcb1d83ee3cb9ae0b",
+      "duration_seconds": 4.48,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_return",
+      "id": "9326198706302979747",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Got the key. Their batch's dead. Thanks, V.",
+      "sha256": "2430d3ee68b701166fe608adaa3e33419cb4d6d9225ec9524d77e88bbb0309ad",
+      "duration_seconds": 3.92,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_question",
+      "id": "14076458176472055141",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "That message in the archive. Who was it for?",
+      "sha256": "bb61c6237a94bc5ca3639e54db74599841f5efef2bbd0d7f0f59d341ed8f9a81",
+      "duration_seconds": 2.72,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_question",
+      "id": "14076458176472055141",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "That message in the archive. Who was it for?",
+      "sha256": "71ad964572241fe8c84c0ae149553d7f0ef38807bf5be7acc4a7a9f5d239ca06",
+      "duration_seconds": 3.44,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_friend",
+      "id": "11261539277534521313",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "A friend. Her partner bought her a mood regulator. Said she wasn't sleeping. That she worried too much.",
+      "sha256": "6f7af425fbdc7affa1a009d198e4fac2f3f6430f4cdcc51cafd08957b0f1ed4d",
+      "duration_seconds": 6.0,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_cost",
+      "id": "3851357283064953564",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Whenever she got angry with him, it pushed her back toward feeling good. She'd tell me something he'd done, then start apologising for bringing it up.",
+      "sha256": "fb0673ced3a31793acad8f2004ca401cece902895beb728e56531c3c82126333",
+      "duration_seconds": 8.24,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_truth",
+      "id": "209976722909800386",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "She knew it was happening. Told me she couldn't stay angry long enough to leave. That's what I built Heartbreaker for.",
+      "sha256": "1fa1f3a84aa4415a6cbed65f3f7cc3b1d7f424ee305874c85fbf12e8d0a247f0",
+      "duration_seconds": 6.640041666666667,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_sincere",
+      "id": "3447555177663139336",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "You gave her a chance to get out.",
+      "sha256": "e5199de640df854ce9ed24c64495c5d57ed5a2e23a3f26e453f82ced0b8ef49f",
+      "duration_seconds": 1.36,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_sincere",
+      "id": "3447555177663139336",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "You gave her a chance to get out.",
+      "sha256": "670c3d1f037c3f8b7c9ad071f4782fa572dc2325fb26f04b2c8681ae36ddac61",
+      "duration_seconds": 1.92,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_sincere",
+      "id": "581051657885304764",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "She got herself out. Just needed her head clear long enough. I'm glad I could give her that.",
+      "sha256": "1eb08d7cfd37c3f6e840a283334b0520b1272284e4a785d7614aeb13c244766a",
+      "duration_seconds": 5.68,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_tease",
+      "id": "12210822694412636017",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Still doesn't explain the hearts and ribbons.",
+      "sha256": "b7fabdfe0ad34b94d6c172d03352d4790602fe82cd443f1581a8ac1d0fd62435",
+      "duration_seconds": 2.24,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_tease",
+      "id": "12210822694412636017",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Still doesn't explain the hearts and ribbons.",
+      "sha256": "c1366a24fd7818e79750c5fbd1dcf6e151297ca8511b36b6457e5002a9a22398",
+      "duration_seconds": 2.72,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_tease",
+      "id": "13302109527002221941",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Those were in my version, too. I'm keeping them.",
+      "sha256": "ce34e202be106e943ccc6966a06986df4d98d831e4055c3145ea16dbef6e2021",
+      "duration_seconds": 3.6,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_tease_soft",
+      "id": "10132533625446414382",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Fair enough. Your work.",
+      "sha256": "010a1ecb53532b4c0f45307f39c6f89c4343aa54b2c0d4d7ab566be9546fcded",
+      "duration_seconds": 2.32,
+      "review_status": "user_selected",
+      "selection": {
+        "candidate": 4,
+        "batch": "vk001-extra-takes-20261111",
+        "approved_in_chat": true
+      }
+    },
+    {
+      "key": "vk001_03_v_tease_soft",
+      "id": "10132533625446414382",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Fair enough. Your work.",
+      "sha256": "7e86f5cc7a175fc724aa863ab0d502efd9f986dff1a9588253f1a14ed83e7ba1",
+      "duration_seconds": 1.76,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_friend",
+      "id": "8498838853296619757",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "She doing okay now?",
+      "sha256": "e339f6b9822071868147ac41421d26c87b5fc018cd2151fb434b1334d5463f2d",
+      "duration_seconds": 1.84,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_friend",
+      "id": "8498838853296619757",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "She doing okay now?",
+      "sha256": "5e995162106039a16cffaccbf069a555b29a16d0fb3109d81329ff7747be8550",
+      "duration_seconds": 1.44,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_friend_now",
+      "id": "6996642977783215546",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "She's out. Got her own place. We talk when she wants to.",
+      "sha256": "525284b41f6841e1a2cba2c127c993bd6ada70751f9ed84371d16b76c25fa30d",
+      "duration_seconds": 4.72,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_reward",
+      "id": "10085675471022865382",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Your build. Heartbreaker Protocol. You'll find it under Velvet Crash. Six-second optics interruption. The Claws' additions are gone.",
+      "sha256": "4f0aceae895932b166e2417b865e240e09e397110dc8b67f307de4aab0cac897",
+      "duration_seconds": 8.48,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_reward",
+      "id": "14332000867347249306",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "Guess I can live with the bows.",
+      "sha256": "452f1d512c26720df00d604f756dddc96858eb9b01329ffb899293643a83e85f",
+      "duration_seconds": 2.24,
+      "review_status": "existing_take_reused"
+    },
+    {
+      "key": "vk001_03_v_reward",
+      "id": "14332000867347249306",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "Guess I can live with the bows.",
+      "sha256": "edf86c3845c477bae758aea23473c7bb4cd8e2e8c2cb25c12f17931bee64ec2d",
+      "duration_seconds": 2.48,
+      "review_status": "existing_take_reused"
+    },
+    {
+      "key": "vk001_03_velvet_close",
+      "id": "1077986469800269399",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Give it a try. They look better on someone else's optics.",
+      "sha256": "ec1b15c73b3e8d8996ea8bca0e6306a9039a52ae299be7b9b8fbf6d4349d2e1a",
+      "duration_seconds": 4.4,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_friend_contact",
+      "id": "13869872480822010244",
+      "speaker": "V Female",
+      "gender": "female",
+      "text": "You hear from her much?",
+      "sha256": "59ea3b408e46576234bb9f6b94f776e614639dbb77162e8d27042275a071248c",
+      "duration_seconds": 1.04,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_v_friend_contact",
+      "id": "13869872480822010244",
+      "speaker": "V Male",
+      "gender": "male",
+      "text": "You hear from her much?",
+      "sha256": "593821f671101ad695804bdae7bdec5419234effc71050f292ba9fa283e87287",
+      "duration_seconds": 1.36,
+      "review_status": "generated_unreviewed"
+    },
+    {
+      "key": "vk001_03_velvet_friend_contact",
+      "id": "6024600473456806400",
+      "speaker": "Velvet",
+      "gender": "shared",
+      "text": "Enough. I don't chase her for an answer.",
+      "sha256": "8498db010ddb0e01a0c62e3c8eddba392abbc0254e5416df7d03bc2b6a76ed73",
+      "duration_seconds": 3.36,
+      "review_status": "generated_unreviewed"
+    }
+  ],
+  "user_selected_takes": 9
+}

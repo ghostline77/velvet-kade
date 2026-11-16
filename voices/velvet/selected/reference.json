@@ -1,0 +1,23 @@
+{
+  "schema": "ghostline-voice-reference-v1",
+  "fingerprint": "c7be585d9eeedc86382be9673c66e51dcb6e1f208e0aeff0cc764d7d41ec57a7",
+  "speaker": "velvet",
+  "variant": "selected",
+  "mode": "full_reference",
+  "reference_text": "Okay, gorgeous. The hearts are intentional.",
+  "instruction": "",
+  "tensors": "reference.safetensors",
+  "audio": "reference.wav",
+  "frame_count": 99,
+  "code_groups": 16,
+  "sha256": {
+    "reference.safetensors": "64d6eb24b0474550d344057a4047b1124859b005bc42aee5ebc505c9edc388aa",
+    "reference.wav": "d4534eac2d522975bdce4974636cb1a8c4a1a36689ec7821d941322cc73bc00c"
+  },
+  "source_sha256": {
+    "embedding": "eb56014e06e6fc36e2a990bbe70b276aa511ca9363a4985465d7e7bde9c81bf2",
+    "codes": "de1823f0138bc929a40a72b2daa1190fe257a5ae7c0582927513e7bf8ec93d46",
+    "audio": "d4534eac2d522975bdce4974636cb1a8c4a1a36689ec7821d941322cc73bc00c"
+  },
+  "selection": {}
+}

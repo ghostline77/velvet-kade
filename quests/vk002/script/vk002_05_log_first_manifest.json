@@ -1,0 +1,45 @@
+{
+  "sequence_id": "vk002_05_log_first",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_05_log_first_react_velvet_01",
+      "string_id": "15716160067308000733",
+      "female_lipsync_animation": "f_DA1B04503D1295DD",
+      "male_lipsync_animation": "f_DA1B04503D1295DD",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Message cache. That's where they got it.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_velvet_01.wem",
+      "duration_ms": 3840,
+      "beat": "react"
+    },
+    {
+      "key": "vk002_05_log_first_react_v_02",
+      "string_id": "16384257518491045990",
+      "female_lipsync_animation": "f_E3609367D22E9066",
+      "male_lipsync_animation": "m_E3609367D22E9066",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Expired contractor account. Still let them in.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_v_02_f.wem",
+      "duration_ms": 3440,
+      "beat": "react",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_v_02_m.wem"
+    },
+    {
+      "key": "vk002_05_log_first_react_velvet_03",
+      "string_id": "15716157868284744311",
+      "female_lipsync_animation": "f_DA1B02503D129277",
+      "male_lipsync_animation": "f_DA1B02503D129277",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Terminal kept part of our thread with the reservation. They copied it, put your name on the sender. Sent it through that relay.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_velvet_03.wem",
+      "duration_ms": 7040,
+      "beat": "react"
+    }
+  ],
+  "choice_lines": []
+}

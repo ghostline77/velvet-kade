@@ -1,0 +1,25 @@
+{
+  "schema": "ghostline-voice-reference-v1",
+  "fingerprint": "2fd2e1060bfe69487807d39ad276fc6e0ba2bd98398a666b7aaf2b05c09d78d9",
+  "speaker": "latch",
+  "variant": "candidate",
+  "mode": "full_reference",
+  "reference_text": "Relay's rented. Take the receipt. I'm not refunding the client.",
+  "instruction": "",
+  "tensors": "reference.safetensors",
+  "audio": "reference.wav",
+  "frame_count": 99,
+  "code_groups": 16,
+  "sha256": {
+    "reference.safetensors": "868a888ab6d4b847b145454e42813ad407e22ee43eed360f3990b9290ae67ca9",
+    "reference.wav": "f8429b3fbfc5a953483b6802cb83b9a9e3c082af45ab2b438ab091a32270c69a"
+  },
+  "source_sha256": {
+    "embedding": "e31558ac70667accd35fb1dc5ce0d0cb19877758c1be0c2d787d84dda2086d6b",
+    "codes": "9eb0cc5826ebb6cdfd6eb92ab2bb0e8bc1c931c95ac666f5f9cdeee718781855",
+    "audio": "f8429b3fbfc5a953483b6802cb83b9a9e3c082af45ab2b438ab091a32270c69a"
+  },
+  "selection": {
+    "status": "unreviewed"
+  }
+}

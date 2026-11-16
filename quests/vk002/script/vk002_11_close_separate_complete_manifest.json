@@ -1,0 +1,305 @@
+{
+  "sequence_id": "vk002_11_close_separate_complete",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_11_close_separate_reflection_velvet_01",
+      "string_id": "13464242269327261395",
+      "female_lipsync_animation": "f_BADA9901E10CFED3",
+      "male_lipsync_animation": "f_BADA9901E10CFED3",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Glad you came back up. Wasn't sure how much evening we had left.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_reflection_velvet_01.wem",
+      "duration_ms": 4000,
+      "beat": "reflection"
+    },
+    {
+      "key": "vk002_11_close_separate_reflection_v_02",
+      "string_id": "7755006242027293616",
+      "female_lipsync_animation": "f_6B9F5116DEF94BB0",
+      "male_lipsync_animation": "m_6B9F5116DEF94BB0",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Wanted my own look at the relay. Wasn't accusing you of setting me up.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_reflection_v_02_f.wem",
+      "duration_ms": 4000,
+      "beat": "reflection",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_reflection_v_02_m.wem"
+    },
+    {
+      "key": "vk002_11_close_separate_reflection_velvet_03",
+      "string_id": "13464244468350517817",
+      "female_lipsync_animation": "f_BADA9B01E10D0239",
+      "male_lipsync_animation": "f_BADA9B01E10D0239",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "I know. Took me a minute.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_reflection_velvet_03.wem",
+      "duration_ms": 2080,
+      "beat": "reflection"
+    },
+    {
+      "key": "vk002_11_close_separate_reconcile_v_01",
+      "string_id": "7788720613650903244",
+      "female_lipsync_animation": "f_6C171821B76CB0CC",
+      "male_lipsync_animation": "m_6C171821B76CB0CC",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Next time, we compare notes before we move.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_reconcile_v_01_f.wem",
+      "duration_ms": 3280,
+      "beat": "reconcile",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_reconcile_v_01_m.wem"
+    },
+    {
+      "key": "vk002_11_close_separate_distance_v_01",
+      "string_id": "9256680698748692015",
+      "female_lipsync_animation": "f_8076560D3021662F",
+      "male_lipsync_animation": "m_8076560D3021662F",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Think we should keep this to work for now.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_distance_v_01_f.wem",
+      "duration_ms": 2480,
+      "beat": "distance",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_distance_v_01_m.wem"
+    },
+    {
+      "key": "vk002_11_close_separate_distance_velvet_02",
+      "string_id": "8679637042444808000",
+      "female_lipsync_animation": "f_787443E7463EAF40",
+      "male_lipsync_animation": "f_787443E7463EAF40",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "All right. If I find anything else, you'll get the details before I ask you to do a thing.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_separate_distance_velvet_02.wem",
+      "duration_ms": 5280,
+      "beat": "distance"
+    },
+    {
+      "key": "vk002_12_goodnight_phrase_velvet_01",
+      "string_id": "9350734707063213923",
+      "female_lipsync_animation": "f_81C47BAC7B6B4F63",
+      "male_lipsync_animation": "f_81C47BAC7B6B4F63",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "If another message comes through like that, call me. We should have something to check it against.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_phrase_velvet_01.wem",
+      "duration_ms": 5360,
+      "beat": "phrase"
+    },
+    {
+      "key": "vk002_12_goodnight_phrase_v_02",
+      "string_id": "14979901169587368032",
+      "female_lipsync_animation": "f_CFE34CBF2FB6B060",
+      "male_lipsync_animation": "m_CFE34CBF2FB6B060",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Terrible weather for a rooftop.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_phrase_v_02_f.wem",
+      "duration_ms": 2320,
+      "beat": "phrase",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_phrase_v_02_m.wem"
+    },
+    {
+      "key": "vk002_12_goodnight_phrase_velvet_03",
+      "string_id": "9350736906086470345",
+      "female_lipsync_animation": "f_81C47DAC7B6B52C9",
+      "male_lipsync_animation": "f_81C47DAC7B6B52C9",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Then stop inviting lightning.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_phrase_velvet_03.wem",
+      "duration_ms": 1920,
+      "beat": "phrase"
+    },
+    {
+      "key": "vk002_12_goodnight_phrase_velvet_04",
+      "string_id": "9350738005598098556",
+      "female_lipsync_animation": "f_81C47EAC7B6B547C",
+      "male_lipsync_animation": "f_81C47EAC7B6B547C",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "That'll do. Dinner's still on me, by the way. Including whatever Mara charges for keeping it warm.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_phrase_velvet_04.wem",
+      "duration_ms": 6160,
+      "beat": "phrase"
+    },
+    {
+      "key": "vk002_12_goodnight_friends_reply_v_01",
+      "string_id": "12625049957671786",
+      "female_lipsync_animation": "f_002CDA6A81FFA36A",
+      "male_lipsync_animation": "m_002CDA6A81FFA36A",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Like to do this again. As friends.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_friends_reply_v_01_f.wem",
+      "duration_ms": 2800,
+      "beat": "friends_reply",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_friends_reply_v_01_m.wem"
+    },
+    {
+      "key": "vk002_12_goodnight_friends_reply_velvet_02",
+      "string_id": "4349403545855400139",
+      "female_lipsync_animation": "f_3C5C2F7B178918CB",
+      "male_lipsync_animation": "f_3C5C2F7B178918CB",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Yeah. I'd like that. Somewhere with a working awning?",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_friends_reply_velvet_02.wem",
+      "duration_ms": 3760,
+      "beat": "friends_reply"
+    },
+    {
+      "key": "vk002_12_goodnight_interest_reply_v_01",
+      "string_id": "13088342994428952441",
+      "female_lipsync_animation": "f_B5A3229BC168FF79",
+      "male_lipsync_animation": "m_B5A3229BC168FF79",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Next time, I want it to be a date.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_interest_reply_v_01_f.wem",
+      "duration_ms": 3120,
+      "beat": "interest_reply",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_interest_reply_v_01_m.wem"
+    },
+    {
+      "key": "vk002_12_goodnight_interest_reply_velvet_02",
+      "string_id": "15588511316749446934",
+      "female_lipsync_animation": "f_D85584737C01EF16",
+      "male_lipsync_animation": "f_D85584737C01EF16",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Good. I was hoping you'd say that.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_interest_reply_velvet_02.wem",
+      "duration_ms": 3360,
+      "beat": "interest_reply"
+    },
+    {
+      "key": "vk002_12_goodnight_open_reply_v_01",
+      "string_id": "15855123931802675295",
+      "female_lipsync_animation": "f_DC08B73640E4A85F",
+      "male_lipsync_animation": "m_DC08B73640E4A85F",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Let's get through one dinner first.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_open_reply_v_01_f.wem",
+      "duration_ms": 2080,
+      "beat": "open_reply",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_open_reply_v_01_m.wem"
+    },
+    {
+      "key": "vk002_12_goodnight_open_reply_velvet_02",
+      "string_id": "4056793020535776400",
+      "female_lipsync_animation": "f_384C9FC22451A490",
+      "male_lipsync_animation": "f_384C9FC22451A490",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Fair. You want anything else? I could still eat.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_open_reply_velvet_02.wem",
+      "duration_ms": 3520,
+      "beat": "open_reply"
+    },
+    {
+      "key": "vk002_12_goodnight_touch_ask_v_01",
+      "string_id": "6987410095004050438",
+      "female_lipsync_animation": "f_60F84475E4B1E406",
+      "male_lipsync_animation": "m_60F84475E4B1E406",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Can I?",
+      "duration_ms": 880,
+      "beat": "touch_consent",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_touch_ask_v_01_f.wem",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_touch_ask_v_01_m.wem"
+    },
+    {
+      "key": "vk002_12_goodnight_touch_yes_velvet_02",
+      "string_id": "7821545866827138533",
+      "female_lipsync_animation": "f_6C8BB6868AA805E5",
+      "male_lipsync_animation": "f_6C8BB6868AA805E5",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Yeah.",
+      "duration_ms": 720,
+      "beat": "touch_consent",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_goodnight_touch_yes_velvet_02.wem"
+    },
+    {
+      "key": "vk002_12_professional_goodnight_velvet_01",
+      "string_id": "13750362384865037761",
+      "female_lipsync_animation": "f_BED319BC8AC60DC1",
+      "male_lipsync_animation": "f_BED319BC8AC60DC1",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "I've covered dinner. If Aster turns into a job, I'll send the details and a rate.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_velvet_01.wem",
+      "duration_ms": 5520,
+      "beat": "goodnight"
+    },
+    {
+      "key": "vk002_12_professional_goodnight_v_02",
+      "string_id": "248813809298034410",
+      "female_lipsync_animation": "f_0373F6D75E6BCEEA",
+      "male_lipsync_animation": "m_0373F6D75E6BCEEA",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "All right. Get home safe.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_v_02_f.wem",
+      "duration_ms": 2640,
+      "beat": "goodnight",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_v_02_m.wem"
+    },
+    {
+      "key": "vk002_12_professional_goodnight_velvet_03",
+      "string_id": "13750360185841781339",
+      "female_lipsync_animation": "f_BED317BC8AC60A5B",
+      "male_lipsync_animation": "f_BED317BC8AC60A5B",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "You too, V.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_12_professional_goodnight_velvet_03.wem",
+      "duration_ms": 1840,
+      "beat": "goodnight"
+    }
+  ],
+  "choice_lines": [
+    {
+      "key": "vk002_11_close_separate_decision_choice_01",
+      "string_id": "8574597879126685979",
+      "text": "Compare notes next time."
+    },
+    {
+      "key": "vk002_11_close_separate_decision_choice_02",
+      "string_id": "8574598978638314190",
+      "text": "Keep it professional."
+    },
+    {
+      "key": "vk002_12_goodnight_relationship_choice_01",
+      "string_id": "12293525471308080415",
+      "text": "[Friends] Dinner again?"
+    },
+    {
+      "key": "vk002_12_goodnight_relationship_choice_02",
+      "string_id": "12293526570819708626",
+      "text": "[Romance] A date next time."
+    },
+    {
+      "key": "vk002_12_goodnight_relationship_choice_03",
+      "string_id": "12293527670331336837",
+      "text": "Let's see."
+    },
+    {
+      "key": "vk002_12_goodnight_touch_choice_01",
+      "string_id": "2097603848827958175",
+      "text": "[Offer your hand]"
+    },
+    {
+      "key": "vk002_12_goodnight_touch_choice_02",
+      "string_id": "2097604948339586386",
+      "text": "[Leave it there]"
+    }
+  ]
+}

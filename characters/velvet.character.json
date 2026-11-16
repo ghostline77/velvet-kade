@@ -1,0 +1,91 @@
+{
+  "format": "ghostline-character",
+  "version": 1,
+  "id": "velvet",
+  "name": "Velvet Kade",
+  "revision": 0,
+  "refit_clothing": false,
+  "template": "female_average",
+  "namespace": "mod\\velvet-kade\\characters\\velvet",
+  "catalogue": {
+    "format": "ghostline-items",
+    "version": 1,
+    "sources": {
+      "clothing_source_identity": "08846801c1d03e98a2df42cdd838d0959dcc5e77228e9306d7efb599c5bf6f17",
+      "game_version": "2.31",
+      "language": "en-us",
+      "props_names_file": "usedhashes.kark",
+      "props_prefixes": "[\"base\\\\environment\\\\\",\"ep1\\\\environment\\\\\",\"base\\\\items\\\\\",\"ep1\\\\items\\\\\",\"base\\\\gameplay\\\\devices\\\\\",\"ep1\\\\gameplay\\\\devices\\\\\",\"base\\\\meshes\\\\\",\"ep1\\\\meshes\\\\\",\"base\\\\props\\\\\",\"ep1\\\\props\\\\\",\"base\\\\prefabs\\\\\",\"ep1\\\\prefabs\\\\\"]",
+      "props_source_identity": "08846801c1d03e98a2df42cdd838d0959dcc5e77228e9306d7efb599c5bf6f17",
+      "tweak_names_file": "tweakdbstr.kark",
+      "tweakdb_file": "tweakdb_ep1.bin"
+    },
+    "identity": "9f5ad3e90fdbb33dd10a0102c870bb6a9c04c2ac91a746003afa3e7f031043e6"
+  },
+  "appearances": [
+    {
+      "id": "ghostline_velvet_default",
+      "name": "default",
+      "choices": {
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#armsCustomizationOptions/5": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#armsCustomizationOptions/5/definitions/2",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#bodyCustomizationOptions/0": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#bodyCustomizationOptions/0/definitions/2",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#bodyCustomizationOptions/72": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#bodyCustomizationOptions/72/definitions/2",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/139": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/139/definitions/3",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/155": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/155/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/213": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/213/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/6": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/6/definitions/2",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/61": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/61/definitions/6",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/145": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/145/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/216": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/216/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/295": "base/gameplay/gui/fullscreen/main_menu/female_cco.inkcharcustomization#headCustomizationOptions/295/definitions/4"
+      },
+      "equipment": {
+        "Clo_InnerChest": "base\\characters\\garment\\player_equipment\\torso\\t1_097_pwa_tank__corset_doll_prostitute.ent#",
+        "Clo_Legs": "base\\characters\\garment\\player_equipment\\legs\\l1_078_pwa_pants__militech.ent#",
+        "Clo_Feet": "base\\characters\\garment\\player_equipment\\feet\\s1_056_pwa_boot__biker.ent#",
+        "Clo_OuterChest": "base\\characters\\garment\\player_equipment\\torso\\t2_047_pwa_jacket__bolero.ent#"
+      },
+      "shapes": {
+        "eyes": 12,
+        "nose": 6,
+        "mouth": 6,
+        "jaw": 7,
+        "ears": 2
+      },
+      "mesh_overrides": {
+        "base\\characters\\garment\\player_equipment\\torso\\t1_097_tank__corset_doll_prostitute\\t1_097_pwa_tank__corset_doll_prostitute.mesh": {
+          "appearance": "black_red",
+          "chunk_mask": "3"
+        },
+        "base\\characters\\garment\\player_equipment\\legs\\l1_078_pants__militech_small_caps\\l1_078_pwa_pants__militech.mesh": {
+          "appearance": "maelstrom_leather"
+        },
+        "base\\characters\\garment\\player_equipment\\feet\\s1_056_boot__biker\\s1_056_pwa_boot__biker.mesh": {
+          "appearance": "black_glossy"
+        },
+        "base\\characters\\garment\\player_equipment\\torso\\t2_047_jacket__bolero\\t2_047_pwa_jacket__bolero.mesh": {
+          "appearance": "black_purple_puffy"
+        }
+      },
+      "native_parts": []
+    }
+  ],
+  "active_appearance": "ghostline_velvet_default",
+  "identity": {
+    "record": "Character.GhostlineVelvet",
+    "display_name": "vk_contact_velvet",
+    "voice_tag": "gq_velvet",
+    "affiliation": "Factions.Ghostline"
+  },
+  "loadout": [],
+  "ai": {
+    "profile": "quest",
+    "action_map": "",
+    "archetype_data": "",
+    "attitude_group": "",
+    "reaction_preset": "",
+    "rarity": "",
+    "power_level": null,
+    "health_multiplier": null
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "purpose": "Optional interested-ending hand-touch consent",
+  "listening_review": "pending",
+  "generation_manifest": "work/closing-consent-audio.json",
+  "lines": [
+    {
+      "text": "Can I?",
+      "speaker": "V",
+      "id": "6987410095004050438",
+      "sources": [
+        "source/vk002_12_goodnight_touch_ask_v_01_f.wav",
+        "source/vk002_12_goodnight_touch_ask_v_01_m.wav"
+      ]
+    },
+    {
+      "text": "Yeah.",
+      "speaker": "Velvet",
+      "id": "7821545866827138533",
+      "sources": ["source/vk002_12_goodnight_touch_yes_velvet_02.wav"]
+    }
+  ],
+  "native_facial_validation": "182 clips verified: 179 existing clips preserved and three consent clips added"
+}

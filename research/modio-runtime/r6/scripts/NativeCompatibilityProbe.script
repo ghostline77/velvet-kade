@@ -1,0 +1,132 @@
+// Offline research probe. Not included in either shipping package profile.
+// Compile with CDPR's native SCC against the installed base script bundle.
+// Device selection uses editable NodeRef data, not extender-only CreateNodeRef().
+
+class GLVK001ModioRuntime extends ScriptableSystem
+{
+    private var m_fxHost : weak< GLVK001ModioFxHost >;
+
+    public static function ForGame( game : GameInstance ) : GLVK001ModioRuntime
+    {
+        return ( ( GLVK001ModioRuntime )( GameInstance.GetScriptableSystemsContainer( game ).Get( 'GLVK001ModioRuntime' ) ) );
+    }
+
+    public function SetFxHost( fxHost : GLVK001ModioFxHost ) { m_fxHost = fxHost; }
+    public function GetFxHost() : GLVK001ModioFxHost { return m_fxHost; }
+}
+
+class GLVK001ModioFxHost extends GameObject
+{
+    // A reserved helper entity supplies this FxResource in its native data.
+    // The effect must use a supported resource route; this does not enable particles.
+    private editable var m_npcFx : FxResource;
+    private editable var m_relay : NodeRef;
+    private editable var m_upload : NodeRef;
+
+    public const function RoleFor( entityID : EntityID ) : Int32
+    {
+        var relayID : EntityID;
+        var uploadID : EntityID;
+        relayID = ( ( EntityID )( ResolveNodeRef( m_relay, GlobalNodeID.GetRoot() ) ) );
+        uploadID = ( ( EntityID )( ResolveNodeRef( m_upload, GlobalNodeID.GetRoot() ) ) );
+        if( entityID == relayID ) { return 1; }
+        if( entityID == uploadID ) { return 2; }
+        return 0;
+    }
+
+    protected event OnGameAttached()
+    {
+        var runtime : GLVK001ModioRuntime;
+        super.OnGameAttached();
+        runtime = GLVK001ModioRuntime.ForGame( GetGame() );
+        if( runtime ) { runtime.SetFxHost( this ); }
+    }
+
+    public function PlayOn( target : GameObject ) : FxInstance
+    {
+        var instance : FxInstance;
+        if( !target || !FxResource.IsValid( m_npcFx ) )
+        {
+            return NULL;
+        }
+        instance = GameInstance.GetFxSystem( GetGame() ).SpawnEffect( m_npcFx, target.GetWorldTransform(), true );
+        if( instance )
+        {
+            instance.AttachToSlot( target, entAttachmentTarget.Transform, 'Head' );
+        }
+        return instance;
+    }
+
+    public function MakeOverlayImage( atlas : ResRef, part : CName ) : inkImage
+    {
+        var image : inkImage;
+        image = new inkImage;
+        image.SetAtlasResource( atlas );
+        image.SetTexturePart( part );
+        return image;
+    }
+
+    // Query the live component, avoiding a class/NodeRef lookup through .devices.
+    // This deliberately does not fabricate a replacement PersistentID.
+    public function ReadLivePersonalLink( device : Device ) : Bool
+    {
+        var state : ScriptableDeviceComponentPS;
+        if( !device ) { return false; }
+        state = device.GetDevicePS();
+        return state && state.IsPersonalLinkConnected();
+    }
+
+    // Dispatch the same native actions used by the existing transfer graph,
+    // through the live controller's real PersistentID and class.
+    public function SendLiveQuestAction( device : Device, actionName : CName ) : Bool
+    {
+        var state : ScriptableDeviceComponentPS;
+        var action : DeviceAction;
+        if( !device ) { return false; }
+        if( actionName != 'ForceON' && actionName != 'ForceDisabled'
+            && actionName != 'QuestForceDisconnectPersonalLink'
+            && actionName != 'QuestForcePersonalLinkUnderStrictQuestControl' ) { return false; }
+        state = device.GetDevicePS();
+        if( !state ) { return false; }
+        action = state.GetQuestActionByName( actionName );
+        if( !action ) { return false; }
+        GameInstance.GetPersistencySystem( GetGame() ).QueuePSEvent( state.GetID(), state.GetClassName(), action );
+        return true;
+    }
+}
+
+@postfix( "ScriptableDeviceComponentPS.SetPersonalLinkStatus" )
+function GLVK001Modio_LinkStateChanged( status : EPersonalLinkConnectionStatus )
+{
+    var runtime : GLVK001ModioRuntime;
+    var fxHost : GLVK001ModioFxHost;
+    var role : Int32;
+    var connected : Int32;
+    runtime = GLVK001ModioRuntime.ForGame( GetGameInstance() );
+    if( !runtime ) { return; }
+    fxHost = runtime.GetFxHost();
+    if( !fxHost ) { return; }
+    role = fxHost.RoleFor( PersistentID.ExtractEntityID( GetID() ) );
+    if( role == 0 ) { return; }
+    if( status == EPersonalLinkConnectionStatus.CONNECTED ) { connected = 1; }
+    if( role == 1 )
+    {
+        GameInstance.GetQuestsSystem( GetGameInstance() ).SetFactStr( "vk001_modio_relay_connected", connected );
+    }
+    if( role == 2 )
+    {
+        GameInstance.GetQuestsSystem( GetGameInstance() ).SetFactStr( "vk001_modio_upload_connected", connected );
+    }
+}
+
+@postfix( "ScriptedPuppet.OnStatusEffectApplied" )
+function GLVK001Modio_CustomStatusApplied( evt : ApplyStatusEffectEvent )
+{
+    var runtime : GLVK001ModioRuntime;
+    var fxHost : GLVK001ModioFxHost;
+    if( evt.staticData.GetID() != T"BaseStatusEffect.GhostlineVelvetCrashShortBlind" ) { return; }
+    runtime = GLVK001ModioRuntime.ForGame( GetGame() );
+    if( !runtime ) { return; }
+    fxHost = runtime.GetFxHost();
+    if( fxHost ) { fxHost.PlayOn( this ); }
+}

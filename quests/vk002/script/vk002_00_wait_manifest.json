@@ -1,0 +1,6 @@
+{
+  "sequence_id": "vk002_00_wait",
+  "delivery": "formal_scene",
+  "spoken_lines": [],
+  "choice_lines": [{"key": "vk002_00_wait_until_dinner", "string_id": "762002000001", "text": "Wait until 18:00"}]
+}

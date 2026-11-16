@@ -1,0 +1,137 @@
+{
+  "name": "vk002_05_log_first",
+  "manifest": "../script/vk002_05_log_first_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_05_log_first.scene",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "lipsync_animset": "mod\\vk002\\localization\\en-us\\lipsync\\second-date.anims",
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "lipsync": true,
+      "appearance": "ghostline_velvet_default",
+      "entry": "velvet",
+      "community_ref": "#vk002_com_velvet",
+      "voicetag": "5506207259407814236"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "lipsync": true,
+      "appearance": "default",
+      "record": "Character.Player_Puppet_Base"
+    }
+  ],
+  "spoken_line_order": [
+    "vk002_05_log_first_react_velvet_01",
+    "vk002_05_log_first_react_v_02",
+    "vk002_05_log_first_react_velvet_03"
+  ],
+  "choice_line_order": [],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "start_node": {
+    "on_start": [
+      {
+        "node": "position_velvet"
+      }
+    ],
+    "key": "entry_start"
+  },
+  "exit_points": [
+    {
+      "name": "read_done",
+      "node": "exit_read_done"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "exit_read_done"
+    }
+  ],
+  "sections": [
+    {
+      "key": "react",
+      "lines": [
+        "vk002_05_log_first_react_velvet_01",
+        "vk002_05_log_first_react_v_02",
+        "vk002_05_log_first_react_velvet_03"
+      ],
+      "on_end": [
+        {
+          "node": "exit_read_done"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 3840
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 3840
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 4090,
+          "duration_ms": 3440
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 4090,
+          "duration_ms": 3440
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 7780,
+          "duration_ms": 7040
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 7780,
+          "duration_ms": 7040
+        }
+      ]
+    }
+  ],
+  "choices": [],
+  "quest_nodes": [
+    {
+      "finish_animation": true,
+      "kind": "use_workspot",
+      "is_workspot_infinite": true,
+      "entry": "velvet",
+      "on_work_started": [
+        {
+          "node": "react"
+        }
+      ],
+      "key": "position_velvet",
+      "workspot_ref": "#vk002_spot_velvet_computer",
+      "teleport": false,
+      "entity_ref": "#vk002_com_velvet",
+      "instant": false,
+      "repeat_on_interrupt": false,
+      "on_success": [],
+      "movement_type": "Walk"
+    }
+  ]
+}

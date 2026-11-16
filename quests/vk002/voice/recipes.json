@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "voice_reference": "../../../voices/velvet/selected/reference.json",
+  "existing_speakers": "Reuse published Velvet and selected V Female/V Male full-reference recipes without new delivery instructions.",
+  "new_speakers": {
+    "mara": {
+      "speaker": "Mara",
+      "seed": 200201,
+      "description": "Adult woman in her forties. Clear low alto, dry amused American delivery, grounded and practical. A bartender speaking conversationally in a quiet room. No rasp exaggeration, no telephone filter, no breathy flirting.",
+      "reference_text": "Sit down. I'll bring the drinks. Try not to complicate dinner."
+    },
+    "latch": {
+      "speaker": "Latch",
+      "seed": 200202,
+      "description": "Adult man in his thirties. Mid-low American voice, quick and guarded, slightly nasal edge, plausible small-time identity broker. Conversational volume, restrained irritation, clear unfiltered studio recording. No villain growl.",
+      "reference_text": "Relay's rented. Take the receipt. I'm not refunding the client."
+    }
+  },
+  "review_status": "Mara and Latch designs and all new performances require listening review; generated candidates must not be promoted automatically."
+}

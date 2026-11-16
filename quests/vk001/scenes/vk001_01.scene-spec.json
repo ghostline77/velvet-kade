@@ -1,0 +1,280 @@
+{
+  "name": "vk001_01_velvet",
+  "manifest": "../script/vk001_01_manifest.json",
+  "archive_path": "mod\\vk001\\scenes\\vk001_01_velvet.scene",
+  "exported_datetime": "2026-10-25T00:00:00Z",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "entry": "velvet",
+      "community_ref": "#vk001_com_velvet",
+      "appearance": "ghostline_velvet_default",
+      "lipsync": true,
+      "voicetag": "5506207259407814236"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "record": "Character.Player_Puppet_Base",
+      "appearance": "default",
+      "lipsync": true
+    }
+  ],
+  "spoken_line_order": [
+    "vk001_01_velvet_hello",
+    "vk001_01_v_hello",
+    "vk001_01_velvet_job",
+    "vk001_01_v_hack",
+    "vk001_01_velvet_hack",
+    "vk001_01_v_recover",
+    "vk001_01_velvet_recover",
+    "vk001_01_v_name",
+    "vk001_01_velvet_name",
+    "vk001_01_v_accept",
+    "vk001_01_velvet_route",
+    "vk001_01_velvet_bows",
+    "vk001_01_v_later",
+    "vk001_01_velvet_later"
+  ],
+  "choice_line_order": [
+    "vk001_01_what_short",
+    "vk001_01_recover_short",
+    "vk001_01_flirt_short",
+    "vk001_01_accept_short",
+    "vk001_01_later_short"
+  ],
+  "exit_points": [
+    {
+      "name": "end",
+      "node": "exit_end"
+    },
+    {
+      "name": "job_accept",
+      "node": "exit_job_accept"
+    }
+  ],
+  "sections": [
+    {
+      "key": "opening",
+      "lines": [
+        "vk001_01_velvet_hello",
+        "vk001_01_v_hello",
+        "vk001_01_velvet_job"
+      ],
+      "on_end": [
+        {
+          "node": "pause_condition_3"
+        }
+      ]
+    },
+    {
+      "key": "what",
+      "lines": [
+        "vk001_01_v_hack",
+        "vk001_01_velvet_hack"
+      ],
+      "on_end": [
+        {
+          "node": "conversation"
+        }
+      ]
+    },
+    {
+      "key": "recover",
+      "lines": [
+        "vk001_01_v_recover",
+        "vk001_01_velvet_recover"
+      ],
+      "on_end": [
+        {
+          "node": "conversation"
+        }
+      ]
+    },
+    {
+      "key": "flirt",
+      "lines": [
+        "vk001_01_v_name",
+        "vk001_01_velvet_name"
+      ],
+      "on_end": [
+        {
+          "node": "conversation"
+        }
+      ]
+    },
+    {
+      "key": "accept",
+      "lines": [
+        "vk001_01_v_accept",
+        "vk001_01_velvet_route",
+        "vk001_01_velvet_bows"
+      ],
+      "on_end": [
+        {
+          "node": "exit_job_accept"
+        }
+      ]
+    },
+    {
+      "key": "later",
+      "lines": [
+        "vk001_01_v_later",
+        "vk001_01_velvet_later"
+      ],
+      "on_end": [
+        {
+          "node": "exit_end"
+        }
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "key": "conversation",
+      "options": [
+        {
+          "choice_key": "vk001_01_what_short",
+          "caption": "What does it actually do?",
+          "single_choice": false,
+          "choice_type": 0,
+          "target": "what"
+        },
+        {
+          "choice_key": "vk001_01_recover_short",
+          "caption": "Why not wipe their server?",
+          "single_choice": false,
+          "choice_type": 0,
+          "target": "recover"
+        },
+        {
+          "choice_key": "vk001_01_flirt_short",
+          "caption": "Do you always flirt when you need something fixed?",
+          "single_choice": false,
+          "choice_type": 0,
+          "target": "flirt"
+        },
+        {
+          "choice_key": "vk001_01_accept_short",
+          "caption": "I'll get it. Show me where.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "accept"
+        },
+        {
+          "choice_key": "vk001_01_later_short",
+          "caption": "I'll come back.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "later"
+        }
+      ],
+      "actor": "velvet"
+    }
+  ],
+  "quest_nodes": [
+    {
+      "kind": "puppet_ai",
+      "entity_ref": "#vk001_com_velvet",
+      "entry": "velvet",
+      "ai_tier": "Cinematic",
+      "key": "puppet_ai"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#vk001_tr_mood",
+      "require_player_not_in_combat": true,
+      "on_out": [
+        {
+          "node": "pause_condition_2"
+        }
+      ],
+      "key": "pause_condition"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#vk001_tr_awareness",
+      "on_out": [
+        {
+          "node": "opening"
+        }
+      ],
+      "key": "pause_condition_2"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#vk001_tr_engage",
+      "on_out": [
+        {
+          "node": "conversation"
+        }
+      ],
+      "key": "pause_condition_3"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#vk001_tr_engage",
+      "require_player_not_in_combat": true,
+      "on_out": [
+        {
+          "node": "conversation"
+        }
+      ],
+      "key": "pause_condition_4"
+    }
+  ],
+  "xor_nodes": [],
+  "end_nodes": [
+    {
+      "key": "exit_end"
+    },
+    {
+      "key": "exit_job_accept"
+    }
+  ],
+  "lipsync_animset": "mod\\vk001\\localization\\en-us\\lipsync\\love-actually.anims",
+  "entry_points": [
+    {
+      "name": "start",
+      "node": "entry_start"
+    },
+    {
+      "name": "resume",
+      "node": "entry_resume"
+    }
+  ],
+  "start_nodes": [
+    {
+      "on_start": [
+        {
+          "node": "puppet_ai"
+        },
+        {
+          "node": "pause_condition"
+        }
+      ],
+      "key": "entry_start"
+    },
+    {
+      "on_start": [
+        {
+          "node": "puppet_ai"
+        },
+        {
+          "node": "pause_condition_4"
+        }
+      ],
+      "key": "entry_resume"
+    }
+  ]
+}

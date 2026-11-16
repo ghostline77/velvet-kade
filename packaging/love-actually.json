@@ -1,0 +1,8 @@
+{
+  "name":"Ghostline_LoveActually",
+  "builds":["../work/builds/vk001"],
+  "active_roots":["mod\\vk001\\phases\\vk001.questphase"],
+  "include_loose":["r6/tweaks/velvet-kade/vk001_love_actually.yaml","r6/tweaks/velvet-kade/z_vk001_heartbreaker_icon.yaml","r6/tweaks/velvet-kade/faction_ghostline.yaml","r6/tweaks/velvet-kade/velvet_crash_protocol.yaml"],
+  "include_prefixes":["mod/velvet_crash/"],
+  "streaming_sectors":["base\\worlds\\03_night_city\\_compiled\\default\\exterior_-10_16_0_1.streamingsector"]
+}

@@ -1,0 +1,1326 @@
+{
+  "schema_version": 1,
+  "quest": "vk002",
+  "placement_status": "placed_for_playtest",
+  "runtime_ready": false,
+  "coordinate_policy": "Captured poses use native surface raycasts. Null poses remain uncaptured or require device fitting. Seating roots require workspot calibration. Do not install before runtime review.",
+  "targets": [
+    {
+      "id": "origin",
+      "label": "Rooftop origin",
+      "hint": "Walkable central floor, not a camera position.",
+      "group": "rooftop",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -326.92706298828,
+          "y": 239.76054382324,
+          "z": 213.9296875
+        },
+        "yaw": 0
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -326.92706298828,
+            "y": 239.76054382324,
+            "z": 213.9296875
+          },
+          "yaw": 0
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_87b85bdf404345399afe42b64d9c8a43",
+        "viewpoint_id": "viewpoint_ff6d8578df994b5996d3639258c26120",
+        "inspection": {
+          "u": 0.48,
+          "v": 0.85,
+          "direction": {
+            "x": -0.089235700249445,
+            "y": -0.91410664075727,
+            "z": -0.39553260184775
+          },
+          "hit": true,
+          "distance": 3.4089523232852,
+          "entity": {
+            "proxy_id": "81590",
+            "hash": "2700146811280ULL",
+            "template": "userdata: 0x0296368df7b8"
+          },
+          "position": {
+            "x": -326.92706298828,
+            "y": 239.76054382324,
+            "z": 213.9296875
+          },
+          "origin": {
+            "x": -326.62286376953,
+            "y": 242.87669372559,
+            "z": 215.27803039551
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_mp_rooftop",
+      "label": "Public approach/map pin",
+      "hint": "Street-accessible entrance; record stairs/lift route separately.",
+      "group": "approach",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -326.92706298828,
+          "y": 239.76054382324,
+          "z": 213.9296875
+        },
+        "yaw": 0
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -326.92706298828,
+            "y": 239.76054382324,
+            "z": 213.9296875
+          },
+          "yaw": 0
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_87b85bdf404345399afe42b64d9c8a43",
+        "viewpoint_id": "viewpoint_ff6d8578df994b5996d3639258c26120",
+        "inspection": {
+          "u": 0.48,
+          "v": 0.85,
+          "direction": {
+            "x": -0.089235700249445,
+            "y": -0.91410664075727,
+            "z": -0.39553260184775
+          },
+          "hit": true,
+          "distance": 3.4089523232852,
+          "entity": {
+            "proxy_id": "81590",
+            "hash": "2700146811280ULL",
+            "template": "userdata: 0x0296368df7b8"
+          },
+          "position": {
+            "x": -326.92706298828,
+            "y": 239.76054382324,
+            "z": 213.9296875
+          },
+          "origin": {
+            "x": -326.62286376953,
+            "y": 242.87669372559,
+            "z": 215.27803039551
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_sm_dinner",
+      "label": "Dinner scene origin",
+      "hint": "Between the seats, with conversational sight lines.",
+      "group": "dinner",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -321.90658569336,
+          "y": 242.07919311523,
+          "z": 213.07406616211
+        },
+        "yaw": 0
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -321.90658569336,
+            "y": 242.07919311523,
+            "z": 213.07406616211
+          },
+          "yaw": 0
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_7986ed9d778c49f98d82de4a327fd054",
+        "viewpoint_id": "viewpoint_03a3e5b4e97048c5944ba0ecd42635a0",
+        "inspection": {
+          "u": 0.52,
+          "v": 0.88,
+          "direction": {
+            "x": 0.89554325809554,
+            "y": -0.15146274131692,
+            "z": -0.4184032873585
+          },
+          "hit": true,
+          "distance": 5.2666239045016,
+          "entity": {
+            "proxy_id": "81589",
+            "hash": "2700146811280ULL",
+            "template": "userdata: 0x02975b677528"
+          },
+          "position": {
+            "x": -321.90658569336,
+            "y": 242.07919311523,
+            "z": 213.07406616211
+          },
+          "origin": {
+            "x": -326.62307739258,
+            "y": 242.87689208984,
+            "z": 215.27763366699
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_seat_v",
+      "label": "V seat workspot root",
+      "hint": "Feet/root for a seated workspot; face the table, not the camera.",
+      "group": "dinner",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -322.26220703125,
+          "y": 244.34143066406,
+          "z": 213.07406616211
+        },
+        "yaw": 234.09894245322752
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -322.26220703125,
+            "y": 244.34143066406,
+            "z": 213.07406616211
+          },
+          "yaw": 234.09894245322752
+        },
+        "method": "seat_contact_projected_to_measured_horizontal_floor",
+        "image_id": "image_7986ed9d778c49f98d82de4a327fd054",
+        "viewpoint_id": "viewpoint_03a3e5b4e97048c5944ba0ecd42635a0",
+        "seat_contact": {
+          "u": 0.22,
+          "v": 0.84,
+          "direction": {
+            "x": 0.88682804108109,
+            "y": 0.29785838032817,
+            "z": -0.35329366088363
+          },
+          "hit": true,
+          "distance": 4.9172326101148,
+          "entity": {
+            "proxy_id": "81755",
+            "hash": "2700036385520ULL",
+            "template": "userdata: 0x02977fde33a0"
+          },
+          "position": {
+            "x": -322.26220703125,
+            "y": 244.34143066406,
+            "z": 213.54048156738
+          },
+          "origin": {
+            "x": -326.62295532227,
+            "y": 242.87680053711,
+            "z": 215.27769470215
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        },
+        "floor_samples": {
+          "near_floor": {
+            "u": 0.49,
+            "v": 0.94,
+            "direction": {
+              "x": 0.88026226454429,
+              "y": -0.10140107717087,
+              "z": -0.46352579989462
+            },
+            "hit": true,
+            "distance": 4.7543639611004,
+            "entity": {
+              "proxy_id": "81589",
+              "hash": "2700146811280ULL",
+              "template": "userdata: 0x0296065878d8"
+            },
+            "position": {
+              "x": -322.43795776367,
+              "y": 242.39476013184,
+              "z": 213.07406616211
+            },
+            "origin": {
+              "x": -326.623046875,
+              "y": 242.87686157227,
+              "z": 215.27783203125
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          },
+          "far_floor": {
+            "u": 0.61,
+            "v": 0.76,
+            "direction": {
+              "x": 0.90004963890496,
+              "y": -0.29993386518633,
+              "z": -0.31614921164133
+            },
+            "hit": true,
+            "distance": 6.9708139494283,
+            "entity": {
+              "proxy_id": "81590",
+              "hash": "2700146811280ULL",
+              "template": "userdata: 0x02975adaccb0"
+            },
+            "position": {
+              "x": -320.34896850586,
+              "y": 240.78607177734,
+              "z": 213.07406616211
+            },
+            "origin": {
+              "x": -326.623046875,
+              "y": 242.87686157227,
+              "z": 215.27787780762
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          }
+        },
+        "workspot_calibration_required": true
+      },
+      "fit": {
+        "root_plane": "Measured sofa-deck floor",
+        "seat_contact": "Measured existing sofa cushion",
+        "workspot": "base\\workspots\\player\\couch\\player__sit_couch__talk__01.workspot",
+        "runtime_verified": false
+      }
+    },
+    {
+      "id": "#vk002_seat_velvet",
+      "label": "Velvet seat workspot root",
+      "hint": "Separate seat root opposite V.",
+      "group": "dinner",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -319.0256652832,
+          "y": 241.99847412109,
+          "z": 213.07406616211
+        },
+        "yaw": 54.09894245322755
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -319.0256652832,
+            "y": 241.99847412109,
+            "z": 213.07406616211
+          },
+          "yaw": 54.09894245322755
+        },
+        "method": "seat_contact_projected_to_measured_horizontal_floor",
+        "image_id": "image_7986ed9d778c49f98d82de4a327fd054",
+        "viewpoint_id": "viewpoint_03a3e5b4e97048c5944ba0ecd42635a0",
+        "seat_contact": {
+          "u": 0.49,
+          "v": 0.655,
+          "direction": {
+            "x": 0.96699772634282,
+            "y": -0.11180076751816,
+            "z": -0.2289453769574
+          },
+          "hit": true,
+          "distance": 7.856634616942,
+          "entity": {
+            "proxy_id": "81768",
+            "hash": "2700051257072ULL",
+            "template": "userdata: 0x029636250150"
+          },
+          "position": {
+            "x": -319.0256652832,
+            "y": 241.99847412109,
+            "z": 213.47903442383
+          },
+          "origin": {
+            "x": -326.62301635742,
+            "y": 242.87683105469,
+            "z": 215.27777099609
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        },
+        "floor_samples": {
+          "near_floor": {
+            "u": 0.49,
+            "v": 0.94,
+            "direction": {
+              "x": 0.88026226454429,
+              "y": -0.10140107717087,
+              "z": -0.46352579989462
+            },
+            "hit": true,
+            "distance": 4.7543639611004,
+            "entity": {
+              "proxy_id": "81589",
+              "hash": "2700146811280ULL",
+              "template": "userdata: 0x0296065878d8"
+            },
+            "position": {
+              "x": -322.43795776367,
+              "y": 242.39476013184,
+              "z": 213.07406616211
+            },
+            "origin": {
+              "x": -326.623046875,
+              "y": 242.87686157227,
+              "z": 215.27783203125
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          },
+          "far_floor": {
+            "u": 0.61,
+            "v": 0.76,
+            "direction": {
+              "x": 0.90004963890496,
+              "y": -0.29993386518633,
+              "z": -0.31614921164133
+            },
+            "hit": true,
+            "distance": 6.9708139494283,
+            "entity": {
+              "proxy_id": "81590",
+              "hash": "2700146811280ULL",
+              "template": "userdata: 0x02975adaccb0"
+            },
+            "position": {
+              "x": -320.34896850586,
+              "y": 240.78607177734,
+              "z": 213.07406616211
+            },
+            "origin": {
+              "x": -326.623046875,
+              "y": 242.87686157227,
+              "z": 215.27787780762
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          }
+        },
+        "workspot_calibration_required": true
+      },
+      "fit": {
+        "root_plane": "Measured sofa-deck floor",
+        "seat_contact": "Measured existing sofa cushion",
+        "workspot": "base\\workspots\\common\\couch\\generic__sit_couch__sit_around__01.workspot",
+        "runtime_verified": false
+      }
+    },
+    {
+      "id": "#vk002_spot_mara",
+      "label": "Mara bartender root",
+      "hint": "Walkable counter position with access to the table.",
+      "group": "bar",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -328.77322387695,
+          "y": 235.18827819824,
+          "z": 213.92762756348
+        },
+        "yaw": 350.10941670402883
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -328.77322387695,
+            "y": 235.18827819824,
+            "z": 213.92762756348
+          },
+          "yaw": 350.10941670402883
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_318553f12d5740d5a1f641d5a23a398a",
+        "viewpoint_id": "viewpoint_031b1476b66441a9971193f49aeca08e",
+        "inspection": {
+          "u": 0.56,
+          "v": 0.67,
+          "direction": {
+            "x": -0.66334254902076,
+            "y": 0.64418706310286,
+            "z": -0.38078824875453
+          },
+          "hit": true,
+          "distance": 5.5438823305379,
+          "entity": {
+            "proxy_id": "81589",
+            "hash": "2700146811280ULL",
+            "template": "userdata: 0x0296364128e8"
+          },
+          "position": {
+            "x": -328.77322387695,
+            "y": 235.18827819824,
+            "z": 213.92762756348
+          },
+          "origin": {
+            "x": -325.09573364258,
+            "y": 231.61697387695,
+            "z": 216.03866577148
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_computer",
+      "label": "Quest-owned computer anchor",
+      "hint": "Wall terminal on lower lounge balcony, native frame fitted against measured vertical concrete plane.",
+      "group": "device",
+      "height": 1.0,
+      "required": true,
+      "pose": {
+        "yaw": 145.40169694476134,
+        "position": {
+          "x": -336.1434921227058,
+          "y": 210.447713219475,
+          "z": 190.31801452637
+        }
+      },
+      "mounting_surface": {
+        "pose": {
+          "position": {
+            "x": -336.15817260742,
+            "y": 210.45783996582,
+            "z": 189.90634155273
+          },
+          "yaw": 304.6
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_9f60cf1581a644368270a3755fbcb6c1",
+        "viewpoint_id": "viewpoint_78fa97734b4b4c898ff3e14f557d3789",
+        "inspection": {
+          "direction": {
+            "x": -0.9405301061537,
+            "y": -0.33259829432983,
+            "z": -0.069148347972961
+          },
+          "hit": true,
+          "distance": 3.4416771689677,
+          "entity": {
+            "proxy_id": "81607",
+            "hash": "2699729902384ULL",
+            "template": "userdata: 0x02975b454a90"
+          },
+          "position": {
+            "x": -336.15817260742,
+            "y": 210.45783996582,
+            "z": 189.90634155273
+          },
+          "origin": {
+            "x": -332.9211730957,
+            "y": 211.6025390625,
+            "z": 190.14433288574
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        },
+        "device_model_fitting_required": false,
+        "wall_samples": [
+          {
+            "direction": {
+              "x": -0.9405301061537,
+              "y": -0.33259829432983,
+              "z": -0.069148347972961
+            },
+            "hit": true,
+            "distance": 3.4416771689677,
+            "entity": {
+              "proxy_id": "81607",
+              "hash": "2699729902384ULL",
+              "template": "userdata: 0x02975b454a90"
+            },
+            "position": {
+              "x": -336.15817260742,
+              "y": 210.45783996582,
+              "z": 189.90634155273
+            },
+            "origin": {
+              "x": -332.9211730957,
+              "y": 211.6025390625,
+              "z": 190.14433288574
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          },
+          {
+            "direction": {
+              "x": -0.83611876625631,
+              "y": -0.54412467103629,
+              "z": -0.069525183089793
+            },
+            "hit": true,
+            "distance": 5.3120155864813,
+            "entity": {
+              "proxy_id": "81607",
+              "hash": "2699729902384ULL",
+              "template": "userdata: 0x0297870191d0"
+            },
+            "position": {
+              "x": -337.36248779297,
+              "y": 208.71197509766,
+              "z": 189.77507019043
+            },
+            "origin": {
+              "x": -332.92102050781,
+              "y": 211.60238647461,
+              "z": 190.1443939209
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          }
+        ],
+        "interaction_floor": {
+          "direction": {
+            "x": -0.78259971853346,
+            "y": -0.45497754870829,
+            "z": -0.42489188121537
+          },
+          "hit": true,
+          "distance": 2.8866199541349,
+          "entity": {
+            "proxy_id": "81592",
+            "hash": "2700058221648ULL",
+            "template": "userdata: 0x029605898d40"
+          },
+          "position": {
+            "x": -335.18032836914,
+            "y": 210.28913879395,
+            "z": 188.91801452637
+          },
+          "origin": {
+            "x": -332.92126464844,
+            "y": 211.60249328613,
+            "z": 190.14451599121
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      },
+      "fit": {
+        "appearance": "computer_computer_1",
+        "screen_center_above_floor_m": 1.4,
+        "outward_normal": {
+          "x": 0.8231531861568134,
+          "y": -0.5678193657492554,
+          "z": 0
+        },
+        "entity": "base\\gameplay\\devices\\masters\\computers\\computer_1.ent",
+        "back_clearance_m": 0.015,
+        "geometry_review": "Native frame and screen bounds; game visual and interaction review pending."
+      }
+    },
+    {
+      "id": "#vk002_lift_relay",
+      "label": "Forged-message relay anchor",
+      "hint": "Palm-sized relay on fixed wall beneath lounge street-lift call panel. Surface and raised landing floor captured; device origin requires fitting.",
+      "group": "device",
+      "height": 1.2,
+      "required": true,
+      "pose": {
+        "position": {
+          "z": 192.02868652344,
+          "x": -346.81935828973945,
+          "y": 219.5344627000423
+        },
+        "yaw": 235.40044366222156
+      },
+      "mounting_surface": {
+        "position": {
+          "x": -346.82821655273,
+          "y": 219.5216217041,
+          "z": 192.02868652344
+        },
+        "outward_normal": {
+          "x": 0.5678373711894692,
+          "y": 0.8231407655320157,
+          "z": 0
+        },
+        "height_above_floor_m": 0.9419250488300008,
+        "local_negative_x_facing_yaw_degrees": 235.40044366222156,
+        "method": "native_surface_raycast",
+        "viewpoint_id": "viewpoint_585ac025c46e487f94b870bc3025ab2d",
+        "image_id": "image_7c82ce9d8c4a495c96dd728c2adea3ef",
+        "hits": {
+          "panel": {
+            "direction": {
+              "x": -0.51698307428061,
+              "y": -0.85570775591799,
+              "z": 0.022197688374255
+            },
+            "hit": true,
+            "distance": 2.780615382451,
+            "entity": {
+              "proxy_id": "84528",
+              "hash": "2717750349072ULL",
+              "template": "userdata: 0x02975a5e8298",
+              "id": "14904635315128671893ULL"
+            },
+            "position": {
+              "x": -346.78784179688,
+              "y": 219.58204650879,
+              "z": 192.44790649414
+            },
+            "origin": {
+              "x": -345.3503112793,
+              "y": 221.96144104004,
+              "z": 192.38618469238
+            },
+            "collision_group": "Dynamic",
+            "projection": "native_camera_calibration"
+          },
+          "mount": {
+            "direction": {
+              "x": -0.51416820540592,
+              "y": -0.84862644468548,
+              "z": -0.12435519261431
+            },
+            "hit": true,
+            "distance": 2.8748685440526,
+            "entity": {
+              "proxy_id": "81806",
+              "hash": "2699521409072ULL",
+              "template": "userdata: 0x029782012f10"
+            },
+            "position": {
+              "x": -346.82821655273,
+              "y": 219.5216217041,
+              "z": 192.02868652344
+            },
+            "origin": {
+              "x": -345.35003662109,
+              "y": 221.96130371094,
+              "z": 192.38618469238
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          },
+          "mount_left": {
+            "direction": {
+              "x": -0.45736496788396,
+              "y": -0.88065933524736,
+              "z": -0.12351688708105
+            },
+            "hit": true,
+            "distance": 2.8919909605401,
+            "entity": {
+              "proxy_id": "81806",
+              "hash": "2699521409072ULL",
+              "template": "userdata: 0x02976e4b07b0"
+            },
+            "position": {
+              "x": -346.67294311523,
+              "y": 219.41450500488,
+              "z": 192.02894592285
+            },
+            "origin": {
+              "x": -345.35021972656,
+              "y": 221.9613494873,
+              "z": 192.3861541748
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          },
+          "mount_right": {
+            "direction": {
+              "x": -0.56265380524211,
+              "y": -0.81708967371943,
+              "z": -0.1256390088613
+            },
+            "hit": true,
+            "distance": 2.8702773567127,
+            "entity": {
+              "proxy_id": "81806",
+              "hash": "2699521409072ULL",
+              "template": "userdata: 0x02975ae2dec8"
+            },
+            "position": {
+              "x": -346.96527099609,
+              "y": 219.61616516113,
+              "z": 192.02551269531
+            },
+            "origin": {
+              "x": -345.35028076172,
+              "y": 221.96142578125,
+              "z": 192.38613891602
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          }
+        }
+      },
+      "interaction_approach": {
+        "position": {
+          "x": -346.11724853516,
+          "y": 221.01705932617,
+          "z": 191.08676147461
+        },
+        "method": "native_surface_raycast",
+        "viewpoint_id": "viewpoint_5e862460f0fa4aefa8a9055b319d56f0",
+        "image_id": "image_9d621bc87a884ccab4876f45829acac7",
+        "hits": {
+          "approach_floor": {
+            "direction": {
+              "x": -0.43090856726663,
+              "y": -0.53047008607752,
+              "z": -0.73001321524554
+            },
+            "hit": true,
+            "distance": 1.7801535522729,
+            "entity": {
+              "proxy_id": "81592",
+              "hash": "2700058221648ULL",
+              "template": "userdata: 0x02975a2caf80"
+            },
+            "position": {
+              "x": -346.11724853516,
+              "y": 221.01705932617,
+              "z": 191.08676147461
+            },
+            "origin": {
+              "x": -345.35015869141,
+              "y": 221.96138000488,
+              "z": 192.38629150391
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          },
+          "wall_base_floor": {
+            "direction": {
+              "x": -0.51900909925896,
+              "y": -0.64322845245657,
+              "z": -0.56292691607058
+            },
+            "hit": true,
+            "distance": 2.3086950270631,
+            "entity": {
+              "proxy_id": "81592",
+              "hash": "2700058221648ULL",
+              "template": "userdata: 0x02975e0257a0"
+            },
+            "position": {
+              "x": -346.54840087891,
+              "y": 220.47627258301,
+              "z": 191.08676147461
+            },
+            "origin": {
+              "x": -345.35015869141,
+              "y": 221.96128845215,
+              "z": 192.38638305664
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          },
+          "side_floor": {
+            "direction": {
+              "x": -0.66555653869078,
+              "y": -0.36969940566878,
+              "z": -0.64834932193541
+            },
+            "hit": true,
+            "distance": 2.0045008708982,
+            "entity": {
+              "proxy_id": "81592",
+              "hash": "2700058221648ULL",
+              "template": "userdata: 0x02975217c780"
+            },
+            "position": {
+              "x": -346.6845703125,
+              "y": 221.22036743164,
+              "z": 191.08676147461
+            },
+            "origin": {
+              "x": -345.35046386719,
+              "y": 221.96142578125,
+              "z": 192.38638305664
+            },
+            "collision_group": "Static",
+            "projection": "native_camera_calibration"
+          }
+        }
+      },
+      "device_model_fitting_required": false,
+      "fit": {
+        "entity": "base\\gameplay\\devices\\masters\\computers\\computer_1.ent",
+        "width_m": 0.179,
+        "scale": 0.18,
+        "back_clearance_m": 0.015,
+        "runtime_verified": false
+      }
+    },
+    {
+      "id": "#vk002_sm_landing",
+      "label": "Service-landing scene origin",
+      "hint": "Contained encounter area away from civilians and ledges.",
+      "group": "lounge_balcony",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -325.43838500977,
+          "y": 214.66413879395,
+          "z": 188.91801452637
+        },
+        "yaw": 135.95930286667658
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -325.43838500977,
+            "y": 214.66413879395,
+            "z": 188.91801452637
+          },
+          "yaw": 135.95930286667658
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_40a8df60b68840ed81ea26ded8e8ee86",
+        "viewpoint_id": "viewpoint_796eadb295514f2f9e3edca03e6d410e",
+        "inspection": {
+          "direction": {
+            "x": -0.79428273902101,
+            "y": -0.4615942405232,
+            "z": -0.39502618597897
+          },
+          "hit": true,
+          "distance": 4.3013721089912,
+          "entity": {
+            "proxy_id": "81592",
+            "hash": "2700058221648ULL",
+            "template": "userdata: 0x02979c29e748"
+          },
+          "position": {
+            "x": -325.43838500977,
+            "y": 214.66413879395,
+            "z": 188.91801452637
+          },
+          "origin": {
+            "x": -322.02188110352,
+            "y": 216.64962768555,
+            "z": 190.61717224121
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_spot_latch",
+      "label": "Latch root",
+      "hint": "Walkable landing spot, facing V approach.",
+      "group": "lounge_balcony",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -328.08206176758,
+          "y": 211.93041992188,
+          "z": 188.91801452637
+        },
+        "yaw": 315.9593028666766
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -328.08206176758,
+            "y": 211.93041992188,
+            "z": 188.91801452637
+          },
+          "yaw": 315.9593028666766
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_40a8df60b68840ed81ea26ded8e8ee86",
+        "viewpoint_id": "viewpoint_796eadb295514f2f9e3edca03e6d410e",
+        "inspection": {
+          "direction": {
+            "x": -0.77034461900593,
+            "y": -0.59992505017118,
+            "z": -0.21600718077351
+          },
+          "hit": true,
+          "distance": 7.8665957538625,
+          "entity": {
+            "proxy_id": "81592",
+            "hash": "2700058221648ULL",
+            "template": "userdata: 0x02979a9ad6c8"
+          },
+          "position": {
+            "x": -328.08206176758,
+            "y": 211.93041992188,
+            "z": 188.91801452637
+          },
+          "origin": {
+            "x": -322.02206420898,
+            "y": 216.64978027344,
+            "z": 190.61724853516
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_spot_velvet_landing",
+      "label": "Velvet joint-route root",
+      "hint": "Separate from Latch; safe sight lines.",
+      "group": "lounge_balcony",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -326.70849609375,
+          "y": 215.42710876465,
+          "z": 188.91801452637
+        },
+        "yaw": 158.55415892454505
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -326.70849609375,
+            "y": 215.42710876465,
+            "z": 188.91801452637
+          },
+          "yaw": 158.55415892454505
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_40a8df60b68840ed81ea26ded8e8ee86",
+        "viewpoint_id": "viewpoint_796eadb295514f2f9e3edca03e6d410e",
+        "inspection": {
+          "direction": {
+            "x": -0.91305883482634,
+            "y": -0.23819367641655,
+            "z": -0.3310397810849
+          },
+          "hit": true,
+          "distance": 5.132802740524,
+          "entity": {
+            "proxy_id": "81592",
+            "hash": "2700058221648ULL",
+            "template": "userdata: 0x0296056ff750"
+          },
+          "position": {
+            "x": -326.70849609375,
+            "y": 215.42710876465,
+            "z": 188.91801452637
+          },
+          "origin": {
+            "x": -322.02194213867,
+            "y": 216.64970397949,
+            "z": 190.61717224121
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_receipt",
+      "label": "Receipt/relay evidence anchor",
+      "hint": "Relay evidence target on fixed wall, reachable without Latch and independently of elevator door state.",
+      "group": "lounge_lift",
+      "height": 0.8,
+      "required": true,
+      "pose": {
+        "yaw": 235.40044366222156,
+        "position": {
+          "x": -346.82821655273,
+          "y": 219.5216217041,
+          "z": 192.02868652344
+        }
+      },
+      "survey": {
+        "method": "native_surface_raycast",
+        "viewpoint_id": "viewpoint_585ac025c46e487f94b870bc3025ab2d",
+        "image_id": "image_7c82ce9d8c4a495c96dd728c2adea3ef"
+      }
+    },
+    {
+      "id": "#vk002_exit",
+      "label": "Safe exit",
+      "hint": "Unblocked route out; retain roof access for closing.",
+      "group": "exit",
+      "height": 0,
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -332.61041259766,
+          "y": 243.45944213867,
+          "z": 213.9296875
+        },
+        "yaw": 82.416
+      },
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -332.61041259766,
+            "y": 243.45944213867,
+            "z": 213.9296875
+          },
+          "yaw": 82.416
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_83cb3c3db6904acda4b3c74932e75643",
+        "viewpoint_id": "viewpoint_bf526b82028f44f58acd6a12ad21f65d",
+        "inspection": {
+          "direction": {
+            "x": -0.88346513821815,
+            "y": 0.054810895028884,
+            "z": -0.46527960984694
+          },
+          "hit": true,
+          "distance": 3.422631210589,
+          "entity": {
+            "proxy_id": "81590",
+            "hash": "2700146811280ULL",
+            "template": "userdata: 0x02975b00f718"
+          },
+          "position": {
+            "x": -332.61041259766,
+            "y": 243.45944213867,
+            "z": 213.9296875
+          },
+          "origin": {
+            "x": -329.5866394043,
+            "y": 243.27183532715,
+            "z": 215.52217102051
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "id": "#vk002_spot_velvet",
+      "required": true,
+      "pose": {
+        "position": {
+          "x": -327.88272094727,
+          "y": 238.00419616699,
+          "z": 213.92762756348
+        },
+        "yaw": 40.91325445759162
+      },
+      "label": "vk002_spot_velvet",
+      "group": "staging",
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -327.88272094727,
+            "y": 238.00419616699,
+            "z": 213.92762756348
+          },
+          "yaw": 40.91325445759162
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_87b85bdf404345399afe42b64d9c8a43",
+        "viewpoint_id": "viewpoint_ff6d8578df994b5996d3639258c26120",
+        "inspection": {
+          "u": 0.57,
+          "v": 0.69,
+          "direction": {
+            "x": -0.24179686714668,
+            "y": -0.93507889875535,
+            "z": -0.25915579897147
+          },
+          "hit": true,
+          "distance": 5.2106890894655,
+          "entity": {
+            "proxy_id": "81589",
+            "hash": "2700146811280ULL",
+            "template": "userdata: 0x029781f7a278"
+          },
+          "position": {
+            "x": -327.88272094727,
+            "y": 238.00419616699,
+            "z": 213.92762756348
+          },
+          "origin": {
+            "x": -326.62280273438,
+            "y": 242.87660217285,
+            "z": 215.27801513672
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      }
+    },
+    {
+      "group": "bar",
+      "survey": {
+        "pose": {
+          "position": {
+            "x": -327.88272094727,
+            "y": 238.00419616699,
+            "z": 213.92762756348
+          },
+          "yaw": 0
+        },
+        "method": "native_surface_raycast",
+        "image_id": "image_87b85bdf404345399afe42b64d9c8a43",
+        "viewpoint_id": "viewpoint_ff6d8578df994b5996d3639258c26120",
+        "inspection": {
+          "u": 0.57,
+          "v": 0.69,
+          "direction": {
+            "x": -0.24179686714668,
+            "y": -0.93507889875535,
+            "z": -0.25915579897147
+          },
+          "hit": true,
+          "distance": 5.2106890894655,
+          "entity": {
+            "proxy_id": "81589",
+            "hash": "2700146811280ULL",
+            "template": "userdata: 0x029781f7a278"
+          },
+          "position": {
+            "x": -327.88272094727,
+            "y": 238.00419616699,
+            "z": 213.92762756348
+          },
+          "origin": {
+            "x": -326.62280273438,
+            "y": 242.87660217285,
+            "z": 215.27801513672
+          },
+          "collision_group": "Static",
+          "projection": "native_camera_calibration"
+        }
+      },
+      "required": true,
+      "label": "Rooftop bar scene origin",
+      "pose": {
+        "position": {
+          "x": -327.88272094727,
+          "y": 238.00419616699,
+          "z": 213.92762756348
+        },
+        "yaw": 0
+      },
+      "id": "#vk002_sm_bar"
+    }
+  ],
+  "quest_owned_props": [
+    "computer",
+    "relay",
+    "receipt"
+  ],
+  "site_review": [
+    "public_access",
+    "collision",
+    "navmesh",
+    "chair_entry_exit",
+    "civilian_combat_boundary",
+    "streaming",
+    "save_load",
+    "vanilla_activity_conflicts"
+  ],
+  "existing_furniture": {
+    "table": {
+      "u": 0.42,
+      "v": 0.715,
+      "direction": {
+        "x": 0.95995448175415,
+        "y": 0.0053442915146445,
+        "z": -0.28010503656366
+      },
+      "hit": true,
+      "distance": 6.4464776144175,
+      "entity": {
+        "proxy_id": "81767",
+        "hash": "2700051256752ULL",
+        "template": "userdata: 0x0297870c0bc8"
+      },
+      "position": {
+        "x": -320.43475341797,
+        "y": 242.9112701416,
+        "z": 213.47198486328
+      },
+      "origin": {
+        "x": -326.62307739258,
+        "y": 242.8768157959,
+        "z": 215.27767944336
+      },
+      "collision_group": "Static",
+      "projection": "native_camera_calibration"
+    },
+    "v_seat_contact": {
+      "u": 0.22,
+      "v": 0.84,
+      "direction": {
+        "x": 0.88682804108109,
+        "y": 0.29785838032817,
+        "z": -0.35329366088363
+      },
+      "hit": true,
+      "distance": 4.9172326101148,
+      "entity": {
+        "proxy_id": "81755",
+        "hash": "2700036385520ULL",
+        "template": "userdata: 0x02977fde33a0"
+      },
+      "position": {
+        "x": -322.26220703125,
+        "y": 244.34143066406,
+        "z": 213.54048156738
+      },
+      "origin": {
+        "x": -326.62295532227,
+        "y": 242.87680053711,
+        "z": 215.27769470215
+      },
+      "collision_group": "Static",
+      "projection": "native_camera_calibration"
+    },
+    "velvet_seat_contact": {
+      "u": 0.49,
+      "v": 0.655,
+      "direction": {
+        "x": 0.96699772634282,
+        "y": -0.11180076751816,
+        "z": -0.2289453769574
+      },
+      "hit": true,
+      "distance": 7.856634616942,
+      "entity": {
+        "proxy_id": "81768",
+        "hash": "2700051257072ULL",
+        "template": "userdata: 0x029636250150"
+      },
+      "position": {
+        "x": -319.0256652832,
+        "y": 241.99847412109,
+        "z": 213.47903442383
+      },
+      "origin": {
+        "x": -326.62301635742,
+        "y": 242.87683105469,
+        "z": 215.27777099609
+      },
+      "collision_group": "Static",
+      "projection": "native_camera_calibration"
+    },
+    "image_id": "image_7986ed9d778c49f98d82de4a327fd054"
+  },
+  "combat_restriction": {
+    "policy": "Disable during combat; restore on victory and leaving encounter area; retry on return",
+    "native_area": "$/03_night_city/c_westbrook/japan_town/wejt_06/wejt_06_a_env_prefabBIW7GOQ/wejt_06_a_subdistrict_prefabDUSR7KA/wejt_06_a_architecture_prefabIRSKIMY/loc_sq017_pachinko_lounge_prefabGY5OPRA/#loc_sq017_pachinko_lounge_gameplay/#loc_sq017_pachinko_lounge_int_area02",
+    "mechanism": "worldInteriorAreaNotifier.setTier2",
+    "runtime_verified": false
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "quest": "vk002",
+  "status": "staged_for_playtest",
+  "actors": {
+    "velvet": {
+      "record": "Character.GhostlineVelvet",
+      "entity": "mod\\velvet-kade\\characters\\velvet\\velvet.ent",
+      "community": "#vk002_com_velvet",
+      "appearance": "ghostline_velvet_default",
+      "voice": "reuse published reference"
+    },
+    "mara": {
+      "community": "#vk002_com_mara",
+      "entry": "mara",
+      "record": "Character.VK002Mara",
+      "entity": "mod\\velvet-kade\\characters\\mara\\mara.ent",
+      "voice": "new design candidate",
+      "presentation": "Series bartender character project",
+      "appearance": "vk002_mara_default"
+    },
+    "latch": {
+      "community": "#vk002_com_latch",
+      "entry": "latch",
+      "record": "Character.VK002Latch",
+      "entity": "mod\\velvet-kade\\characters\\latch\\latch.ent",
+      "voice": "new design candidate",
+      "presentation": "Series identity broker character project; neutral ranged AI with Unity pistol",
+      "appearance": "vk002_latch_default"
+    }
+  },
+  "performance": {
+    "dinner": "Native player and NPC couch workspots aligned to the surveyed rooftop sofas; walking entry/exit and cushion fit require in-game review.",
+    "travel": "Velvet follows V during shared travel, with native attachment to the rooftop lift and release at the destination."
+  },
+  "quest_owned_props": {
+    "relay": "18 cm wall terminal beneath the lounge lift call panel, enabled after surrender or defeat; its recovery file revokes the cached credential",
+    "computer": "Wall-mounted native computer with Afterglow browser and journal-backed files"
+  }
+}

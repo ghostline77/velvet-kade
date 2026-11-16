@@ -1,0 +1,213 @@
+{
+  "sequence_id": "vk001_01",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk001_01_velvet_hello",
+      "string_id": "16980408628996069129",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "V. Thanks for coming.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_hello.wem",
+      "duration_ms": 1600,
+      "beat": "opening",
+      "female_lipsync_animation": "f_EBA687AE9849D709",
+      "male_lipsync_animation": "m_EBA687AE9849D709"
+    },
+    {
+      "key": "vk001_01_v_hello",
+      "string_id": "15175627852896059917",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Said somebody stole your work.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hello_f.wem",
+      "duration_ms": 2320,
+      "beat": "opening",
+      "male_audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hello_m.wem",
+      "female_lipsync_animation": "f_D29AA920D764C20D",
+      "male_lipsync_animation": "m_D29AA920D764C20D"
+    },
+    {
+      "key": "vk001_01_velvet_job",
+      "string_id": "3897210614595280370",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Heartbreaker Protocol. The Claws changed it, started selling copies. I need the prototype and its signing key back. Get those out and I'll make you a clean build.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_job.wem",
+      "duration_ms": 9680,
+      "beat": "opening",
+      "female_lipsync_animation": "f_3615AC67D9D55DF2",
+      "male_lipsync_animation": "m_3615AC67D9D55DF2"
+    },
+    {
+      "key": "vk001_01_v_hack",
+      "string_id": "2827355708979248330",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Heartbreaker. What does it actually do?",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hack_f.wem",
+      "duration_ms": 3520,
+      "beat": "what",
+      "male_audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hack_m.wem",
+      "female_lipsync_animation": "f_273CC9098F617CCA",
+      "male_lipsync_animation": "m_273CC9098F617CCA"
+    },
+    {
+      "key": "vk001_01_velvet_hack",
+      "string_id": "14981997704910797886",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Mine interrupts a conditioning signal. Gives someone a few seconds with their own head clear. Theirs holds them in the loop. They took the cutoff out.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_hack.wem",
+      "duration_ms": 8960,
+      "beat": "what",
+      "female_lipsync_animation": "f_CFEABF88DAECFC3E",
+      "male_lipsync_animation": "m_CFEABF88DAECFC3E"
+    },
+    {
+      "key": "vk001_01_v_recover",
+      "string_id": "12750871977998759661",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Why not wipe their server?",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_recover_f.wem",
+      "duration_ms": 1680,
+      "beat": "recover",
+      "male_audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_recover_m.wem",
+      "female_lipsync_animation": "f_B0F43281C91936ED",
+      "male_lipsync_animation": "m_B0F43281C91936ED"
+    },
+    {
+      "key": "vk001_01_velvet_recover",
+      "string_id": "15538076547907395033",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "The signing key's on it. I need that to revoke their batch. Copy the code and key first. Then we can shut it down.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_recover.wem",
+      "duration_ms": 9840,
+      "beat": "recover",
+      "female_lipsync_animation": "f_D7A2564BCAD91DD9",
+      "male_lipsync_animation": "m_D7A2564BCAD91DD9"
+    },
+    {
+      "key": "vk001_01_v_name",
+      "string_id": "13541029791074301620",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Do you always flirt when you need something fixed?",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_name_f.wem",
+      "duration_ms": 3120,
+      "beat": "flirt",
+      "male_audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_name_m.wem",
+      "female_lipsync_animation": "f_BBEB66D9FDF736B4",
+      "male_lipsync_animation": "m_BBEB66D9FDF736B4"
+    },
+    {
+      "key": "vk001_01_velvet_name",
+      "string_id": "10364372180465013600",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Only when it's urgent.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_name.wem",
+      "duration_ms": 1360,
+      "beat": "flirt",
+      "female_lipsync_animation": "f_8FD5A595D88ED360",
+      "male_lipsync_animation": "m_8FD5A595D88ED360"
+    },
+    {
+      "key": "vk001_01_v_accept",
+      "string_id": "1619376887455519035",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "I'll get it. Show me where.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_accept_f.wem",
+      "duration_ms": 2240,
+      "beat": "accept",
+      "male_audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_accept_m.wem",
+      "female_lipsync_animation": "f_16792EB30643913B",
+      "male_lipsync_animation": "m_16792EB30643913B"
+    },
+    {
+      "key": "vk001_01_velvet_route",
+      "string_id": "18019278892928713928",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Three Claws watching the place. Two access points. First one has the prototype and key. Second one distributes their build. Keep both intact.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_route.wem",
+      "duration_ms": 10000,
+      "beat": "accept",
+      "female_lipsync_animation": "f_FA1156AED1B5C4C8",
+      "male_lipsync_animation": "m_FA1156AED1B5C4C8"
+    },
+    {
+      "key": "vk001_01_velvet_bows",
+      "string_id": "3543934580879065958",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "You'll see little black bows in the interface. Those were there before the Claws got involved.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_bows.wem",
+      "duration_ms": 5200,
+      "beat": "accept",
+      "female_lipsync_animation": "f_312E95B988850366",
+      "male_lipsync_animation": "m_312E95B988850366"
+    },
+    {
+      "key": "vk001_01_v_later",
+      "string_id": "10858545669338369451",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Got something else to finish. I'll come back.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_later_f.wem",
+      "duration_ms": 3120,
+      "beat": "later",
+      "male_audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_later_m.wem",
+      "female_lipsync_animation": "f_96B14DC156450DAB",
+      "male_lipsync_animation": "m_96B14DC156450DAB"
+    },
+    {
+      "key": "vk001_01_velvet_later",
+      "string_id": "8857389735383609999",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "All right. I'll keep watching the relay.",
+      "audio_path": "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_later.wem",
+      "duration_ms": 4240,
+      "beat": "later",
+      "female_lipsync_animation": "f_7AEBC5092EBB328F",
+      "male_lipsync_animation": "m_7AEBC5092EBB328F"
+    }
+  ],
+  "choice_lines": [
+    {
+      "key": "vk001_01_what_short",
+      "string_id": "8731946901268384815",
+      "speaker": "V",
+      "text": "What does it actually do?"
+    },
+    {
+      "key": "vk001_01_recover_short",
+      "string_id": "930735972417493945",
+      "speaker": "V",
+      "text": "Why not wipe their server?"
+    },
+    {
+      "key": "vk001_01_flirt_short",
+      "string_id": "13883883724852417138",
+      "speaker": "V",
+      "text": "Do you always flirt when you need something fixed?"
+    },
+    {
+      "key": "vk001_01_accept_short",
+      "string_id": "8282985316050259525",
+      "speaker": "V",
+      "text": "I'll get it. Show me where."
+    },
+    {
+      "key": "vk001_01_later_short",
+      "string_id": "6575021082164373527",
+      "speaker": "V",
+      "text": "I'll come back."
+    }
+  ]
+}

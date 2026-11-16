@@ -1,0 +1,45 @@
+{
+  "sequence_id": "vk002_11_close_joint",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_11_close_joint_reflection_velvet_01",
+      "string_id": "16282287348914260262",
+      "female_lipsync_animation": "f_E1F64E139ADF0926",
+      "male_lipsync_animation": "f_E1F64E139ADF0926",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Should've shown you the decoy before asking you to come down with me.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_joint_reflection_velvet_01.wem",
+      "duration_ms": 3200,
+      "beat": "reflection"
+    },
+    {
+      "key": "vk002_11_close_joint_reflection_v_02",
+      "string_id": "13085045328909524031",
+      "female_lipsync_animation": "f_B5976B662B895C3F",
+      "male_lipsync_animation": "m_B5976B662B895C3F",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Asked. You showed me.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_joint_reflection_v_02_f.wem",
+      "duration_ms": 2400,
+      "beat": "reflection",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_joint_reflection_v_02_m.wem"
+    },
+    {
+      "key": "vk002_11_close_joint_reflection_velvet_03",
+      "string_id": "16282285149891003840",
+      "female_lipsync_animation": "f_E1F64C139ADF05C0",
+      "male_lipsync_animation": "f_E1F64C139ADF05C0",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Yeah. Next time I'll start there.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_joint_reflection_velvet_03.wem",
+      "duration_ms": 2480,
+      "beat": "reflection"
+    }
+  ],
+  "choice_lines": []
+}

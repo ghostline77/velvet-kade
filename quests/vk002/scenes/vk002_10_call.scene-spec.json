@@ -1,0 +1,64 @@
+{
+  "name": "vk002_10_call",
+  "manifest": "../script/vk002_10_call_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_10_call.scene",
+  "speaker_distance_interruptions": false,
+  "actors": [
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "lipsync": true,
+      "appearance": "default",
+      "record": "Character.Player_Puppet_Base"
+    }
+  ],
+  "spoken_line_order": [],
+  "choice_line_order": [
+    "vk002_call_velvet_action"
+  ],
+  "entry_point": {
+    "name": "start",
+    "node": "start"
+  },
+  "start_node": {
+    "key": "start",
+    "on_start": [
+      {
+        "node": "call"
+      }
+    ]
+  },
+  "sections": [],
+  "choices": [
+    {
+      "key": "call",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0.7
+      },
+      "activation_range": 3,
+      "indication_range": 4,
+      "disable_auto_look_at": true,
+      "options": [
+        {
+          "choice_key": "vk002_call_velvet_action",
+          "caption": "Call Velvet.",
+          "target": "end"
+        }
+      ]
+    }
+  ],
+  "exit_points": [
+    {
+      "name": "call",
+      "node": "end"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "end"
+    }
+  ]
+}

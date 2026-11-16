@@ -1,0 +1,33 @@
+{
+  "sequence_id": "vk002_07_receipt",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_07_receipt_react_v_rewrite_01",
+      "string_id": "1987012166687541372",
+      "speaker": "V",
+      "female_lipsync_animation": "f_1B934909B7CA487C",
+      "male_lipsync_animation": "m_1B934909B7CA487C",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_07_receipt_react_v_rewrite_01_f.wem",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_07_receipt_react_v_rewrite_01_m.wem",
+      "text": "Same reference. Latch rented it. Aster paid.",
+      "addressee": "Velvet",
+      "beat": "react",
+      "duration_ms": 4000
+    },
+    {
+      "key": "vk002_07_receipt_react_velvet_01",
+      "string_id": "16863243548057051600",
+      "female_lipsync_animation": "f_EA0646A962D6A1D0",
+      "male_lipsync_animation": "f_EA0646A962D6A1D0",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Aster's a club. Expensive one. I'd like to know what they think they're buying.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_07_receipt_react_velvet_01.wem",
+      "duration_ms": 5360,
+      "beat": "react"
+    }
+  ],
+  "choice_lines": []
+}

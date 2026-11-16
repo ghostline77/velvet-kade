@@ -1,0 +1,45 @@
+{
+  "sequence_id": "vk002_11_close_refuse",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_11_close_refuse_result_velvet_01",
+      "string_id": "5124679046800608656",
+      "female_lipsync_animation": "f_471E8470FC700D90",
+      "male_lipsync_animation": "f_471E8470FC700D90",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Token's dead. Mara's got the report. Security can deal with Latch.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_refuse_result_velvet_01.wem",
+      "duration_ms": 4800,
+      "beat": "result"
+    },
+    {
+      "key": "vk002_11_close_refuse_result_v_02",
+      "string_id": "17969405500913131973",
+      "female_lipsync_animation": "f_F9602718DAE0A1C5",
+      "male_lipsync_animation": "m_F9602718DAE0A1C5",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Good enough for tonight.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_refuse_result_v_02_f.wem",
+      "duration_ms": 1680,
+      "beat": "result",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_refuse_result_v_02_m.wem"
+    },
+    {
+      "key": "vk002_11_close_refuse_result_velvet_03",
+      "string_id": "5124681245823865078",
+      "female_lipsync_animation": "f_471E8670FC7010F6",
+      "male_lipsync_animation": "f_471E8670FC7010F6",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Yeah. Thanks for staying long enough to find the hole.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_11_close_refuse_result_velvet_03.wem",
+      "duration_ms": 2800,
+      "beat": "result"
+    }
+  ],
+  "choice_lines": []
+}

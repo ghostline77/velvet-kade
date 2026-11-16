@@ -1,0 +1,68 @@
+{
+  "Header": {
+    "WolvenKitVersion": "8.17-compatible",
+    "WKitJsonVersion": "0.0.9",
+    "DataType": "CR2W"
+  },
+  "Data": {
+    "Version": 195,
+    "RootChunk": {
+      "$type": "worldEffect",
+      "cookingPlatform": "PLATFORM_PC",
+      "length": 6.0,
+      "trackRoot": {
+        "HandleId": "0",
+        "Data": {
+          "$type": "effectTrackGroup",
+          "tracks": [
+            {
+              "HandleId": "1",
+              "Data": {
+                "$type": "effectTrack",
+                "items": [
+                  {
+                    "HandleId": "2",
+                    "Data": {
+                      "$type": "effectTrackItemForwardDecal",
+                      "timeBegin": 0.0,
+                      "timeDuration": 6.0,
+                      "ruid": "174500000000000001",
+                      "mesh": {
+                        "DepotPath": {
+                          "$type": "ResourcePath",
+                          "$storage": "string",
+                          "$value": "base\\fx\\_meshes\\primitives\\fx_plane_1x1_vertex_color_1_alpha_1.mesh"
+                        },
+                        "Flags": "Default"
+                      },
+                      "appearance": {"$type": "CName", "$storage": "string", "$value": "default"},
+                      "scale": {
+                        "HandleId": "3",
+                        "Data": {
+                          "$type": "CEvaluatorVectorConst",
+                          "value": {"$type": "Vector4", "X": 1.25, "Y": 1.25, "Z": 1.25, "W": 0.0}
+                        }
+                      },
+                      "additionalRotation": 0.0,
+                      "sizeThreshold": 0.0,
+                      "randomRotation": false,
+                      "randomAppearance": false,
+                      "isAttached": true,
+                      "subUVx": 1,
+                      "subUVy": 1,
+                      "frame": 0,
+                      "fadeInTime": 0.05,
+                      "fadeOutTime": 0.35
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "events": [{"HandleRefId": "2"}],
+      "effectLoops": []
+    }
+  }
+}

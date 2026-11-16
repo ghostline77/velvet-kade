@@ -1,0 +1,11 @@
+work/
+generated/
+dist/
+packed/
+.projectFiles/
+GraphEditorStates/
+custom_refs.txt
+custom_tweaks.txt
+layout.xml
+__pycache__/
+*.pyc

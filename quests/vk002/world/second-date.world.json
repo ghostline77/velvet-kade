@@ -1,0 +1,2084 @@
+{
+  "_note": "Dark Matter playtest staging. Existing rooftop furniture, couch workspots, lounge wall computer and call-panel relay. Native serialization is checked; interaction, navigation and seating require in-game review.",
+  "name": "vk002",
+  "prefab_root": "$/mod/vk002/#vk002_pr_second_date",
+  "block_path": "mod\\vk002\\world\\second_date.streamingblock",
+  "quest_sector_path": "mod\\vk002\\world\\second_date.streamingsector",
+  "always_loaded_sector_path": "mod\\vk002\\world\\always_loaded.streamingsector",
+  "streaming_box": {
+    "padding": 100
+  },
+  "origin": {
+    "yaw": 0,
+    "x": -326.92706298828,
+    "z": 213.9296875,
+    "y": 239.76054382324
+  },
+  "markers": [
+    {
+      "ref": "#vk002_lift_idle_rooftop",
+      "position": {
+        "x": -334.75633719702864,
+        "y": 246.03822162459574,
+        "z": 213.94520568848
+      },
+      "yaw": 215.4
+    },
+    {
+      "ref": "#vk002_lift_idle_lounge",
+      "position": {
+        "x": -335.25474853516,
+        "y": 245.6728515625,
+        "z": 188.92193603516
+      },
+      "yaw": 215.4
+    },
+    {
+      "ref": "#vk002_sm_wait",
+      "sector": "always_loaded",
+      "position": {
+        "x": -346.479,
+        "y": 222.132,
+        "z": 28.094
+      },
+      "yaw": 0,
+      "scene_marker": true
+    },
+    {
+      "ref": "#vk002_mp_rooftop",
+      "sector": "always_loaded",
+      "position": {
+        "x": -326.92706298828,
+        "y": 239.76054382324,
+        "z": 213.9296875
+      },
+      "yaw": 0
+    },
+    {
+      "ref": "#vk002_sm_dinner",
+      "sector": "always_loaded",
+      "position": {
+        "x": -321.90658569336,
+        "y": 242.07919311523,
+        "z": 213.07406616211
+      },
+      "yaw": 0,
+      "scene_marker": true
+    },
+    {
+      "ref": "#vk002_sm_landing",
+      "sector": "always_loaded",
+      "position": {
+        "x": -325.43838500977,
+        "y": 214.66413879395,
+        "z": 188.91801452637
+      },
+      "yaw": 135.95930286667658,
+      "scene_marker": true
+    },
+    {
+      "yaw": 235.40044366222156,
+      "position": {
+        "x": -346.82821655273,
+        "y": 219.5216217041,
+        "z": 192.02868652344
+      },
+      "ref": "#vk002_receipt"
+    },
+    {
+      "yaw": 82.416,
+      "position": {
+        "x": -332.61041259766,
+        "y": 243.45944213867,
+        "z": 213.9296875
+      },
+      "ref": "#vk002_exit"
+    },
+    {
+      "sector": "always_loaded",
+      "yaw": 0,
+      "position": {
+        "x": -327.88272094727,
+        "y": 238.00419616699,
+        "z": 213.92762756348
+      },
+      "ref": "#vk002_sm_bar",
+      "scene_marker": true
+    },
+    {
+      "ref": "#vk002_sm_computer",
+      "position": {
+        "x": -335.18032836914,
+        "y": 210.28913879395,
+        "z": 188.91801452637
+      },
+      "scene_marker": true,
+      "sector": "always_loaded",
+      "yaw": 145.4
+    },
+    {
+      "ref": "#vk002_sm_relay",
+      "position": {
+        "x": -346.11724853516,
+        "y": 221.01705932617,
+        "z": 191.08676147461
+      },
+      "scene_marker": true,
+      "sector": "always_loaded",
+      "yaw": 0
+    }
+  ],
+  "triggers": [
+    {
+      "ref": "#vk002_tr_lift_destination_rooftop",
+      "position": {
+        "x": -327.30844116211,
+        "y": 236.10279846191,
+        "z": 213.42762756348
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "type": "circle",
+        "radius": 0.75,
+        "height": 2,
+        "segments": 16
+      }
+    },
+    {
+      "ref": "#vk002_tr_lift_destination_lounge",
+      "position": {
+        "x": -334.38032836914,
+        "y": 211.43913879395,
+        "z": 188.41801452637
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "type": "circle",
+        "radius": 0.75,
+        "height": 2,
+        "segments": 16
+      }
+    },
+    {
+      "ref": "#vk002_tr_rooftop_setup",
+      "position": {
+        "x": -326.92706298828,
+        "z": 211.9296875,
+        "y": 239.76054382324
+      },
+      "outline": {
+        "type": "circle",
+        "radius": 50,
+        "segments": 16,
+        "height": 8
+      },
+      "notifiers": [
+        "quest"
+      ]
+    },
+    {
+      "ref": "#vk002_tr_rooftop_mood",
+      "position": {
+        "x": -326.92706298828,
+        "z": 211.9296875,
+        "y": 239.76054382324
+      },
+      "outline": {
+        "type": "circle",
+        "radius": 30,
+        "segments": 16,
+        "height": 8
+      },
+      "notifiers": [
+        "quest"
+      ]
+    },
+    {
+      "ref": "#vk002_tr_rooftop_awareness",
+      "position": {
+        "x": -321.90658569336,
+        "z": 211.07406616211,
+        "y": 242.07919311523
+      },
+      "outline": {
+        "type": "circle",
+        "radius": 8,
+        "segments": 16,
+        "height": 8
+      },
+      "notifiers": [
+        "quest"
+      ]
+    },
+    {
+      "ref": "#vk002_tr_rooftop_engage",
+      "position": {
+        "x": -321.90658569336,
+        "z": 211.07406616211,
+        "y": 242.07919311523
+      },
+      "outline": {
+        "type": "circle",
+        "radius": 4,
+        "segments": 16,
+        "height": 8
+      },
+      "notifiers": [
+        "quest"
+      ]
+    },
+    {
+      "ref": "#vk002_tr_rooftop_retention",
+      "position": {
+        "x": -326.92706298828,
+        "z": 211.9296875,
+        "y": 239.76054382324
+      },
+      "outline": {
+        "type": "circle",
+        "radius": 65,
+        "segments": 16,
+        "height": 8
+      },
+      "notifiers": [
+        "quest"
+      ]
+    },
+    {
+      "ref": "#vk002_tr_landing_setup",
+      "position": {
+        "x": -325.43838500977,
+        "z": 186.91801452637,
+        "y": 214.66413879395
+      },
+      "outline": {
+        "type": "circle",
+        "radius": 20,
+        "segments": 16,
+        "height": 8
+      },
+      "notifiers": [
+        "quest"
+      ]
+    },
+    {
+      "ref": "#vk002_tr_landing_engage",
+      "position": {
+        "x": -325.43838500977,
+        "z": 186.91801452637,
+        "y": 214.66413879395
+      },
+      "outline": {
+        "type": "circle",
+        "radius": 5,
+        "segments": 16,
+        "height": 8
+      },
+      "notifiers": [
+        "quest"
+      ]
+    },
+    {
+      "ref": "#vk002_tr_bar_engage",
+      "position": {
+        "z": 212.92762756348,
+        "x": -327.30844116211,
+        "y": 236.10279846191
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "radius": 5,
+        "height": 6,
+        "segments": 16,
+        "type": "circle"
+      }
+    },
+    {
+      "ref": "#vk002_tr_computer_engage",
+      "position": {
+        "z": 187.91801452637,
+        "x": -335.18032836914,
+        "y": 210.28913879395
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "radius": 4.5,
+        "height": 6,
+        "segments": 16,
+        "type": "circle"
+      }
+    },
+    {
+      "ref": "#vk002_tr_rooftop_lift_player_board",
+      "position": {
+        "x": -334.5959777832,
+        "y": 246.44578552246,
+        "z": 213.44520568848
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "type": "circle",
+        "radius": 2.5,
+        "height": 3,
+        "segments": 16
+      }
+    },
+    {
+      "ref": "#vk002_tr_rooftop_lift_board",
+      "position": {
+        "x": -334.30633719702865,
+        "y": 246.03822162459574,
+        "z": 213.44520568848
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "type": "circle",
+        "radius": 1,
+        "height": 3,
+        "segments": 16
+      }
+    },
+    {
+      "ref": "#vk002_tr_lounge_lift_player_board",
+      "position": {
+        "x": -334.80474853516,
+        "y": 245.6728515625,
+        "z": 188.42193603516
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "type": "circle",
+        "radius": 2.5,
+        "height": 3,
+        "segments": 16
+      }
+    },
+    {
+      "ref": "#vk002_tr_lounge_lift_board",
+      "position": {
+        "x": -334.80474853516,
+        "y": 245.6728515625,
+        "z": 188.42193603516
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "type": "circle",
+        "radius": 1,
+        "height": 3,
+        "segments": 16
+      }
+    },
+    {
+      "ref": "#vk002_tr_relay_engage",
+      "position": {
+        "z": 190.08676147461,
+        "x": -346.11724853516,
+        "y": 221.01705932617
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "radius": 2.5,
+        "height": 6,
+        "segments": 16,
+        "type": "circle"
+      }
+    },
+    {
+      "ref": "#vk002_tr_lounge_setup",
+      "position": {
+        "z": 187.91801452637,
+        "x": -335.18032836914,
+        "y": 210.28913879395
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "radius": 35,
+        "height": 6,
+        "segments": 16,
+        "type": "circle"
+      }
+    },
+    {
+      "ref": "#vk002_tr_lift_destination_landing",
+      "position": {
+        "x": -326.70849609375,
+        "y": 215.42710876465,
+        "z": 188.41801452637
+      },
+      "notifiers": [
+        "quest"
+      ],
+      "outline": {
+        "type": "circle",
+        "radius": 0.75,
+        "height": 2,
+        "segments": 16
+      }
+    }
+  ],
+  "communities": [
+    {
+      "active_on_start": 0,
+      "ref": "#vk002_com_velvet",
+      "appearance": "ghostline_velvet_default",
+      "character": "Character.GhostlineVelvet",
+      "entry": "velvet",
+      "spot": {
+        "yaw": 45.875940947661,
+        "position": {
+          "x": -327.30844116211,
+          "y": 236.10279846191,
+          "z": 213.92762756348
+        },
+        "ref": "#vk002_spot_velvet",
+        "workspot": "base\\workspots\\common\\ground\\generic__stand_ground__stand_around__07.workspot",
+        "is_workspot_infinite": true
+      }
+    },
+    {
+      "active_on_start": 0,
+      "ref": "#vk002_com_mara",
+      "appearance": "vk002_mara_default",
+      "character": "Character.VK002Mara",
+      "entry": "mara",
+      "spot": {
+        "yaw": 350.10941670402883,
+        "position": {
+          "x": -328.77322387695,
+          "y": 235.18827819824,
+          "z": 213.92762756348
+        },
+        "ref": "#vk002_spot_mara",
+        "workspot": "base\\workspots\\bar\\bar\\generic__stand_bar__stand_around__01.workspot",
+        "is_workspot_infinite": true
+      }
+    },
+    {
+      "active_on_start": 0,
+      "ref": "#vk002_com_latch",
+      "appearance": "vk002_latch_default",
+      "character": "Character.VK002Latch",
+      "entry": "latch",
+      "spot": {
+        "yaw": 315.9593028666766,
+        "position": {
+          "x": -328.08206176758,
+          "y": 211.93041992188,
+          "z": 188.91801452637
+        },
+        "ref": "#vk002_spot_latch",
+        "workspot": "base\\workspots\\common\\ground\\generic__stand_ground__stand_around__07.workspot",
+        "is_workspot_infinite": true
+      }
+    }
+  ],
+  "ai_spots": [
+    {
+      "yaw": 54.09894245322755,
+      "position": {
+        "x": -319.26867452837,
+        "y": 242.17439031353,
+        "z": 213.07406616211
+      },
+      "ref": "#vk002_seat_velvet",
+      "workspot": "base\\workspots\\common\\couch\\generic__sit_couch__sit_around__01.workspot",
+      "is_workspot_infinite": true
+    },
+    {
+      "yaw": 234.09894245322752,
+      "position": {
+        "x": -321.40200805664,
+        "y": 243.45643615723,
+        "z": 213.07406616211
+      },
+      "ref": "#vk002_seat_v",
+      "workspot": "base\\workspots\\player\\couch\\player__sit_couch__talk__01.workspot",
+      "is_workspot_infinite": true
+    },
+    {
+      "yaw": 158.55415892454505,
+      "position": {
+        "x": -326.70849609375,
+        "y": 215.42710876465,
+        "z": 188.91801452637
+      },
+      "ref": "#vk002_spot_velvet_landing",
+      "workspot": "base\\dependencies\\workspots\\common\\ground\\dep__master_generic__stand_ground__wait_nervous__03.workspot",
+      "is_workspot_infinite": true
+    },
+    {
+      "ref": "#vk002_spot_velvet_computer",
+      "position": {
+        "z": 188.91801452637,
+        "x": -334.38032836914,
+        "y": 211.43913879395
+      },
+      "workspot": "base\\dependencies\\workspots\\common\\ground\\dep__master_generic__stand_ground__wait_nervous__03.workspot",
+      "yaw": 145.4,
+      "is_workspot_infinite": true
+    },
+    {
+      "ref": "#vk002_spot_velvet_relay",
+      "position": {
+        "x": -346.6845703125,
+        "y": 221.22036743164,
+        "z": 191.08676147461
+      },
+      "workspot": "base\\dependencies\\workspots\\common\\ground\\dep__master_generic__stand_ground__wait_nervous__03.workspot",
+      "yaw": 145.4,
+      "is_workspot_infinite": true
+    }
+  ],
+  "splines": [
+    {
+      "ref": "#vk002_spl_bar_to_rooftop_lift",
+      "position": {
+        "x": -327.30844116211,
+        "y": 236.10279846191,
+        "z": 213.92762756348
+      },
+      "points": [
+        {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              -0.7810063988077142,
+              1.950352639897119,
+              0.006144205728020324
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -2.3430191964231426,
+            5.851057919691357,
+            0.018432617184060973
+          ],
+          "tangents": [
+            [
+              0.7810063988077142,
+              -1.950352639897119,
+              -0.006144205728020324
+            ],
+            [
+              -0.18422279107382036,
+              0.14096552935600484,
+              -0.019687997177243233
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -3.922612781499083,
+            7.463652124860545,
+            -0.002593994144064027
+          ],
+          "tangents": [
+            [
+              0.7696797942940738,
+              -0.4871780464264907,
+              -0.0017757206223905087
+            ],
+            [
+              -0.5880794889087482,
+              0.3722319465928132,
+              0.0013567523565143347
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -5.5892322327661645,
+            7.934687389956963,
+            0.0019226074184359732
+          ],
+          "tangents": [
+            [
+              0.9997628140164784,
+              -0.02178276411175334,
+              0
+            ],
+            [
+              -0.46955460071749816,
+              0.6669119242429206,
+              0.005218505860521343
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -6.997896034918659,
+            9.935423162685725,
+            0.017578125
+          ],
+          "tangents": [
+            [
+              0.46955460071749816,
+              -0.6669119242429206,
+              -0.005218505860521343
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        }
+      ]
+    },
+    {
+      "ref": "#vk002_spl_rooftop_lift_to_bar",
+      "position": {
+        "x": -327.30844116211,
+        "y": 236.10279846191,
+        "z": 213.92762756348
+      },
+      "points": [
+        {
+          "position": [
+            -6.997896034918659,
+            9.935423162685725,
+            0.017578125
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.46955460071749816,
+              -0.6669119242429206,
+              -0.005218505860521343
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -5.5892322327661645,
+            7.934687389956963,
+            0.0019226074184359732
+          ],
+          "tangents": [
+            [
+              -0.46955460071749816,
+              0.6669119242429206,
+              0.005218505860521343
+            ],
+            [
+              0.9997628140164784,
+              -0.02178276411175334,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -3.922612781499083,
+            7.463652124860545,
+            -0.002593994144064027
+          ],
+          "tangents": [
+            [
+              -0.5880794889087482,
+              0.3722319465928132,
+              0.0013567523565143347
+            ],
+            [
+              0.7696797942940738,
+              -0.4871780464264907,
+              -0.0017757206223905087
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -2.3430191964231426,
+            5.851057919691357,
+            0.018432617184060973
+          ],
+          "tangents": [
+            [
+              -0.18422279107382036,
+              0.14096552935600484,
+              -0.019687997177243233
+            ],
+            [
+              0.7810063988077142,
+              -1.950352639897119,
+              -0.006144205728020324
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "tangents": [
+            [
+              -0.7810063988077142,
+              1.950352639897119,
+              0.006144205728020324
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        }
+      ]
+    },
+    {
+      "ref": "#vk002_spl_computer_to_lounge_lift",
+      "position": {
+        "x": -334.55169677734,
+        "y": 245.14410400391,
+        "z": 188.92193603516
+      },
+      "points": [
+        {
+          "position": [
+            0.17136840820000998,
+            -33.704965209959994,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            0.3053283691399997,
+            -33.66375732422,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            0.672088623039997,
+            -33.46002197266,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            4.222534179679997,
+            -31.488189697270002,
+            0.04916381836000028
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            7.73959350586,
+            -29.534912109380002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            6.6179809570299994,
+            -25.6354675293,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.8540649413999972,
+            -24.194427490240002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.7982177734299967,
+            -22.55697631836,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            1.487884521479998,
+            -20.09132385254,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -0.7554321289100017,
+            -17.854110717780003,
+            0.07135009764999722
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -0.10784912110000278,
+            -16.324996948250003,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            1.8318786621100003,
+            -11.74481201172,
+            -0.001678466800001388
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            3.430267333979998,
+            -7.970245361330001,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            5.0033264160099975,
+            -4.255889892580001,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            3.933319091789997,
+            -2.672927856450002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.000701904289997,
+            -1.3596343994200026,
+            0.0005645751899976403
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        }
+      ]
+    },
+    {
+      "ref": "#vk002_spl_lounge_lift_to_landing",
+      "position": {
+        "x": -334.55169677734,
+        "y": 245.14410400391,
+        "z": 188.92193603516
+      },
+      "points": [
+        {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.000701904289997,
+            -1.3596343994200026,
+            0.0005645751899976403
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            3.933319091789997,
+            -2.672927856450002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            5.0033264160099975,
+            -4.255889892580001,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            3.430267333979998,
+            -7.970245361330001,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            1.8318786621100003,
+            -11.74481201172,
+            -0.001678466800001388
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -0.10784912110000278,
+            -16.324996948250003,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -0.7554321289100017,
+            -17.854110717780003,
+            0.07135009764999722
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            1.487884521479998,
+            -20.09132385254,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.7982177734299967,
+            -22.55697631836,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.8540649413999972,
+            -24.194427490240002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            6.6179809570299994,
+            -25.6354675293,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            7.73959350586,
+            -29.534912109380002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            7.843200683589998,
+            -29.71699523926,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        }
+      ]
+    },
+    {
+      "ref": "#vk002_spl_lounge_lift_to_computer",
+      "position": {
+        "x": -334.55169677734,
+        "y": 245.14410400391,
+        "z": 188.92193603516
+      },
+      "points": [
+        {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.000701904289997,
+            -1.3596343994200026,
+            0.0005645751899976403
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            3.933319091789997,
+            -2.672927856450002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            5.0033264160099975,
+            -4.255889892580001,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            3.430267333979998,
+            -7.970245361330001,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            1.8318786621100003,
+            -11.74481201172,
+            -0.001678466800001388
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -0.10784912110000278,
+            -16.324996948250003,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            -0.7554321289100017,
+            -17.854110717780003,
+            0.07135009764999722
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            1.487884521479998,
+            -20.09132385254,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.7982177734299967,
+            -22.55697631836,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.8540649413999972,
+            -24.194427490240002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            6.6179809570299994,
+            -25.6354675293,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            7.73959350586,
+            -29.534912109380002,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            4.222534179679997,
+            -31.488189697270002,
+            0.04916381836000028
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            0.672088623039997,
+            -33.46002197266,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            0.3053283691399997,
+            -33.66375732422,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            0.17136840820000998,
+            -33.704965209959994,
+            -0.003921508790000416
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        }
+      ]
+    },
+    {
+      "ref": "#vk002_spl_relay_to_lounge_lift",
+      "position": {
+        "x": -346.6845703125,
+        "y": 221.22036743164,
+        "z": 191.08676147461
+      },
+      "points": [
+        {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tangents": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.45109049478999924,
+              0.25658671061333393,
+              -0.06334431965999936
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            1.3532714843699978,
+            0.7697601318400018,
+            -0.19003295897999806
+          ],
+          "tangents": [
+            [
+              -0.45109049478999924,
+              -0.25658671061333393,
+              0.06334431965999936
+            ],
+            [
+              0.48465983073000035,
+              0.6427764892566662,
+              -0.22020467122666787
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            2.807250976559999,
+            2.6980895996100003,
+            -0.8506469726600017
+          ],
+          "tangents": [
+            [
+              -0.48465983073000035,
+              -0.6427764892566662,
+              0.22020467122666787
+            ],
+            [
+              0.5304667154966675,
+              0.7036336263033339,
+              -0.4393666585266658
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            4.398651123050001,
+            4.808990478520002,
+            -2.168746948239999
+          ],
+          "tangents": [
+            [
+              -0.5304667154966675,
+              -0.7036336263033339,
+              0.4393666585266658
+            ],
+            [
+              1.088989257809999,
+              0.7227376302066659,
+              0.0007476806633330094
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            7.665618896479998,
+            6.97720336914,
+            -2.16650390625
+          ],
+          "tangents": [
+            [
+              -1.088989257809999,
+              -0.7227376302066659,
+              -0.0007476806633330094
+            ],
+            [
+              0.8245340983100012,
+              1.0937449137366666,
+              -0.0007476806633330094
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            10.139221191410002,
+            10.25843811035,
+            -2.168746948239999
+          ],
+          "tangents": [
+            [
+              -0.8245340983100012,
+              -1.0937449137366666,
+              0.0007476806633330094
+            ],
+            [
+              1.1080627441399997,
+              1.469767252603333,
+              0.0007476806633330094
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            13.46340942383,
+            14.667739868159998,
+            -2.16650390625
+          ],
+          "tangents": [
+            [
+              -1.1080627441399997,
+              -1.469767252603333,
+              -0.0007476806633330094
+            ],
+            [
+              0.6363830566399997,
+              0.8441467285166672,
+              -0.0007476806633330094
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            15.37255859375,
+            17.20018005371,
+            -2.168746948239999
+          ],
+          "tangents": [
+            [
+              -0.6363830566399997,
+              -0.8441467285166672,
+              0.0007476806633330094
+            ],
+            [
+              0.48016357422000056,
+              0.6368865966800001,
+              0.0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            16.81304931641,
+            19.11083984375,
+            -2.168746948239999
+          ],
+          "tangents": [
+            [
+              -0.48016357422000056,
+              -0.6368865966800001,
+              0.0
+            ],
+            [
+              -0.6933288574233339,
+              0.9565734863300008,
+              0.0014953613266660188
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            14.73306274414,
+            21.980560302740002,
+            -2.164260864260001
+          ],
+          "tangents": [
+            [
+              0.6933288574233339,
+              -0.9565734863300008,
+              -0.0014953613266660188
+            ],
+            [
+              -0.7099914550766661,
+              0.9425354003899997,
+              -0.00018819172999921344
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            12.603088378910002,
+            24.80816650391,
+            -2.1648254394499986
+          ],
+          "tangents": [
+            [
+              0.7099914550766661,
+              -0.9425354003899997,
+              0.00018819172999921344
+            ],
+            [
+              -0.3910888671899973,
+              -0.11856079101666712,
+              0.0
+            ]
+          ],
+          "automatic_tangents": false
+        },
+        {
+          "position": [
+            11.42982177734001,
+            24.45248413086,
+            -2.1648254394499986
+          ],
+          "tangents": [
+            [
+              0.3910888671899973,
+              0.11856079101666712,
+              0.0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "automatic_tangents": false
+        }
+      ]
+    }
+  ],
+  "entities": [],
+  "devices": [
+    {
+      "yaw": 145.40169694476134,
+      "kind": "computer",
+      "position": {
+        "x": -336.1434921227058,
+        "y": 210.447713219475,
+        "z": 190.31801452637
+      },
+      "buffer_id": 1,
+      "starting_page": "NETdir://ncity.afterglow.pub/booking/sunset-2",
+      "ref": "#vk002_computer",
+      "initial_state": "OFF",
+      "documents": [
+        {
+          "read_fact": "vk002_log_read",
+          "title": "Venue maintenance / 21:14",
+          "journal_entry": "onscreens/emails/quests/minor_quest/vk002/terminal/service_log",
+          "name": "service_log",
+          "text": "SERVICE LIFT / ACCESS REVIEW\n\n21:14  Temporary relay registered.\n       Booking reference: SUNSET-2\n\nContractor account: EXPIRED\nGuest-contact export: COMPLETED\nReservation message cache: COPIED\nContact-thread excerpt: INCLUDED\n\nNo corresponding service ticket.\n\nCamera review:\nCourier secured an external unit beneath the call panel.\nStill attached to this record.\n\nCamera clock checked against till receipt.\nOffset: +00:00\n\nAccount requires removal from booking-system access list."
+        },
+        {
+          "read_fact": "vk002_receipt_read",
+          "title": "Courier receipt",
+          "journal_entry": "onscreens/emails/quests/minor_quest/vk002/terminal/receipt",
+          "name": "receipt",
+          "text": "RELAY HIRE / SUNSET-2\n\nOperator: LATCH\nClient account: ASTER\nCost centre: RETENTION / OUTREACH\n\nHire fee: PAID\nCredential collection: PENDING\n\nOn completion:\nRevoke venue token.\nClear local message cache.\n\nEquipment remains billable until returned."
+        }
+      ],
+      "entity": "base\\gameplay\\devices\\masters\\computers\\computer_1.ent",
+      "appearance": "computer_computer_1",
+      "controller_component_ids": [
+        "1131680419258347532"
+      ],
+      "starting_menu": "FILES",
+      "has_personal_link_slot": false
+    },
+    {
+      "buffer_id": 2,
+      "initial_state": "OFF",
+      "ref": "#vk002_lift_relay",
+      "documents": [
+        {
+          "read_fact": "vk002_relay_recovered",
+          "title": "Relay audit / SUNSET-2",
+          "journal_entry": "onscreens/emails/quests/minor_quest/vk002/terminal/relay_receipt",
+          "name": "relay_receipt",
+          "text": "AUDIT EXPORT / SUNSET-2\n\nClient account: ASTER\nCost centre: RETENTION / OUTREACH\nHire fee: SETTLED\n\nCredential request received.\nPayload contains no signing key.\n\nOn audit collection:\nInvalidate venue token.\nPurge cached sender credentials.\n\nBilling record retained."
+        }
+      ],
+      "yaw": 235.40044366222156,
+      "position": {
+        "z": 192.02868652344,
+        "x": -346.81935828973945,
+        "y": 219.5344627000423
+      },
+      "kind": "computer",
+      "entity": "base\\gameplay\\devices\\masters\\computers\\computer_1.ent",
+      "appearance": "computer_computer_1",
+      "controller_component_ids": [
+        "1131680419258347532"
+      ],
+      "node_data": {
+        "scale_y": 0.18,
+        "scale_x": 0.18,
+        "scale_z": 0.18
+      }
+    }
+  ]
+}

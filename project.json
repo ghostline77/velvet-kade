@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "velvet-kade",
+  "depot_prefixes": [
+    "mod/vk001/",
+    "mod/velvet_crash/",
+    "mod/vk002/",
+    "mod/vk003/",
+    "mod/vk004/",
+    "mod/vk005/",
+    "mod/vk006/",
+    "mod/vk007/",
+    "mod/velvet-kade/characters/"
+  ],
+  "dependencies": []
+}

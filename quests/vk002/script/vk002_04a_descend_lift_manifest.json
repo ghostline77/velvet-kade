@@ -1,0 +1,131 @@
+{
+  "sequence_id": "vk002_04a_descend_lift",
+  "spoken_lines": [
+    {
+      "key": "vk002_05_log_first_react_velvet_01",
+      "string_id": "15716160067308000733",
+      "female_lipsync_animation": "f_DA1B04503D1295DD",
+      "male_lipsync_animation": "f_DA1B04503D1295DD",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Message cache. That's where they got it.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_velvet_01.wem",
+      "duration_ms": 3840,
+      "beat": "react"
+    },
+    {
+      "key": "vk002_05_log_first_react_v_02",
+      "string_id": "16384257518491045990",
+      "female_lipsync_animation": "f_E3609367D22E9066",
+      "male_lipsync_animation": "m_E3609367D22E9066",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Expired contractor account. Still let them in.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_v_02_f.wem",
+      "duration_ms": 3440,
+      "beat": "react",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_v_02_m.wem"
+    },
+    {
+      "key": "vk002_05_log_first_react_velvet_03",
+      "string_id": "15716157868284744311",
+      "female_lipsync_animation": "f_DA1B02503D129277",
+      "male_lipsync_animation": "f_DA1B02503D129277",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Terminal kept part of our thread with the reservation. They copied it, put your name on the sender. Sent it through that relay.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_05_log_first_react_velvet_03.wem",
+      "duration_ms": 7040,
+      "beat": "react"
+    },
+    {
+      "key": "vk002_06_profile_first_react_v_01",
+      "string_id": "585032121971217981",
+      "female_lipsync_animation": "f_081E739D8449963D",
+      "male_lipsync_animation": "m_081E739D8449963D",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Discreet mercenary. They leave out the shooting?",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_06_profile_first_react_v_01_f.wem",
+      "duration_ms": 3520,
+      "beat": "react",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_06_profile_first_react_v_01_m.wem"
+    },
+    {
+      "key": "vk002_06_profile_first_react_velvet_02",
+      "string_id": "7923801707448801850",
+      "female_lipsync_animation": "f_6DF6FFABBB1E9A3A",
+      "male_lipsync_animation": "f_6DF6FFABBB1E9A3A",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Trying to get a booking, V.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_06_profile_first_react_velvet_02.wem",
+      "duration_ms": 1920,
+      "beat": "react"
+    },
+    {
+      "key": "vk002_06_profile_first_react_v_03",
+      "string_id": "585029922947961559",
+      "female_lipsync_animation": "f_081E719D844992D7",
+      "male_lipsync_animation": "m_081E719D844992D7",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "Seems pretty personal for an advert.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_06_profile_first_react_v_03_f.wem",
+      "duration_ms": 2080,
+      "beat": "react",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_06_profile_first_react_v_03_m.wem"
+    },
+    {
+      "key": "vk002_06_profile_first_react_velvet_04",
+      "string_id": "7923795110379032584",
+      "female_lipsync_animation": "f_6DF6F9ABBB1E9008",
+      "male_lipsync_animation": "f_6DF6F9ABBB1E9008",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "They knew where I'd be tonight. That's the part I'm worried about.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_06_profile_first_react_velvet_04.wem",
+      "duration_ms": 4000,
+      "beat": "react"
+    },
+    {
+      "key": "vk002_06_profile_first_react_velvet_05",
+      "string_id": "7923796209890660795",
+      "female_lipsync_animation": "f_6DF6FAABBB1E91BB",
+      "male_lipsync_animation": "f_6DF6FAABBB1E91BB",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Check SUNSET-2 against the courier receipt.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_06_profile_first_react_velvet_05.wem",
+      "duration_ms": 2800,
+      "beat": "react"
+    },
+    {
+      "key": "vk002_07_receipt_react_v_rewrite_01",
+      "string_id": "1987012166687541372",
+      "speaker": "V",
+      "female_lipsync_animation": "f_1B934909B7CA487C",
+      "male_lipsync_animation": "m_1B934909B7CA487C",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_07_receipt_react_v_rewrite_01_f.wem",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_07_receipt_react_v_rewrite_01_m.wem",
+      "text": "Same reference. Latch rented it. Aster paid.",
+      "addressee": "Velvet",
+      "beat": "react",
+      "duration_ms": 4000
+    },
+    {
+      "key": "vk002_07_receipt_react_velvet_01",
+      "string_id": "16863243548057051600",
+      "female_lipsync_animation": "f_EA0646A962D6A1D0",
+      "male_lipsync_animation": "f_EA0646A962D6A1D0",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Aster's a club. Expensive one. I'd like to know what they think they're buying.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_07_receipt_react_velvet_01.wem",
+      "duration_ms": 5360,
+      "beat": "react"
+    }
+  ],
+  "choices": [],
+  "runtime_status": "generated_audio_staged_for_listening_review"
+}

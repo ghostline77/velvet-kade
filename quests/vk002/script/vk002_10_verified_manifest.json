@@ -1,0 +1,45 @@
+{
+  "sequence_id": "vk002_10_verified",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_10_verified_result_velvet_01",
+      "string_id": "11780675062430547512",
+      "female_lipsync_animation": "f_A37D5D8D7679BE38",
+      "male_lipsync_animation": "f_A37D5D8D7679BE38",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "They tried the dummy. Got nothing. Real key's safe, and the stolen token's dead.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_10_verified_result_velvet_01.wem",
+      "duration_ms": 6480,
+      "beat": "result"
+    },
+    {
+      "key": "vk002_10_verified_result_v_02",
+      "string_id": "1696873604941413421",
+      "female_lipsync_animation": "f_178C818DA344FC2D",
+      "male_lipsync_animation": "m_178C818DA344FC2D",
+      "speaker": "V",
+      "addressee": "Velvet",
+      "text": "What about the profile?",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_10_verified_result_v_02_f.wem",
+      "duration_ms": 1280,
+      "beat": "result",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_10_verified_result_v_02_m.wem"
+    },
+    {
+      "key": "vk002_10_verified_result_velvet_03",
+      "string_id": "11780677261453803934",
+      "female_lipsync_animation": "f_A37D5F8D7679C19E",
+      "male_lipsync_animation": "f_A37D5F8D7679C19E",
+      "speaker": "Velvet",
+      "addressee": "V",
+      "text": "Gone. Kept a copy with the contact details stripped out. Might need it.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_10_verified_result_velvet_03.wem",
+      "duration_ms": 5120,
+      "beat": "result"
+    }
+  ],
+  "choice_lines": []
+}

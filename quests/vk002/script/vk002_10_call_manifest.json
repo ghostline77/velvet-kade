@@ -1,0 +1,11 @@
+{
+  "sequence_id": "vk002_10_call",
+  "spoken_lines": [],
+  "choice_lines": [
+    {
+      "key": "vk002_call_velvet_action",
+      "string_id": "11679957626112039820",
+      "text": "Call Velvet."
+    }
+  ]
+}

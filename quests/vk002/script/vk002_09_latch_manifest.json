@@ -1,0 +1,136 @@
+{
+  "sequence_id": "vk002_09_latch",
+  "delivery": "formal_scene",
+  "runtime_status": "generated_audio_staged_for_listening_review",
+  "spoken_lines": [
+    {
+      "key": "vk002_09_latch_opening_latch_01",
+      "string_id": "15264827565472045829",
+      "female_lipsync_animation": "m_D3D78FCB558D5B05",
+      "male_lipsync_animation": "m_D3D78FCB558D5B05",
+      "speaker": "Latch",
+      "addressee": "V",
+      "text": "You're not supposed to be here.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_opening_latch_01.wem",
+      "duration_ms": 1600,
+      "beat": "opening"
+    },
+    {
+      "key": "vk002_09_latch_opening_v_02",
+      "string_id": "15719886266465951408",
+      "female_lipsync_animation": "f_DA284145963E9EB0",
+      "male_lipsync_animation": "m_DA284145963E9EB0",
+      "speaker": "V",
+      "addressee": "Latch",
+      "text": "You put my name on the invitation.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_opening_v_02_f.wem",
+      "duration_ms": 2640,
+      "beat": "opening",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_opening_v_02_m.wem"
+    },
+    {
+      "key": "vk002_09_latch_opening_latch_03",
+      "string_id": "15264825366448789407",
+      "female_lipsync_animation": "m_D3D78DCB558D579F",
+      "male_lipsync_animation": "m_D3D78DCB558D579F",
+      "speaker": "Latch",
+      "addressee": "V",
+      "text": "Look. Relay's rented. Her signing key's worth more than the fucking box.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_opening_latch_03.wem",
+      "duration_ms": 4640,
+      "beat": "opening"
+    },
+    {
+      "key": "vk002_09_latch_negotiate_v_01",
+      "string_id": "5569348982517988005",
+      "female_lipsync_animation": "f_4D4A4D64552AFAA5",
+      "male_lipsync_animation": "m_4D4A4D64552AFAA5",
+      "speaker": "V",
+      "addressee": "Latch",
+      "text": "Keep your fee. Give me the relay audit and we're done.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_negotiate_v_01_f.wem",
+      "duration_ms": 3520,
+      "beat": "negotiate",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_negotiate_v_01_m.wem"
+    },
+    {
+      "key": "vk002_09_latch_negotiate_latch_02",
+      "string_id": "5175100620495519088",
+      "female_lipsync_animation": "m_47D1A6987189FD70",
+      "male_lipsync_animation": "m_47D1A6987189FD70",
+      "speaker": "Latch",
+      "addressee": "V",
+      "text": "Client paid already. Fine. Take it. I'm not refunding them.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_negotiate_latch_02.wem",
+      "duration_ms": 4880,
+      "beat": "negotiate"
+    },
+    {
+      "key": "vk002_09_latch_expose_v_01",
+      "string_id": "14361572557294018341",
+      "female_lipsync_animation": "f_C74E8E2665821F25",
+      "male_lipsync_animation": "m_C74E8E2665821F25",
+      "speaker": "V",
+      "addressee": "Latch",
+      "text": "Got you on camera. Give me the client and the audit. I'll leave the rest with venue security.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_expose_v_01_f.wem",
+      "duration_ms": 6000,
+      "beat": "expose",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_expose_v_01_m.wem"
+    },
+    {
+      "key": "vk002_09_latch_expose_latch_02",
+      "string_id": "5886948881558907376",
+      "female_lipsync_animation": "m_51B2A4D14033A9F0",
+      "male_lipsync_animation": "m_51B2A4D14033A9F0",
+      "speaker": "Latch",
+      "addressee": "V",
+      "text": "Aster. Account said retention outreach. That's all I got.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_expose_latch_02.wem",
+      "duration_ms": 3840,
+      "beat": "expose"
+    },
+    {
+      "key": "vk002_09_latch_threat_v_01",
+      "string_id": "14309012186727115249",
+      "female_lipsync_animation": "f_C693D2C57C9AE9F1",
+      "male_lipsync_animation": "m_C693D2C57C9AE9F1",
+      "speaker": "V",
+      "addressee": "Latch",
+      "text": "Put the gun down.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_threat_v_01_f.wem",
+      "duration_ms": 1120,
+      "beat": "threat",
+      "male_audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_threat_v_01_m.wem"
+    },
+    {
+      "key": "vk002_09_latch_threat_latch_02",
+      "string_id": "2800323359295568916",
+      "female_lipsync_animation": "m_26DCBF422F0A7C14",
+      "male_lipsync_animation": "m_26DCBF422F0A7C14",
+      "speaker": "Latch",
+      "addressee": "V",
+      "text": "Come take it.",
+      "audio_path": "mod\\vk002\\localization\\en-us\\vo\\vk002_09_latch_threat_latch_02.wem",
+      "duration_ms": 1040,
+      "beat": "threat"
+    }
+  ],
+  "choice_lines": [
+    {
+      "key": "vk002_09_latch_response_choice_01",
+      "string_id": "10547369532069783803",
+      "text": "Keep your fee."
+    },
+    {
+      "key": "vk002_09_latch_response_choice_02",
+      "string_id": "10547370631581412014",
+      "text": "Got you on camera."
+    },
+    {
+      "key": "vk002_09_latch_response_choice_03",
+      "string_id": "10547371731093040225",
+      "text": "Lower the gun."
+    }
+  ]
+}

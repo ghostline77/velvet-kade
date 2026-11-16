@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "quest": "vk002",
+  "status": "candidate_shortlist_no_placement_selected",
+  "runtime_ready": false,
+  "selection_criteria": [
+    "Dinner seating with V/Velvet sightline",
+    "Space for Mara and an added computer",
+    "Walking access plus believable service-lift/relay location",
+    "Ambient NPC/vanilla quest conflicts",
+    "Sunset and night visuals"
+  ],
+  "candidates": [
+    {
+      "id": "hillside_cafe",
+      "name": "Rooftop caf\u00c3\u00a9 overview from hillside",
+      "scout_location_id": "location_b2bc906db6b5409aa7a37d0ab6ada1d0",
+      "scout_viewpoint_id": "viewpoint_c94643d14fe843969ab0ee3dc492e77e",
+      "saved_camera_pose": {
+        "pitch": -0.10650652144416,
+        "yaw": 265.53663316459,
+        "fov": 51.005516052246,
+        "x": -1060.5726318359,
+        "y": 1681.0413818359,
+        "z": 23.001543045044,
+        "roll": -0.00098534320226306
+      },
+      "pose_kind": "active_camera_not_actor_or_floor_position",
+      "image": "converted/game-scout/library/images/image_485c7fbb26854e58be713f576658febb.png",
+      "status": "prior_freefly_capture_player_access_unverified",
+      "adaptation": [
+        "Add Mara's compact bar and computer",
+        "Verify normal player approach and NPC navigation",
+        "Check sunset/night lighting, ambient population and quest ownership"
+      ],
+      "teleport_candidate": {
+        "x": -1060.5927734375,
+        "y": 1681.0422363281,
+        "z": 21.404304504395,
+        "yaw": 265.53663316459,
+        "kind": "recorded_freefly_player_pose_not_validated_ground",
+        "source_image_id": "image_485c7fbb26854e58be713f576658febb"
+      }
+    },
+    {
+      "id": "rancho_terrace",
+      "name": "Yellow columns and outdoor tables",
+      "scout_location_id": "location_9af19bb1885c445cad2b1c6f6231fdba",
+      "scout_viewpoint_id": "viewpoint_eece3dc5013e479988ed5c19fe986e91",
+      "saved_camera_pose": {
+        "pitch": -0.090383910158691,
+        "yaw": 145.00004284304,
+        "fov": 51.005516052246,
+        "x": 130.08422851563,
+        "y": -1172.5278320313,
+        "z": 22.950300216675,
+        "roll": 0.010344022505705
+      },
+      "pose_kind": "active_camera_not_actor_or_floor_position",
+      "image": "converted/game-scout/library/images/image_0a4934326bd643899e66e5ff7d27d3f9.png",
+      "status": "prior_freefly_capture_player_access_unverified",
+      "adaptation": [
+        "Add Mara's compact bar and computer",
+        "Verify normal player approach and NPC navigation",
+        "Check sunset/night lighting, ambient population and quest ownership"
+      ],
+      "teleport_candidate": {
+        "x": 130.09004211426,
+        "y": -1172.5069580078,
+        "z": 21.348808288574,
+        "yaw": 145.00004284304,
+        "kind": "recorded_freefly_player_pose_not_validated_ground",
+        "source_image_id": "image_0a4934326bd643899e66e5ff7d27d3f9"
+      }
+    },
+    {
+      "id": "arroyo_dining_deck",
+      "name": "Raised dining deck front steps",
+      "scout_location_id": "location_2fcd4e97735f4f3ba0d70480cc38292e",
+      "scout_viewpoint_id": "viewpoint_af8e2a4defb54ba28fa3cfaacb151a0a",
+      "saved_camera_pose": {
+        "pitch": -1.4355961572626,
+        "yaw": 144.55720803607,
+        "fov": 51.005516052246,
+        "x": -1054.1782226563,
+        "y": -1228.3394775391,
+        "z": 12.32350063324,
+        "roll": 0.011939663794545
+      },
+      "pose_kind": "active_camera_not_actor_or_floor_position",
+      "image": "converted/game-scout/library/images/image_1c1060f1a0804365a600b8e83e6a5b95.png",
+      "status": "prior_freefly_capture_player_access_unverified",
+      "adaptation": [
+        "Add Mara's compact bar and computer",
+        "Verify normal player approach and NPC navigation",
+        "Check sunset/night lighting, ambient population and quest ownership"
+      ],
+      "teleport_candidate": {
+        "x": -1054.1688232422,
+        "y": -1228.3184814453,
+        "z": 10.721832275391,
+        "yaw": 144.55720803607,
+        "kind": "recorded_freefly_player_pose_not_validated_ground",
+        "source_image_id": "image_1c1060f1a0804365a600b8e83e6a5b95"
+      }
+    },
+    {
+      "id": "dark_matter",
+      "name": "Dark Matter terrace",
+      "status": "documented_not_scouted_for_vk002",
+      "district": "Japantown, Westbrook",
+      "source": "https://www.cyberpunk.net/en/news/50104/your-trip-to-night-city-best-places-to-eat-drink",
+      "notes": "High-rise terrace; stronger luxury mood. Verify Kerry quest states, access and local ambient ownership.",
+      "saved_camera_pose": null,
+      "teleport_candidate": {
+        "x": -330.6800537109375,
+        "y": 245.9527130126953,
+        "z": 214.450927734375,
+        "yaw": 0,
+        "kind": "indexed_quest_anchor_plus_0.5m_not_live_verified",
+        "provenance": {
+          "feature_id": "feature_ad514735e13026c30552d07815cbac32",
+          "source_sector": "quest_3c9aacfbabb69e4f.streamingsector.json",
+          "node_type": "worldAISpotNode",
+          "debug_name": "{sq017_spwn_player_rooftop}",
+          "x": -330.6800537109375,
+          "y": 245.9527130126953,
+          "z": 213.950927734375
+        }
+      }
+    },
+    {
+      "id": "au_cabanon",
+      "name": "Au Cabanon / Lele Park elevated restaurant",
+      "status": "documented_not_scouted_for_vk002",
+      "district": "Charter Hill, Westbrook",
+      "source": "https://cyberpunk.fandom.com/wiki/Au_Cabanon",
+      "notes": "Elevated restaurant southeast of Lele Park. Candidate for the remembered glass venue, identity and actual roof/terrace geometry unconfirmed. Associated with Spellbound and Family Heirloom.",
+      "saved_camera_pose": null,
+      "teleport_candidate": {
+        "x": -173.97605895996094,
+        "y": -101.5879898071289,
+        "z": 15.588934898376465,
+        "yaw": 0,
+        "kind": "indexed_quest_anchor_plus_0.5m_not_live_verified",
+        "provenance": {
+          "feature_id": "feature_be3143d230f184824e8e54cc11aa9e39",
+          "source_sector": "quest_c681825be1b6a964.streamingsector.json",
+          "node_type": "worldAISpotNode",
+          "debug_name": "{mq015_ws_seller_restaurant}",
+          "x": -173.97605895996094,
+          "y": -101.5879898071289,
+          "z": 15.088934898376465
+        }
+      }
+    },
+    {
+      "id": "stadium_love",
+      "name": "Stadium Love rooftop party area",
+      "status": "documented_not_scouted_for_vk002",
+      "district": "Rancho Coronado, Santo Domingo",
+      "source": "https://www.powerpyx.com/cyberpunk-2077-stadium-love-walkthrough/",
+      "notes": "Rooftop party layout; lower priority due to 6th Street and vanilla side-job ownership.",
+      "saved_camera_pose": null,
+      "teleport_candidate": {
+        "x": 500.7412109375,
+        "y": -2118.956298828125,
+        "z": 27.98000144958496,
+        "yaw": 0,
+        "kind": "indexed_quest_anchor_plus_0.5m_not_live_verified",
+        "provenance": {
+          "feature_id": "feature_f09ed284edbf04b3614e26ac65515d39",
+          "source_sector": "quest_881787b353be7a97.streamingsector.json",
+          "node_type": "worldAISpotNode",
+          "debug_name": "{mq008_ws_6th_comp2_start}",
+          "x": 500.7412109375,
+          "y": -2118.956298828125,
+          "z": 27.48000144958496
+        }
+      }
+    }
+  ],
+  "live_scout_status": "heartbeat_stale_or_incompatible_reload_CET_mod_before_live_control"
+}

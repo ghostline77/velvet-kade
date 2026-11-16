@@ -1,0 +1,93 @@
+{
+  "format": "ghostline-character",
+  "version": 1,
+  "id": "latch",
+  "name": "Latch",
+  "revision": 0,
+  "refit_clothing": false,
+  "template": "male_average",
+  "namespace": "mod\\velvet-kade\\characters\\latch",
+  "catalogue": {
+    "format": "ghostline-items",
+    "version": 1,
+    "sources": {
+      "clothing_source_identity": "08846801c1d03e98a2df42cdd838d0959dcc5e77228e9306d7efb599c5bf6f17",
+      "game_version": "2.31",
+      "language": "en-us",
+      "props_names_file": "usedhashes.kark",
+      "props_prefixes": "[\"base\\\\environment\\\\\",\"ep1\\\\environment\\\\\",\"base\\\\items\\\\\",\"ep1\\\\items\\\\\",\"base\\\\gameplay\\\\devices\\\\\",\"ep1\\\\gameplay\\\\devices\\\\\",\"base\\\\meshes\\\\\",\"ep1\\\\meshes\\\\\",\"base\\\\props\\\\\",\"ep1\\\\props\\\\\",\"base\\\\prefabs\\\\\",\"ep1\\\\prefabs\\\\\"]",
+      "props_source_identity": "08846801c1d03e98a2df42cdd838d0959dcc5e77228e9306d7efb599c5bf6f17",
+      "tweak_names_file": "tweakdbstr.kark",
+      "tweakdb_file": "tweakdb_ep1.bin"
+    },
+    "identity": "9f5ad3e90fdbb33dd10a0102c870bb6a9c04c2ac91a746003afa3e7f031043e6"
+  },
+  "appearances": [
+    {
+      "id": "vk002_latch_default",
+      "name": "default",
+      "choices": {
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#armsCustomizationOptions/4": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#armsCustomizationOptions/4/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#bodyCustomizationOptions/0": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#bodyCustomizationOptions/0/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/144": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/144/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/146": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/146/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/160": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/160/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/291": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/291/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/6": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/6/definitions/0",
+        "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/49": "base/gameplay/gui/fullscreen/main_menu/male_cco.inkcharcustomization#headCustomizationOptions/49/definitions/5"
+      },
+      "equipment": {
+        "Clo_InnerChest": "base\\characters\\garment\\player_equipment\\torso\\t1_079_pma_tshirt__casual.ent#",
+        "Clo_Legs": "base\\characters\\garment\\player_equipment\\legs\\l1_065_pma_pants__pockets.ent#",
+        "Clo_Feet": "base\\characters\\garment\\player_equipment\\feet\\s1_066_pma_boot__bovver.ent#",
+        "Clo_OuterChest": "base\\characters\\garment\\player_equipment\\torso\\t2_064_pma_jacket__t2_player_heavy.ent#"
+      },
+      "shapes": {
+        "eyes": 6,
+        "nose": 15,
+        "mouth": 8,
+        "jaw": 16,
+        "ears": 2
+      },
+      "mesh_overrides": {
+        "base\\characters\\garment\\player_equipment\\torso\\t1_079_tshirt__casual\\t1_079_pma_tshirt__casual.mesh": {
+          "appearance": "black_burn",
+          "chunk_mask": "9223372036854775807"
+        },
+        "base\\characters\\garment\\player_equipment\\legs\\l1_065_pants__pockets\\l1_065_pma_pants__pockets.mesh": {
+          "appearance": "jeans_rugged",
+          "chunk_mask": "9223372036854775807"
+        },
+        "base\\characters\\garment\\player_equipment\\feet\\s1_066_boot__bovver\\s1_066_pma_boot__bovver.mesh": {
+          "appearance": "default",
+          "chunk_mask": "13"
+        },
+        "base\\characters\\garment\\player_equipment\\torso\\t2_064_jacket__t2_player_heavy\\t2_064_pma_jacket__t2_player_heavy.mesh": {
+          "appearance": "black_yellow",
+          "chunk_mask": "9223372036854775807"
+        }
+      },
+      "native_parts": []
+    }
+  ],
+  "active_appearance": "vk002_latch_default",
+  "identity": {
+    "record": "Character.VK002Latch",
+    "display_name": "vk_contact_latch",
+    "voice_tag": "vk002_latch",
+    "affiliation": "Factions.Civilian"
+  },
+  "loadout": [
+    "item:113697797098"
+  ],
+  "ai": {
+    "profile": "combat",
+    "action_map": "Gang.Map",
+    "archetype_data": "ArchetypeData.GenericRangedT1",
+    "attitude_group": "neutral",
+    "reaction_preset": "ReactionPresets.Ganger_Aggressive",
+    "rarity": "NPCRarity.Normal",
+    "power_level": null,
+    "health_multiplier": null
+  }
+}

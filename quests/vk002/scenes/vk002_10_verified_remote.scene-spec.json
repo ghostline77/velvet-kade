@@ -1,0 +1,120 @@
+{
+  "name": "vk002_10_verified_remote",
+  "manifest": "../script/vk002_10_verified_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_10_verified_remote.scene",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "lipsync_animset": "mod\\vk002\\localization\\en-us\\lipsync\\second-date.anims",
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "lipsync": true,
+      "appearance": "ghostline_velvet_default",
+      "entry": "velvet",
+      "community_ref": "#vk002_com_velvet",
+      "voicetag": "5506207259407814236"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "lipsync": true,
+      "appearance": "default",
+      "record": "Character.Player_Puppet_Base"
+    }
+  ],
+  "spoken_line_order": [
+    "vk002_10_verified_result_velvet_01",
+    "vk002_10_verified_result_v_02",
+    "vk002_10_verified_result_velvet_03"
+  ],
+  "choice_line_order": [],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "start_node": {
+    "on_start": [
+      {
+        "node": "result"
+      }
+    ],
+    "key": "entry_start"
+  },
+  "exit_points": [
+    {
+      "name": "resolved",
+      "node": "exit_resolved"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "exit_resolved"
+    }
+  ],
+  "sections": [
+    {
+      "key": "result",
+      "lines": [
+        "vk002_10_verified_result_velvet_01",
+        "vk002_10_verified_result_v_02",
+        "vk002_10_verified_result_velvet_03"
+      ],
+      "on_end": [
+        {
+          "node": "exit_resolved"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 6480
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 0,
+          "duration_ms": 6480
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 6730,
+          "duration_ms": 1280
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 6730,
+          "duration_ms": 1280
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 8260,
+          "duration_ms": 5120
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 8260,
+          "duration_ms": 5120
+        }
+      ]
+    }
+  ],
+  "choices": [],
+  "holocall_speakers": [
+    "velvet"
+  ],
+  "speaker_distance_interruptions": false
+}

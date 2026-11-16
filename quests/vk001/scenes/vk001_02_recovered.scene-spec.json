@@ -1,0 +1,82 @@
+{
+  "name": "vk001_02_recovered",
+  "manifest": "../script/vk001_02_manifest.json",
+  "archive_path": "mod\\vk001\\scenes\\vk001_02_recovered.scene",
+  "exported_datetime": "2026-10-25T00:00:00Z",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "spawn",
+      "record": "Character.GhostlineVelvet",
+      "dynamic_name": "vk001_field_velvet_recovered",
+      "spawn_marker": "#holocall_marker",
+      "appearance": "ghostline_velvet_default",
+      "lipsync": true,
+      "validate_spawn_position": false,
+      "voicetag": "5506207259407814236",
+      "force_max_visibility": true,
+      "always_spawned": true,
+      "keep_alive": false
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "record": "Character.Player_Puppet_Base",
+      "appearance": "default",
+      "lipsync": true
+    }
+  ],
+  "spoken_line_order": [
+    "vk001_02_v_copy"
+  ],
+  "choice_line_order": [],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "exit_points": [
+    {
+      "name": "end",
+      "node": "exit_end"
+    }
+  ],
+  "start_node": {
+    "on_start": [
+      {
+        "node": "field"
+      }
+    ],
+    "key": "entry_start"
+  },
+  "sections": [
+    {
+      "key": "field",
+      "lines": [
+        "vk001_02_v_copy"
+      ],
+      "on_end": [
+        {
+          "node": "exit_end"
+        }
+      ]
+    }
+  ],
+  "choices": [],
+  "quest_nodes": [],
+  "xor_nodes": [],
+  "end_nodes": [
+    {
+      "key": "exit_end"
+    }
+  ],
+  "lipsync_animset": "mod\\vk001\\localization\\en-us\\lipsync\\love-actually.anims"
+}

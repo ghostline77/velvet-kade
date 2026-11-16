@@ -1,0 +1,459 @@
+{
+  "name": "vk002_07a_return_lift",
+  "manifest": "../script/vk002_07a_return_lift_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_07a_return_lift.scene",
+  "speaker_distance_interruptions": false,
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "community_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "appearance": "ghostline_velvet_default",
+      "voicetag": "5506207259407814236",
+      "lipsync": false
+    }
+  ],
+  "spoken_line_order": [],
+  "choice_line_order": [],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "start_node": {
+    "key": "entry_start",
+    "on_start": [
+      {
+        "node": "resume_floor_checkpoint"
+      }
+    ]
+  },
+  "exit_points": [
+    {
+      "name": "arrived",
+      "node": "exit_arrived"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "exit_arrived",
+      "end_type": "NonTerminating"
+    }
+  ],
+  "sections": [],
+  "choices": [],
+  "workspots": [
+    {
+      "key": "cabin_idle",
+      "origin": "#vk002_lift_idle_lounge",
+      "resource": "base\\workspots\\common\\ground\\generic__stand_ground__stand_around__01.workspot"
+    }
+  ],
+  "quest_nodes": [
+    {
+      "key": "release_previous",
+      "kind": "stop_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot_ref": "current",
+      "instant": true,
+      "finish_animation": false,
+      "on_success": []
+    },
+    {
+      "key": "lock_departure",
+      "kind": "device_action",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "action": "SetFloorInactive",
+      "properties": {
+        "floorNumber": {
+          "type": "Int32",
+          "value": 1
+        }
+      },
+      "on_out": [
+        {
+          "node": "cinematic_ai"
+        }
+      ]
+    },
+    {
+      "key": "cinematic_ai",
+      "kind": "puppet_ai",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "ai_tier": "Cinematic",
+      "on_out": [
+        {
+          "node": "walk_to_cabin"
+        }
+      ]
+    },
+    {
+      "key": "walk_to_cabin",
+      "kind": "move_on_spline",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "spline_ref": "#vk002_spl_computer_to_lounge_lift",
+      "reverse": false,
+      "on_out": [
+        {
+          "node": "velvet_boarded"
+        }
+      ],
+      "movement_type": "Run",
+      "catch_up_with_companion": true,
+      "match_player_speed": true
+    },
+    {
+      "key": "cabin_idle",
+      "kind": "use_scene_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot": "cabin_idle",
+      "entry_id": 2,
+      "jump_to_entry": true,
+      "enable_idle_mode": true,
+      "finish_animation": false,
+      "repeat_on_interrupt": false,
+      "on_success": [],
+      "on_work_started": [
+        {
+          "node": "idle_only"
+        },
+        {
+          "node": "attach_velvet"
+        }
+      ]
+    },
+    {
+      "key": "idle_only",
+      "kind": "use_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot_ref": "current",
+      "function": "IdleOnlyMode",
+      "enable_idle_mode": true,
+      "teleport": false,
+      "on_success": []
+    },
+    {
+      "key": "velvet_boarded",
+      "kind": "pause_condition",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "trigger_ref": "#vk002_tr_lounge_lift_board",
+      "on_out": [
+        {
+          "node": "cabin_idle"
+        }
+      ]
+    },
+    {
+      "key": "attach_velvet",
+      "kind": "elevator_attachment",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "elevator_ref": "#sq017_pachinko_lift_lounge",
+      "attach": true,
+      "on_out": [
+        {
+          "node": "player_boarded"
+        }
+      ]
+    },
+    {
+      "key": "player_boarded",
+      "kind": "pause_condition",
+      "trigger_ref": "#vk002_tr_lounge_lift_player_board",
+      "on_out": [
+        {
+          "node": "close_doors"
+        }
+      ]
+    },
+    {
+      "key": "close_doors",
+      "kind": "device_action",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "action": "QuestForceCloseAllDoors",
+      "on_out": [
+        {
+          "node": "enable_destination"
+        }
+      ]
+    },
+    {
+      "key": "enable_destination",
+      "kind": "device_action",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "action": "SetFloorActive",
+      "properties": {
+        "floorNumber": {
+          "type": "Int32",
+          "value": 1
+        }
+      },
+      "on_out": [
+        {
+          "node": "record_departure"
+        }
+      ]
+    },
+    {
+      "key": "travel",
+      "kind": "device_action",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "action": "GoToFloor",
+      "properties": {
+        "floorNumber": {
+          "type": "Int32",
+          "value": 1
+        }
+      },
+      "on_out": [
+        {
+          "node": "disable_source"
+        }
+      ]
+    },
+    {
+      "key": "disable_source",
+      "kind": "device_action",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "action": "SetFloorInactive",
+      "properties": {
+        "floorNumber": {
+          "type": "Int32",
+          "value": 0
+        }
+      },
+      "on_out": [
+        {
+          "node": "await_floor"
+        }
+      ]
+    },
+    {
+      "key": "await_floor",
+      "kind": "device_condition",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "condition": "IsAtFloor",
+      "properties": {
+        "floorNumber": {
+          "type": "Int32",
+          "value": 1
+        }
+      },
+      "on_out": [
+        {
+          "node": "record_floor_arrival"
+        }
+      ]
+    },
+    {
+      "key": "detach_velvet",
+      "kind": "elevator_attachment",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "elevator_ref": "#sq017_pachinko_lift_lounge",
+      "attach": false,
+      "on_out": [
+        {
+          "node": "open_doors"
+        }
+      ]
+    },
+    {
+      "key": "open_doors",
+      "kind": "device_action",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "action": "QuestForceOpenAllDoors",
+      "on_out": [
+        {
+          "node": "enable_source"
+        }
+      ]
+    },
+    {
+      "key": "enable_source",
+      "kind": "device_action",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "action": "SetFloorActive",
+      "properties": {
+        "floorNumber": {
+          "type": "Int32",
+          "value": 0
+        }
+      },
+      "on_out": [
+        {
+          "node": "release_cabin_idle"
+        }
+      ]
+    },
+    {
+      "key": "release_cabin_idle",
+      "kind": "stop_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot_ref": "current",
+      "instant": true,
+      "finish_animation": false,
+      "on_success": [
+        {
+          "node": "walk_from_cabin"
+        }
+      ],
+      "repeat_on_interrupt": false
+    },
+    {
+      "key": "walk_from_cabin",
+      "kind": "move_on_spline",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "spline_ref": "#vk002_spl_rooftop_lift_to_bar",
+      "reverse": false,
+      "on_out": [
+        {
+          "node": "destination_reached"
+        }
+      ],
+      "movement_type": "Run",
+      "catch_up_with_companion": true,
+      "match_player_speed": true
+    },
+    {
+      "key": "destination_reached",
+      "kind": "pause_condition",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "trigger_ref": "#vk002_tr_lift_destination_rooftop",
+      "on_out": [
+        {
+          "node": "destination_idle"
+        }
+      ]
+    },
+    {
+      "key": "destination_idle",
+      "kind": "use_workspot",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "workspot_ref": "#vk002_spot_velvet",
+      "teleport": false,
+      "instant": false,
+      "finish_animation": false,
+      "is_workspot_infinite": true,
+      "enable_idle_mode": true,
+      "repeat_on_interrupt": false,
+      "on_success": [],
+      "on_work_started": [
+        {
+          "node": "exit_arrived"
+        }
+      ]
+    },
+    {
+      "key": "resume_floor_checkpoint",
+      "kind": "fact_condition",
+      "fact": "vk002_07a_return_lift_arrived_floor",
+      "on_true": [
+        {
+          "node": "detach_velvet"
+        }
+      ],
+      "on_false": [
+        {
+          "node": "resume_departure_checkpoint"
+        }
+      ]
+    },
+    {
+      "key": "resume_departure_checkpoint",
+      "kind": "fact_condition",
+      "fact": "vk002_07a_return_lift_departed",
+      "on_true": [
+        {
+          "node": "resume_ride_attach"
+        }
+      ],
+      "on_false": [
+        {
+          "node": "release_previous"
+        },
+        {
+          "node": "lock_departure"
+        }
+      ]
+    },
+    {
+      "key": "record_departure",
+      "kind": "fact",
+      "fact": "vk002_07a_return_lift_departed",
+      "value": 1,
+      "on_out": [
+        {
+          "node": "travel"
+        }
+      ]
+    },
+    {
+      "key": "record_floor_arrival",
+      "kind": "fact",
+      "fact": "vk002_07a_return_lift_arrived_floor",
+      "value": 1,
+      "on_out": [
+        {
+          "node": "detach_velvet"
+        }
+      ]
+    },
+    {
+      "key": "resume_ride_attach",
+      "kind": "elevator_attachment",
+      "entity_ref": "#vk002_com_velvet",
+      "entry": "velvet",
+      "elevator_ref": "#sq017_pachinko_lift_lounge",
+      "attach": true,
+      "on_out": [
+        {
+          "node": "resume_ride_floor"
+        }
+      ]
+    },
+    {
+      "key": "resume_ride_floor",
+      "kind": "device_condition",
+      "device_ref": "#sq017_pachinko_lift_lounge",
+      "controller_class": "LiftControllerPS",
+      "condition": "IsAtFloor",
+      "properties": {
+        "floorNumber": {
+          "type": "Int32",
+          "value": 1
+        }
+      },
+      "snapshot": true,
+      "on_true": [
+        {
+          "node": "record_floor_arrival"
+        }
+      ],
+      "on_false": [
+        {
+          "node": "travel"
+        }
+      ]
+    }
+  ]
+}

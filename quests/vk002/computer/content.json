@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "quest": "vk002",
+  "device": "#vk002_computer",
+  "discovery": "Read the service log in Files, open the forged booking profile through NET, then read the courier receipt in Files.",
+  "preferred_presentation": "files_then_custom_website_then_files",
+  "pages": {
+    "home": {
+      "address": "NETdir://ncity.afterglow.pub",
+      "title": "AFTERGLOW",
+      "subtitle": "An evening worth keeping private.",
+      "body": "Your introduction is ready.\nBooking reference: SUNSET-2",
+      "footer": "Profile supplied by our booking partner. Verification status is shown on the individual profile.",
+      "layout": [
+        {
+          "kind": "rectangle",
+          "name": "Background",
+          "x": 0.0,
+          "y": 0.0,
+          "w": 3138.0,
+          "h": 1200.0,
+          "color": "#291c2e"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkBrand",
+          "text": "afterglow",
+          "x": 137.287,
+          "y": 30.0,
+          "w": 1062.344,
+          "h": 95.833,
+          "size": 77,
+          "color": "#f0e8d6",
+          "font": "italic",
+          "link": "NETdir://ncity.afterglow.pub"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkDiscover",
+          "text": "Discover",
+          "x": 2190.062,
+          "y": 66.667,
+          "w": 326.875,
+          "h": 50.0,
+          "size": 27,
+          "color": "#b9a8b3",
+          "font": "sans",
+          "link": "NETdir://ncity.afterglow.pub"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkBooking",
+          "text": "Your booking  01",
+          "x": 2582.312,
+          "y": 66.667,
+          "w": 490.312,
+          "h": 50.0,
+          "size": 27,
+          "color": "#f0e8d6",
+          "font": "sans",
+          "link": "NETdir://ncity.afterglow.pub/booking/sunset-2"
+        },
+        {
+          "kind": "rectangle",
+          "name": "HeaderRule",
+          "x": 0.0,
+          "y": 145.0,
+          "w": 3138.0,
+          "h": 1.667,
+          "color": "#685064"
+        },
+        {
+          "kind": "text",
+          "name": "TextHeadlineLead",
+          "text": "An evening worth",
+          "x": 137.287,
+          "y": 287.5,
+          "w": 1634.375,
+          "h": 250.0,
+          "size": 98,
+          "color": "#f0e8d6",
+          "font": "serif",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextHeadlineAccent",
+          "text": "keeping private.",
+          "x": 137.287,
+          "y": 541.667,
+          "w": 1683.406,
+          "h": 150.0,
+          "size": 104,
+          "color": "#f49a89",
+          "font": "italic",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextIntroduction",
+          "text": "Your introduction is ready.\nBooking reference: SUNSET-2",
+          "x": 137.287,
+          "y": 712.5,
+          "w": 1274.812,
+          "h": 120.833,
+          "size": 30,
+          "color": "#f0e8d6",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "rectangle",
+          "name": "BookingButton",
+          "x": 137.287,
+          "y": 875.0,
+          "w": 931.594,
+          "h": 83.333,
+          "color": "#f49a89"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkCompanion",
+          "text": "View your companion  >",
+          "x": 191.222,
+          "y": 893.333,
+          "w": 849.875,
+          "h": 56.667,
+          "size": 32,
+          "color": "#291c2e",
+          "font": "sans",
+          "link": "NETdir://ncity.afterglow.pub/booking/sunset-2"
+        },
+        {
+          "kind": "image",
+          "name": "OrbitalHeart",
+          "part": "orbital_heart",
+          "x": 2061.51,
+          "y": 275.0,
+          "w": 616.667,
+          "h": 616.667
+        },
+        {
+          "kind": "rectangle",
+          "name": "BookingRule",
+          "x": 137.287,
+          "y": 1008.333,
+          "w": 2863.425,
+          "h": 1.667,
+          "color": "#685064"
+        },
+        {
+          "kind": "text",
+          "name": "TextReferenceLabel",
+          "text": "BOOKING REFERENCE",
+          "x": 1356.531,
+          "y": 1033.333,
+          "w": 980.625,
+          "h": 33.333,
+          "size": 21,
+          "color": "#b9a8b3",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextReference",
+          "text": "SUNSET-2",
+          "x": 1356.531,
+          "y": 1075.0,
+          "w": 980.625,
+          "h": 62.5,
+          "size": 32,
+          "color": "#f0e8d6",
+          "font": "serif",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextAvailable",
+          "text": "PROFILE AVAILABLE",
+          "x": 2386.188,
+          "y": 1070.833,
+          "w": 621.062,
+          "h": 41.667,
+          "size": 22,
+          "color": "#f49a89",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextDisclaimer",
+          "text": "Profile supplied by our booking partner. Verification status is shown on the individual profile.",
+          "x": 137.287,
+          "y": 1150.0,
+          "w": 2863.425,
+          "h": 45.833,
+          "size": 19,
+          "color": "#b9a8b3",
+          "font": "sans",
+          "link": ""
+        }
+      ]
+    },
+    "profile": {
+      "address": "NETdir://ncity.afterglow.pub/booking/sunset-2",
+      "title": "V / Discreet mercenary",
+      "subtitle": "Premium verification pending",
+      "body": "Interests: Night City sunsets. Netrunning. Exclusive access.\nLooking for: One independent netrunner.\nMeeting reference: SUNSET-2.",
+      "footer": "",
+      "read_fact": "vk002_profile_read",
+      "layout": [
+        {
+          "kind": "rectangle",
+          "name": "Background",
+          "x": 0.0,
+          "y": 0.0,
+          "w": 3138.0,
+          "h": 1200.0,
+          "color": "#291c2e"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkBrand",
+          "text": "afterglow",
+          "x": 137.287,
+          "y": 30.0,
+          "w": 1062.344,
+          "h": 95.833,
+          "size": 77,
+          "color": "#f0e8d6",
+          "font": "italic",
+          "link": "NETdir://ncity.afterglow.pub"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkDiscover",
+          "text": "Discover",
+          "x": 2190.062,
+          "y": 66.667,
+          "w": 326.875,
+          "h": 50.0,
+          "size": 27,
+          "color": "#b9a8b3",
+          "font": "sans",
+          "link": "NETdir://ncity.afterglow.pub"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkBooking",
+          "text": "Your booking  01",
+          "x": 2582.312,
+          "y": 66.667,
+          "w": 490.312,
+          "h": 50.0,
+          "size": 27,
+          "color": "#f49a89",
+          "font": "sans",
+          "link": "NETdir://ncity.afterglow.pub/booking/sunset-2"
+        },
+        {
+          "kind": "rectangle",
+          "name": "HeaderRule",
+          "x": 0.0,
+          "y": 145.0,
+          "w": 3138.0,
+          "h": 1.667,
+          "color": "#685064"
+        },
+        {
+          "kind": "rectangle",
+          "name": "PortraitPanel",
+          "x": 137.287,
+          "y": 204.167,
+          "w": 817.188,
+          "h": 541.667,
+          "color": "#45313e"
+        },
+        {
+          "kind": "image",
+          "name": "AnonymousCompanion",
+          "part": "anonymous_companion",
+          "x": 337.548,
+          "y": 220.833,
+          "w": 416.667,
+          "h": 479.167
+        },
+        {
+          "kind": "text",
+          "name": "TextPortraitInitial",
+          "text": "V",
+          "x": 506.656,
+          "y": 395.833,
+          "w": 163.438,
+          "h": 75.0,
+          "size": 46,
+          "color": "#f0e8d6",
+          "font": "serif",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextPortraitCaption",
+          "text": "Private introductions available.",
+          "x": 183.05,
+          "y": 712.5,
+          "w": 751.812,
+          "h": 41.667,
+          "size": 19,
+          "color": "#f0e8d6",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextCompanionID",
+          "text": "COMPANION / 000V",
+          "x": 137.287,
+          "y": 783.333,
+          "w": 849.875,
+          "h": 41.667,
+          "size": 21,
+          "color": "#b9a8b3",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextPrivate",
+          "text": "PRIVATE PROFILE",
+          "x": 137.287,
+          "y": 833.333,
+          "w": 817.188,
+          "h": 41.667,
+          "size": 21,
+          "color": "#f49a89",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextTitle",
+          "text": "V\nDiscreet mercenary",
+          "x": 1078.688,
+          "y": 266.667,
+          "w": 1944.906,
+          "h": 200.0,
+          "size": 72,
+          "color": "#f0e8d6",
+          "font": "serif",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextVerification",
+          "text": "PREMIUM VERIFICATION PENDING",
+          "x": 1078.688,
+          "y": 491.667,
+          "w": 1895.875,
+          "h": 45.833,
+          "size": 22,
+          "color": "#f49a89",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "rectangle",
+          "name": "ProfileRule",
+          "x": 1078.688,
+          "y": 562.5,
+          "w": 1922.025,
+          "h": 1.667,
+          "color": "#685064"
+        },
+        {
+          "kind": "text",
+          "name": "TextHobbiesLabel",
+          "text": "INTERESTS",
+          "x": 1078.688,
+          "y": 604.167,
+          "w": 318.703,
+          "h": 41.667,
+          "size": 22,
+          "color": "#b9a8b3",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextHobbies",
+          "text": "Night City sunsets\nNetrunning\nExclusive access",
+          "x": 1470.938,
+          "y": 600.0,
+          "w": 1519.969,
+          "h": 150.0,
+          "size": 30,
+          "color": "#f0e8d6",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextLookingLabel",
+          "text": "LOOKING FOR",
+          "x": 1078.688,
+          "y": 775.0,
+          "w": 359.562,
+          "h": 41.667,
+          "size": 22,
+          "color": "#b9a8b3",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextLooking",
+          "text": "One independent netrunner.",
+          "x": 1470.938,
+          "y": 770.833,
+          "w": 1519.969,
+          "h": 75.0,
+          "size": 30,
+          "color": "#f0e8d6",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "rectangle",
+          "name": "MeetingCodePanel",
+          "x": 1078.688,
+          "y": 883.333,
+          "w": 1922.025,
+          "h": 141.667,
+          "color": "#f0e8d6"
+        },
+        {
+          "kind": "text",
+          "name": "TextCodeLabel",
+          "text": "MEETING REFERENCE",
+          "x": 1144.062,
+          "y": 904.167,
+          "w": 1634.375,
+          "h": 37.5,
+          "size": 22,
+          "color": "#291c2e",
+          "font": "sans",
+          "link": ""
+        },
+        {
+          "kind": "text",
+          "name": "TextCode",
+          "text": "SUNSET-2",
+          "x": 1144.062,
+          "y": 950.0,
+          "w": 1716.094,
+          "h": 75.0,
+          "size": 55,
+          "color": "#291c2e",
+          "font": "serif",
+          "link": ""
+        },
+        {
+          "kind": "rectangle",
+          "name": "FooterRule",
+          "x": 137.287,
+          "y": 1075.0,
+          "w": 2863.425,
+          "h": 1.667,
+          "color": "#685064"
+        },
+        {
+          "kind": "text",
+          "name": "TextLinkBack",
+          "text": "< Back to Afterglow",
+          "x": 2271.781,
+          "y": 1108.333,
+          "w": 735.469,
+          "h": 54.167,
+          "size": 25,
+          "color": "#f49a89",
+          "font": "sans",
+          "link": "NETdir://ncity.afterglow.pub"
+        }
+      ]
+    }
+  },
+  "forged_message": "Need you downstairs. Come alone. Bring the signing key. The bows are non-negotiable.",
+  "namespace": "vk002",
+  "site_id": "vk002_afterglow",
+  "depot_root": "mod\\vk002\\ui\\afterglow",
+  "home": "home",
+  "site_name": "Afterglow",
+  "name": "afterglow",
+  "size": [
+    3138,
+    1200
+  ],
+  "atlas": "mod\\vk002\\ui\\afterglow\\afterglow.inkatlas",
+  "icon_part": "orbital_heart",
+  "fonts": {
+    "serif": {
+      "family": "mod\\vk002\\ui\\afterglow\\fonts\\afterglow.inkfontfamily",
+      "style": "Regular"
+    },
+    "italic": {
+      "family": "mod\\vk002\\ui\\afterglow\\fonts\\afterglow.inkfontfamily",
+      "style": "Italic"
+    },
+    "sans": {
+      "family": "base\\gameplay\\gui\\fonts\\arial\\arial.inkfontfamily",
+      "style": "Regular"
+    },
+    "mono": {
+      "family": "base\\gameplay\\gui\\fonts\\arial\\arial.inkfontfamily",
+      "style": "Regular"
+    }
+  },
+  "receipt": {
+    "title": "Courier receipt",
+    "text": "RELAY HIRE / SUNSET-2\n\nOperator: LATCH\nClient account: ASTER\nCost centre: RETENTION / OUTREACH\n\nHire fee: PAID\nCredential collection: PENDING\n\nOn completion:\nRevoke venue token.\nClear local message cache.\n\nEquipment remains billable until returned.",
+    "read_fact": "vk002_receipt_read"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "name": "vk002_04_console",
+  "manifest": "../script/vk002_04_console_manifest.json",
+  "archive_path": "mod\\vk002\\scenes\\vk002_04_console.scene",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "lipsync_animset": "mod\\vk002\\localization\\en-us\\lipsync\\second-date.anims",
+  "actors": [
+    {
+      "key": "mara",
+      "name": "Mara",
+      "kind": "community",
+      "lipsync": true,
+      "appearance": "vk002_mara_default",
+      "entry": "mara",
+      "community_ref": "#vk002_com_mara",
+      "voicetag": "18128934616747059802"
+    },
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "lipsync": true,
+      "appearance": "ghostline_velvet_default",
+      "entry": "velvet",
+      "community_ref": "#vk002_com_velvet",
+      "voicetag": "5506207259407814236"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "lipsync": true,
+      "appearance": "default",
+      "record": "Character.Player_Puppet_Base"
+    }
+  ],
+  "spoken_line_order": [
+    "vk002_03_spoof_mara_mara_01",
+    "vk002_03_spoof_mara_v_02",
+    "vk002_03_spoof_mara_mara_03",
+    "vk002_03_spoof_mara_velvet_04",
+    "vk002_04_console_access_v_01",
+    "vk002_04_console_access_mara_02",
+    "vk002_04_console_access_velvet_03"
+  ],
+  "choice_line_order": [],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "start_node": {
+    "on_start": [
+      {
+        "node": "stand_v"
+      }
+    ],
+    "key": "entry_start"
+  },
+  "exit_points": [
+    {
+      "name": "console_ready",
+      "node": "exit_console_ready"
+    }
+  ],
+  "end_nodes": [
+    {
+      "key": "exit_console_ready"
+    }
+  ],
+  "sections": [
+    {
+      "key": "mara",
+      "lines": [
+        "vk002_03_spoof_mara_mara_01",
+        "vk002_03_spoof_mara_v_02",
+        "vk002_03_spoof_mara_mara_03",
+        "vk002_03_spoof_mara_velvet_04"
+      ],
+      "on_end": [
+        {
+          "node": "access"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "mara",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 3120
+        },
+        {
+          "actor": "v",
+          "target": "mara",
+          "start_ms": 0,
+          "duration_ms": 3120
+        },
+        {
+          "actor": "v",
+          "target": "mara",
+          "start_ms": 3370,
+          "duration_ms": 1200
+        },
+        {
+          "actor": "mara",
+          "target": "v",
+          "start_ms": 3370,
+          "duration_ms": 1200
+        },
+        {
+          "actor": "mara",
+          "target": "v",
+          "start_ms": 4820,
+          "duration_ms": 5520
+        },
+        {
+          "actor": "v",
+          "target": "mara",
+          "start_ms": 4820,
+          "duration_ms": 5520
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 10590,
+          "duration_ms": 4080
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 10590,
+          "duration_ms": 4080
+        }
+      ]
+    },
+    {
+      "key": "access",
+      "lines": [
+        "vk002_04_console_access_v_01",
+        "vk002_04_console_access_mara_02",
+        "vk002_04_console_access_velvet_03"
+      ],
+      "on_end": [
+        {
+          "node": "exit_console_ready"
+        }
+      ],
+      "look_at_events": [
+        {
+          "actor": "v",
+          "target": "mara",
+          "start_ms": 0,
+          "duration_ms": 3040
+        },
+        {
+          "actor": "mara",
+          "target": "v",
+          "start_ms": 0,
+          "duration_ms": 3040
+        },
+        {
+          "actor": "mara",
+          "target": "v",
+          "start_ms": 3290,
+          "duration_ms": 6960
+        },
+        {
+          "actor": "v",
+          "target": "mara",
+          "start_ms": 3290,
+          "duration_ms": 6960
+        },
+        {
+          "actor": "velvet",
+          "target": "v",
+          "start_ms": 10500,
+          "duration_ms": 3360
+        },
+        {
+          "actor": "v",
+          "target": "velvet",
+          "start_ms": 10500,
+          "duration_ms": 3360
+        }
+      ]
+    }
+  ],
+  "choices": [],
+  "quest_nodes": [
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "stand_velvet"
+        }
+      ],
+      "instant": false,
+      "is_player": true,
+      "key": "stand_v",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false
+    },
+    {
+      "workspot_ref": "current",
+      "on_success": [
+        {
+          "node": "position_velvet"
+        }
+      ],
+      "instant": false,
+      "entity_ref": "#vk002_com_velvet",
+      "key": "stand_velvet",
+      "kind": "stop_workspot",
+      "repeat_on_interrupt": false,
+      "finish_animation": true,
+      "teleport": false,
+      "entry": "velvet"
+    },
+    {
+      "finish_animation": true,
+      "kind": "use_workspot",
+      "is_workspot_infinite": true,
+      "entry": "velvet",
+      "on_work_started": [
+        {
+          "node": "mara"
+        }
+      ],
+      "key": "position_velvet",
+      "workspot_ref": "#vk002_spot_velvet",
+      "teleport": false,
+      "entity_ref": "#vk002_com_velvet",
+      "instant": false,
+      "repeat_on_interrupt": false,
+      "on_success": [],
+      "movement_type": "Walk"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# VK007 — Home Is Where the Hack Is
+
+Character development / exploration / persistent hub. Target: 30–40 minutes for reclamation and housewarming, then optional repeat visits. First draft; not implemented. [Dialogue](script/dialogue.md) · [Implementation](plan.md).
+
+Velvet has already moved her essential equipment out of the compromised safehouse. She is choosing a home, not waiting for V to rescue her from an inevitable ambush. Mrs. Osei offers a vacant apartment above her repair shop in exchange for repairing its independent service line and taking a real lease. V helps inspect the access and ownership. The apartment was a caretaker's unit, not someone's conveniently abandoned occupied home; its vacancy, landlord authority and utilities are confirmed in readable documents and conversation before any reclamation.
+
+The first visit is deliberately unglamorous. No lights, one jammed interior door, a leaking roof seam and a window someone has taped over. V and Velvet explore together. They agree that security matters, but Velvet refuses to make the room a sealed bunker. Players choose the order of three practical tasks: restore the flat's isolated power circuit, remove the previous remote-access module and open the jammed interior door through a maintenance release. None requires a cyberdeck or an attribute threshold.
+
+Mrs. Osei refuses a proposed shared-building surveillance upgrade. Velvet initially argues that it would make everyone safer, then recognizes that she is offering a security system her neighbor did not ask for. The critical route repairs only the flat's line. Optional help to the shop is separately authorized. This is a small practical demonstration of Velvet's growth, not an on-the-nose speech summing up the whole series.
+
+The retrofit should serve the story: a functional entrance, a place to talk, a workbench, a visible but isolated equipment shelf and one real window. New geometry, collision, navigation, lighting and access must be validated together. Claimed bed/stash services are conditional on native proof; the guaranteed hub is a persistent accessible place with conversations and small jobs, not an assumed full player apartment system.
+
+Once utilities and access are verified, Velvet chooses a few furnishings. Cosmetic choices are mutually harmless: radio by the window or workbench, warmer or cooler lamp, ribbon on the door or no ribbon. June's outcome has a specific furnishing: isolated terminal with speaker, sealed silent archive drawer, or memorial card. No scene recreates June after local deletion. An escrowed Heartware archive sits in an inaccessible locked case; a purged one is represented by a redacted audit only.
+
+Return later for a modest housewarming: Mara brings leftover glasses, Io sends a note or drops off a manual light controller if her established route supports it, and Niko sends a token or a restrained recovery message. Supporting cast can be represented by messages for the first playable route; the full event is presentation scope, not a requirement to solve actor scheduling before home access works.
+
+Velvet gives V a key with explicit terms: knock before entering her private room, public sitting area access by agreement, and no expectation that she is always available. Friends get a warm standing invitation; interested V can ask to date for real, and Velvet can say yes. There is no compulsory kiss or sex scene. A quiet view from the window closes the seven-quest story. The home remains.
+
+Guaranteed reward: home access, key notification and revisit conversation. Later small jobs are bounded authored follow-ups: an opted-in security audit, delivery of an isolated spare terminal, and recovery of Mrs. Osei's misrouted parcel. They develop the place without turning Velvet into an endlessly available mission terminal. Completion is not held open by a follow-up job or future romance content.

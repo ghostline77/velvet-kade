@@ -1,0 +1,244 @@
+{
+  "name": "vk001_03_velvet",
+  "manifest": "../script/vk001_03_manifest.json",
+  "archive_path": "mod\\vk001\\scenes\\vk001_03_velvet.scene",
+  "exported_datetime": "2026-10-25T00:00:00Z",
+  "choice_locales": [
+    "db_db",
+    "pl_pl",
+    "en_us"
+  ],
+  "section_tail_padding_ms": 400,
+  "line_gap_ms": 250,
+  "actors": [
+    {
+      "key": "velvet",
+      "name": "Velvet",
+      "kind": "community",
+      "entry": "velvet",
+      "community_ref": "#vk001_com_velvet",
+      "appearance": "ghostline_velvet_default",
+      "lipsync": true,
+      "voicetag": "5506207259407814236"
+    },
+    {
+      "key": "v",
+      "name": "V",
+      "kind": "player",
+      "record": "Character.Player_Puppet_Base",
+      "appearance": "default",
+      "lipsync": true
+    }
+  ],
+  "spoken_line_order": [
+    "vk001_03_velvet_return",
+    "vk001_03_v_question",
+    "vk001_03_velvet_friend",
+    "vk001_03_velvet_cost",
+    "vk001_03_velvet_truth",
+    "vk001_03_v_sincere",
+    "vk001_03_velvet_sincere",
+    "vk001_03_v_tease",
+    "vk001_03_velvet_tease",
+    "vk001_03_v_tease_soft",
+    "vk001_03_v_friend",
+    "vk001_03_velvet_friend_now",
+    "vk001_03_velvet_reward",
+    "vk001_03_v_reward",
+    "vk001_03_velvet_close",
+    "vk001_03_v_friend_contact",
+    "vk001_03_velvet_friend_contact"
+  ],
+  "choice_line_order": [
+    "vk001_03_sincere_short",
+    "vk001_03_tease_short",
+    "vk001_03_friend_short",
+    "vk001_03_reward_short"
+  ],
+  "entry_point": {
+    "name": "start",
+    "node": "entry_start"
+  },
+  "exit_points": [
+    {
+      "name": "end",
+      "node": "exit_end"
+    },
+    {
+      "name": "job_accept",
+      "node": "exit_job_accept"
+    }
+  ],
+  "start_node": {
+    "on_start": [
+      {
+        "node": "puppet_ai"
+      },
+      {
+        "node": "pause_condition"
+      }
+    ],
+    "key": "entry_start"
+  },
+  "sections": [
+    {
+      "key": "opening",
+      "lines": [
+        "vk001_03_velvet_return",
+        "vk001_03_v_question",
+        "vk001_03_velvet_friend",
+        "vk001_03_velvet_cost",
+        "vk001_03_velvet_truth"
+      ],
+      "on_end": [
+        {
+          "node": "pause_condition_3"
+        }
+      ]
+    },
+    {
+      "key": "sincere",
+      "lines": [
+        "vk001_03_v_sincere",
+        "vk001_03_velvet_sincere",
+        "vk001_03_velvet_reward",
+        "vk001_03_v_reward",
+        "vk001_03_velvet_close"
+      ],
+      "on_end": [
+        {
+          "node": "exit_job_accept"
+        }
+      ]
+    },
+    {
+      "key": "tease",
+      "lines": [
+        "vk001_03_v_tease",
+        "vk001_03_velvet_tease",
+        "vk001_03_v_tease_soft",
+        "vk001_03_velvet_reward",
+        "vk001_03_v_reward",
+        "vk001_03_velvet_close"
+      ],
+      "on_end": [
+        {
+          "node": "exit_job_accept"
+        }
+      ]
+    },
+    {
+      "key": "friend",
+      "lines": [
+        "vk001_03_v_friend",
+        "vk001_03_velvet_friend_now",
+        "vk001_03_v_friend_contact",
+        "vk001_03_velvet_friend_contact"
+      ],
+      "on_end": [
+        {
+          "node": "conversation"
+        }
+      ]
+    },
+    {
+      "key": "reward",
+      "lines": [
+        "vk001_03_velvet_reward",
+        "vk001_03_v_reward",
+        "vk001_03_velvet_close"
+      ],
+      "on_end": [
+        {
+          "node": "exit_job_accept"
+        }
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "key": "conversation",
+      "options": [
+        {
+          "choice_key": "vk001_03_sincere_short",
+          "caption": "You gave her a chance to get out.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "sincere"
+        },
+        {
+          "choice_key": "vk001_03_tease_short",
+          "caption": "Still doesn't explain the hearts and ribbons.",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "tease"
+        },
+        {
+          "choice_key": "vk001_03_friend_short",
+          "caption": "She doing okay now?",
+          "single_choice": false,
+          "choice_type": 0,
+          "target": "friend"
+        },
+        {
+          "choice_key": "vk001_03_reward_short",
+          "caption": "We good?",
+          "single_choice": false,
+          "choice_type": 1,
+          "target": "reward"
+        }
+      ],
+      "actor": "velvet"
+    }
+  ],
+  "quest_nodes": [
+    {
+      "kind": "puppet_ai",
+      "entity_ref": "#vk001_com_velvet",
+      "entry": "velvet",
+      "ai_tier": "Cinematic",
+      "key": "puppet_ai"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#vk001_tr_mood",
+      "require_player_not_in_combat": true,
+      "on_out": [
+        {
+          "node": "pause_condition_2"
+        }
+      ],
+      "key": "pause_condition"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#vk001_tr_awareness",
+      "on_out": [
+        {
+          "node": "opening"
+        }
+      ],
+      "key": "pause_condition_2"
+    },
+    {
+      "kind": "pause_condition",
+      "trigger_ref": "#vk001_tr_engage",
+      "on_out": [
+        {
+          "node": "conversation"
+        }
+      ],
+      "key": "pause_condition_3"
+    }
+  ],
+  "xor_nodes": [],
+  "end_nodes": [
+    {
+      "key": "exit_end"
+    },
+    {
+      "key": "exit_job_accept"
+    }
+  ],
+  "lipsync_animset": "mod\\vk001\\localization\\en-us\\lipsync\\love-actually.anims"
+}

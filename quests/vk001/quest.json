@@ -1,0 +1,1582 @@
+{
+  "schema_version": 1,
+  "id": "vk001",
+  "title": "Love, Actually.exe",
+  "description": "Velvet Kade side quest. 10–15 minutes. Captured placements and native runtime integration.",
+  "phase_prefabs": [
+    "#vk001_pr_love_actually",
+    "#holocalls_studio"
+  ],
+  "stages": [
+    {
+      "id": "offer",
+      "type": "phone_job_offer",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_offer.questphase",
+      "phase_prefabs": [],
+      "contact": "velvet",
+      "message": "@contacts.velvet.threads.offer.entries.hello.path",
+      "choice_group": "@contacts.velvet.threads.offer.entries.respond.path",
+      "accept_choice": "@contacts.velvet.threads.offer.entries.respond.entries.accept.path",
+      "start_fact": "vk001_offer_sent",
+      "accepted_fact": "vk001_offer_accepted"
+    },
+    {
+      "id": "meet",
+      "type": "meet_contact",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_meet.questphase",
+      "phase_prefabs": [
+        "#vk001_pr_love_actually"
+      ],
+      "contact": "velvet",
+      "scene": "mod\\vk001\\scenes\\vk001_01_velvet.scene",
+      "community": "#vk001_com_velvet",
+      "appearance": "ghostline_velvet_default",
+      "objective": "@objectives.meet.path",
+      "description_entry": "@objectives.meet.description_entry",
+      "mappin": "@objectives.meet.mappins.target.path",
+      "required_assets": [
+        "mod\\velvet-kade\\characters\\velvet\\velvet.ent",
+        "mod\\vk001\\scenes\\vk001_01_velvet.scene"
+      ],
+      "notes": "Community-owned actor; deferred scene exit retries without accepting the job.",
+      "setup_trigger": "#vk001_tr_setup",
+      "scene_origin": "#vk001_sm_velvet",
+      "accepted_fact": "vk001_job_accepted",
+      "defer_policy": "rearm",
+      "rearm_trigger": "#vk001_tr_engage",
+      "attitude_group": "friendly",
+      "protection_source": "vk001_velvet_protection",
+      "deferred_fact": "vk001_meet_deferred",
+      "resume_entry": "resume"
+    },
+    {
+      "id": "reach",
+      "type": "reach_area",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_reach.questphase",
+      "phase_prefabs": [],
+      "trigger": "#vk001_tr_operation",
+      "objective": "@objectives.reach.path",
+      "description_entry": "@objectives.reach.description_entry",
+      "mappin": "@objectives.reach.mappins.target.path",
+      "encounter": {
+        "community": "#vk001_com_claws",
+        "entries": [
+          "guard_ranged_m",
+          "guard_ranged_f",
+          "guard_melee"
+        ],
+        "attitude_group": "hostile"
+      },
+      "cleanup_community": "#vk001_com_velvet"
+    },
+    {
+      "id": "start_call",
+      "type": "phone_call",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_start_call.questphase",
+      "phase_prefabs": [
+        "#holocalls_studio"
+      ],
+      "caller": "contacts/velvet",
+      "action": "StartCall"
+    },
+    {
+      "id": "recover",
+      "type": "hack_access_point",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_recover.questphase",
+      "phase_prefabs": [
+        "#vk001_pr_love_actually",
+        "#holocalls_studio"
+      ],
+      "device": "$/mod/vk001/#vk001_pr_love_actually/#vk001_ap_relay_link",
+      "controller_class": "AccessPointControllerPS",
+      "action": "ToggleON",
+      "send_action": false,
+      "completion_function": "IsPersonalLinkConnected",
+      "objective": "@objectives.recover.path",
+      "description_entry": "@objectives.recover.description_entry",
+      "mappin": "@objectives.recover.mappins.target.path",
+      "success_fact": "vk001_prototype_recovered",
+      "transfer": {
+        "duration_seconds": 5,
+        "label": "Heartbreaker Protocol",
+        "intro_parallel": true,
+        "intro_scene": {
+          "scene": "mod\\vk001\\scenes\\vk001_02_arrive.scene",
+          "origin": "#holocall_marker",
+          "entry": "start",
+          "exit": "end"
+        },
+        "retry_scene": {
+          "scene": "mod\\vk001\\scenes\\vk001_02_retry.scene",
+          "origin": "#holocall_marker",
+          "entry": "start",
+          "exit": "end"
+        },
+        "success_scene": {
+          "scene": "mod\\vk001\\scenes\\vk001_02_recovered.scene",
+          "origin": "#holocall_marker",
+          "entry": "start",
+          "exit": "end"
+        },
+        "interrupted_fact": "vk001_link_interrupted"
+      },
+      "grants": [
+        "Items.GhostlineLoveSales"
+      ]
+    },
+    {
+      "id": "read_sales",
+      "type": "read_shard",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_read_sales.questphase",
+      "phase_prefabs": [
+        "#holocalls_studio"
+      ],
+      "item": "Items.GhostlineLoveSales",
+      "journal_entry": "@readables.sales.path",
+      "file_entry_index": 0,
+      "objective": "@objectives.read_sales.path",
+      "description_entry": "@objectives.read_sales.description_entry",
+      "completion_fact": "vk001_read_sales",
+      "grant_item": false,
+      "reaction_scene": {
+        "scene": "mod\\vk001\\scenes\\vk001_02_evidence.scene",
+        "origin": "#holocall_marker",
+        "entry": "start",
+        "exit": "end"
+      }
+    },
+    {
+      "id": "read_archive",
+      "type": "read_shard",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_read_archive.questphase",
+      "phase_prefabs": [
+        "#holocalls_studio"
+      ],
+      "item": "Items.GhostlineLoveArchive",
+      "journal_entry": "@readables.archive.path",
+      "file_entry_index": 0,
+      "objective": "@objectives.read_archive.path",
+      "description_entry": "@objectives.read_archive.description_entry",
+      "completion_fact": "vk001_read_archive",
+      "grant_item": true,
+      "reaction_scene": {
+        "scene": "mod\\vk001\\scenes\\vk001_02_archive.scene",
+        "origin": "#holocall_marker",
+        "entry": "start",
+        "exit": "end"
+      }
+    },
+    {
+      "id": "read_revocation",
+      "type": "read_shard",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_read_revocation.questphase",
+      "phase_prefabs": [],
+      "item": "Items.GhostlineLoveRevocation",
+      "journal_entry": "@readables.revocation.path",
+      "file_entry_index": 0,
+      "objective": "@objectives.read_revocation.path",
+      "description_entry": "@objectives.read_revocation.description_entry",
+      "completion_fact": "vk001_read_revocation",
+      "grant_item": true
+    },
+    {
+      "id": "upload",
+      "type": "interact_device",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_upload.questphase",
+      "phase_prefabs": [
+        "#vk001_pr_love_actually",
+        "#holocalls_studio"
+      ],
+      "device": "$/mod/vk001/#vk001_pr_love_actually/#vk001_ap_upload_link",
+      "controller_class": "AccessPointControllerPS",
+      "action": "ToggleON",
+      "send_action": false,
+      "completion_function": "IsPersonalLinkConnected",
+      "success_fact": "vk001_patch_uploaded",
+      "objective": "@objectives.upload.path",
+      "description_entry": "@objectives.upload.description_entry",
+      "mappin": "@objectives.upload.mappins.target.path",
+      "transfer": {
+        "duration_seconds": 5,
+        "label": "Velvet Crash",
+        "intro_scene": {
+          "scene": "mod\\vk001\\scenes\\vk001_02_upload.scene",
+          "origin": "#holocall_marker",
+          "entry": "start",
+          "exit": "end"
+        },
+        "connected_scene": {
+          "scene": "mod\\vk001\\scenes\\vk001_02_brand.scene",
+          "origin": "#holocall_marker",
+          "entry": "start",
+          "exit": "end"
+        },
+        "retry_scene": {
+          "scene": "mod\\vk001\\scenes\\vk001_02_retry.scene",
+          "origin": "#holocall_marker",
+          "entry": "start",
+          "exit": "end"
+        },
+        "success_scene": {
+          "scene": "mod\\vk001\\scenes\\vk001_02_success.scene",
+          "origin": "#holocall_marker",
+          "entry": "start",
+          "exit": "end"
+        },
+        "interrupted_fact": "vk001_link_interrupted",
+        "completion_effects": [
+          {
+            "community": "#vk001_com_claws",
+            "entries": [
+              "guard_ranged_m",
+              "guard_ranged_f",
+              "guard_melee"
+            ],
+            "status_effects": [
+              "BaseStatusEffect.GhostlineVelvetCrashVision",
+              "BaseStatusEffect.GhostlineVelvetCrashShortBlind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "leave",
+      "type": "leave_area",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_leave.questphase",
+      "phase_prefabs": [],
+      "trigger": "#vk001_tr_cleanup",
+      "objective": "@objectives.leave.path",
+      "description_entry": "@objectives.leave.description_entry",
+      "cleanup_community": "#vk001_com_claws",
+      "completion_fact": "vk001_operation_left"
+    },
+    {
+      "id": "end_call",
+      "type": "phone_call",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_end_call.questphase",
+      "phase_prefabs": [
+        "#holocalls_studio"
+      ],
+      "caller": "contacts/velvet",
+      "action": "EndCall"
+    },
+    {
+      "id": "return",
+      "type": "meet_contact",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_return.questphase",
+      "phase_prefabs": [
+        "#vk001_pr_love_actually"
+      ],
+      "contact": "velvet",
+      "scene": "mod\\vk001\\scenes\\vk001_03_velvet.scene",
+      "community": "#vk001_com_velvet",
+      "appearance": "ghostline_velvet_default",
+      "objective": "@objectives.return.path",
+      "description_entry": "@objectives.return.description_entry",
+      "mappin": "@objectives.return.mappins.target.path",
+      "required_assets": [
+        "mod\\velvet-kade\\characters\\velvet\\velvet.ent",
+        "mod\\vk001\\scenes\\vk001_03_velvet.scene"
+      ],
+      "notes": "Community-owned actor; deferred scene exit retries without accepting the job.",
+      "setup_trigger": "#vk001_tr_setup",
+      "scene_origin": "#vk001_sm_velvet",
+      "accepted_fact": "vk001_debrief_done",
+      "defer_policy": "rearm",
+      "rearm_trigger": "#vk001_tr_engage",
+      "attitude_group": "friendly",
+      "protection_source": "vk001_velvet_protection",
+      "reward_item": "Items.GhostlineLoveHeartbreaker",
+      "reward_quantity": 1
+    },
+    {
+      "id": "reward",
+      "type": "reward_commit",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_reward.questphase",
+      "phase_prefabs": [],
+      "reported_fact": "vk001_debrief_done",
+      "item": "Items.GhostlineLoveHeartbreaker",
+      "quantity": 1,
+      "commit_fact": "vk001_reward_delivery_verified",
+      "effects": {
+        "success": [
+          {
+            "kind": "fact",
+            "fact": "vk001_reward_granted",
+            "value": 1
+          },
+          {
+            "kind": "objective",
+            "path": "quests/minor_quest/vk001",
+            "state": "Succeeded",
+            "quest": true
+          },
+          {
+            "kind": "fact",
+            "fact": "vk001_completed",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "epilogue_delay",
+      "type": "time_gate",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_epilogue_delay.questphase",
+      "phase_prefabs": [],
+      "hours": 1,
+      "clock": "game"
+    },
+    {
+      "id": "ending",
+      "type": "phone_conversation",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_ending.questphase",
+      "phase_prefabs": [],
+      "contact": "velvet",
+      "thread": "@contacts.velvet.threads.ending.path",
+      "messages": [
+        "@contacts.velvet.threads.ending.entries.goodbye.path"
+      ],
+      "choice_group": "@contacts.velvet.threads.ending.entries.reply.path",
+      "choices": [
+        {
+          "choice": "@contacts.velvet.threads.ending.entries.reply.entries.ack.path",
+          "reply": "@contacts.velvet.threads.ending.entries.response_a.path"
+        },
+        {
+          "choice": "@contacts.velvet.threads.ending.entries.reply.entries.tease.path",
+          "reply": "@contacts.velvet.threads.ending.entries.response_b.path"
+        }
+      ],
+      "final_message": "@contacts.velvet.threads.ending.entries.close.path",
+      "completion_fact": "vk001_epilogue_done",
+      "once_fact": "vk001_epilogue_started"
+    },
+    {
+      "id": "cleanup_giver",
+      "type": "community",
+      "status": "ready",
+      "phase_resource": "mod\\vk001\\phases\\vk001_cleanup_giver.questphase",
+      "phase_prefabs": [],
+      "community": "#vk001_com_velvet",
+      "action": "Deactivate",
+      "wait_trigger": "#vk001_tr_mood",
+      "trigger_event": "IsOutside",
+      "completion_fact": "vk001_cleaned_up"
+    }
+  ],
+  "composition": {
+    "namespace": "vk001",
+    "quest": {
+      "title": "Love, Actually.exe",
+      "localization_key": "gl_vk001_title"
+    },
+    "objectives": {
+      "meet": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_meet",
+        "text": "Meet Velvet in Kabuki.",
+        "localization_key": "gl_vk001_obj_meet",
+        "description": "A stolen heart, apparently. Meet the netrunner who sent the message.",
+        "description_id": "vk001_desc_meet",
+        "description_key": "gl_vk001_desc_meet",
+        "mappins": {
+          "target": {
+            "id": "vk001_mp_meet",
+            "ref": "#vk001_mp_velvet",
+            "text": "Meet Velvet in Kabuki.",
+            "localization_key": "gl_vk001_mp_meet",
+            "debug_caption": "Meet Velvet in Kabuki."
+          }
+        }
+      },
+      "reach": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_reach",
+        "text": "Find the Tyger Claw relay.",
+        "localization_key": "gl_vk001_obj_reach",
+        "description": "Follow Velvet's trace. The prototype and signing key must survive.",
+        "description_id": "vk001_desc_reach",
+        "description_key": "gl_vk001_desc_reach",
+        "mappins": {
+          "target": {
+            "id": "vk001_mp_reach",
+            "ref": "#vk001_mp_relay",
+            "text": "Find the Tyger Claw relay.",
+            "localization_key": "gl_vk001_mp_reach",
+            "debug_caption": "Find the Tyger Claw relay."
+          }
+        }
+      },
+      "recover": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_recover",
+        "text": "Recover the prototype and signing key.",
+        "localization_key": "gl_vk001_obj_recover",
+        "description": "Copy the stolen build before changing the distribution server.",
+        "description_id": "vk001_desc_recover",
+        "description_key": "gl_vk001_desc_recover",
+        "mappins": {
+          "target": {
+            "id": "vk001_mp_recover",
+            "ref": "#vk001_mp_recover",
+            "text": "Recover the prototype and signing key.",
+            "localization_key": "gl_vk001_mp_recover",
+            "debug_caption": "Recover the prototype and signing key."
+          }
+        }
+      },
+      "upload": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_upload",
+        "text": "Upload the corrected Heartbreaker Protocol.",
+        "localization_key": "gl_vk001_obj_upload",
+        "description": "Revoke the stolen batch and break the feedback loop.",
+        "description_id": "vk001_desc_upload",
+        "description_key": "gl_vk001_desc_upload",
+        "mappins": {
+          "target": {
+            "id": "vk001_mp_upload",
+            "ref": "#vk001_mp_upload",
+            "text": "Upload the corrected Heartbreaker Protocol.",
+            "localization_key": "gl_vk001_mp_upload",
+            "debug_caption": "Upload the corrected Heartbreaker Protocol."
+          }
+        }
+      },
+      "leave": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_leave",
+        "text": "Leave the operation.",
+        "localization_key": "gl_vk001_obj_leave",
+        "description": "Get clear while the Claws recover.",
+        "description_id": "vk001_desc_leave",
+        "description_key": "gl_vk001_desc_leave",
+        "mappins": {
+          "target": {
+            "id": "vk001_mp_leave",
+            "ref": "#vk001_mp_relay",
+            "text": "Leave the operation.",
+            "localization_key": "gl_vk001_mp_leave",
+            "debug_caption": "Leave the operation."
+          }
+        }
+      },
+      "return": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_return",
+        "text": "Return to Velvet.",
+        "localization_key": "gl_vk001_obj_return",
+        "description": "The code is safe. There is still something she has not told you.",
+        "description_id": "vk001_desc_return",
+        "description_key": "gl_vk001_desc_return",
+        "mappins": {
+          "target": {
+            "id": "vk001_mp_return",
+            "ref": "#vk001_mp_velvet",
+            "text": "Return to Velvet.",
+            "localization_key": "gl_vk001_mp_return",
+            "debug_caption": "Return to Velvet."
+          }
+        }
+      },
+      "read_sales": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_read_sales",
+        "text": "Read \"HEARTBREAKER / wholesale terms\" in Shards.",
+        "localization_key": "gl_vk001_obj_read_sales"
+      },
+      "read_archive": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_read_archive",
+        "text": "Read \"VK / conditioning-interrupt research\" in Shards.",
+        "localization_key": "gl_vk001_obj_read_archive"
+      },
+      "read_revocation": {
+        "phase_id": "vk001_01",
+        "id": "vk001_obj_read_revocation",
+        "text": "Read \"Deployment / preserve before patch\" in Shards.",
+        "localization_key": "gl_vk001_obj_read_revocation"
+      }
+    },
+    "locations": {},
+    "facts": {},
+    "contacts": {
+      "velvet": {
+        "id": "velvet",
+        "localization_key": "vk_contact_velvet",
+        "threads": {
+          "offer": {
+            "id": "vk001_offer",
+            "title": "Somebody stole my heart",
+            "title_key": "gl_vk001_offer_title",
+            "entries": {
+              "hello": {
+                "type": "message",
+                "id": "01_hello",
+                "text": "Hey, gorgeous. Got a recovery job. Tyger Claws stole a prototype I wrote. Need the code back before they sell another batch. Meet me in Kabuki?",
+                "localization_key": "gl_vk001_01_hello",
+                "delay": 1
+              },
+              "respond": {
+                "type": "choice_group",
+                "id": "02_respond",
+                "entries": {
+                  "accept": {
+                    "id": "01_accept",
+                    "text": "Send the location.",
+                    "localization_key": "gl_vk001_01_accept"
+                  }
+                }
+              }
+            }
+          },
+          "ending": {
+            "id": "vk001_ending",
+            "title": "Attachments",
+            "title_key": "gl_vk001_ending_title",
+            "entries": {
+              "goodbye": {
+                "type": "message",
+                "id": "01_goodbye",
+                "text": "Finished checking the keys. Their batch's dead. Your copy's clean.",
+                "localization_key": "gl_vk001_01_goodbye",
+                "delay": 1
+              },
+              "reply": {
+                "type": "choice_group",
+                "id": "02_reply",
+                "entries": {
+                  "ack": {
+                    "id": "01_ack",
+                    "text": "Could've just said thanks.",
+                    "localization_key": "gl_vk001_01_ack"
+                  },
+                  "tease": {
+                    "id": "02_tease",
+                    "text": "I'll keep a backup.",
+                    "localization_key": "gl_vk001_02_tease"
+                  }
+                }
+              },
+              "response_a": {
+                "type": "message",
+                "id": "03_response_a",
+                "text": "Thanks, V. Still glad I gave you the quickhack.",
+                "localization_key": "gl_vk001_03_response_a",
+                "delay": 1
+              },
+              "response_b": {
+                "type": "message",
+                "id": "03_response_b",
+                "text": "Keep it offline. I'd like one night without chasing copies.",
+                "localization_key": "gl_vk001_03_response_b",
+                "delay": 1
+              },
+              "close": {
+                "type": "message",
+                "id": "04_close",
+                "text": "And V? The bows are non-negotiable. ♡",
+                "localization_key": "gl_vk001_04_close",
+                "delay": 1
+              }
+            }
+          }
+        },
+        "name": "Velvet Kade"
+      }
+    },
+    "readables": {
+      "sales": {
+        "kind": "onscreen",
+        "group": "files",
+        "id": "sales",
+        "title": "HEARTBREAKER / wholesale terms",
+        "text": "HEARTBREAKER / wholesale terms\n\nCLIENT: six seconds?\nBROKER: Standard cutoff. That's the sample build.\nCLIENT: Need them agreeable for longer.\nBROKER: We removed the cutoff. Longer loops cost extra.\nCLIENT: What happens when they disconnect?\nBROKER: That doesn't stop this version.\nCLIENT: Send a sample. If it burns out, I want a replacement.\nBROKER: Hardware damage isn't covered. Terms attached.",
+        "title_key": "gl_vk001_sales_title",
+        "text_key": "gl_vk001_sales_body",
+        "tag": "technology"
+      },
+      "archive": {
+        "kind": "onscreen",
+        "group": "files",
+        "id": "archive",
+        "title": "VK / conditioning-interrupt research",
+        "text": "VK / conditioning-interrupt research\n\nLocal test notes\n\nInterrupt incoming conditioning commands.\nDo not write a replacement preference.\n\nThe user needs time to recognise the interruption.\nSix seconds is the current limit.\n\nOn disconnect:\nRestore altered values.\nDo not restart the incoming loop.\n\nStill need to check for a watchdog in the regulator.\nCan't have it treating the interruption as a fault.\n\nUNSENT DRAFT\n\nYou said you couldn't stay angry.\nI don't think you're imagining it.\n\nI've got something that might interrupt the regulator.\nCall me if you want to try it.",
+        "title_key": "gl_vk001_archive_title",
+        "text_key": "gl_vk001_archive_body",
+        "tag": "technology"
+      },
+      "revocation": {
+        "kind": "onscreen",
+        "group": "files",
+        "id": "revocation",
+        "title": "Deployment / preserve before patch",
+        "text": "Deployment / preserve before patch\n\nBefore making changes:\nCopy the prototype and signing key to isolated storage.\nVerify the copy.\n\nDistribution node:\nUpload the corrected build.\nUse the recovered key to revoke the stolen batch.\n\nRemove the conditioning payload.\nRetain the bounded optics interruption.\n\nCutoff: six seconds.\nNo automatic restart.\n\nKeep the interface assets.\nThe hearts and black bows are intentional.",
+        "title_key": "gl_vk001_revocation_title",
+        "text_key": "gl_vk001_revocation_body",
+        "tag": "technology"
+      }
+    },
+    "text": {
+      "ghostline_velvet_crash_name": "Velvet Crash",
+      "ghostline_velvet_crash_description": "Blinds the target for 6 seconds with black bows and pink hearts. Optics clear in an explosion of glitch confetti.",
+      "gl_vk001_heartbreaker_name": "Heartbreaker Protocol",
+      "gl_vk001_heartbreaker_description": "Velvet Kade's one-of-a-kind Heartbreaker build. Velvet Crash interrupts combat cyberware for six seconds, with pink pixel hearts and tiny black bows. Restores nobody's affections. Respects everybody's right to refuse.",
+      "gl_vk001_heartbreaker_effect": "Disrupts the target's optics for 6 seconds with pink pixel hearts and tiny black bows, ending in a burst of glitch confetti. Velvet calls it flirting. Your target may disagree.",
+      "gl_vk001_recover_link": "Recover Heartbreaker + archived messages",
+      "gl_vk001_upload_link": "Upload Velvet Crash",
+      "mod_gq_faction_ghostline": "Ghostline"
+    }
+  },
+  "parallel_groups": [
+    {
+      "id": "finish",
+      "branches": [
+        [
+          "reward",
+          "epilogue_delay",
+          "ending"
+        ],
+        [
+          "cleanup_giver"
+        ]
+      ]
+    }
+  ],
+  "start_gate": "after_act_1",
+  "start_condition": {
+    "fact": "vk001_completed",
+    "comparison": "Equal",
+    "value": 0
+  },
+  "resources": {
+    "effects": [
+      "fx/velvet-crash.fx.json"
+    ],
+    "characters": [
+      "velvet"
+    ],
+    "atlases": [
+      {
+        "depot": "mod\\vk001\\ui\\heartbreaker.inkatlas",
+        "textures": [
+          "mod\\vk001\\ui\\heartbreaker.xbm",
+          "mod\\vk001\\ui\\heartbreaker_1080p.xbm",
+          "mod\\vk001\\ui\\heartbreaker_1080p.xbm"
+        ],
+        "parts": [
+          {
+            "name": "heartbreaker",
+            "uv": [
+              0,
+              0,
+              0.1953125,
+              0.25390625
+            ]
+          },
+          {
+            "name": "velvet_crash",
+            "uv": [
+              0.5,
+              0,
+              0.625,
+              0.125
+            ]
+          }
+        ]
+      }
+    ],
+    "root_resource": "mod\\vk001\\phases\\vk001.questphase",
+    "scenes": [
+      {
+        "spec": "scenes/vk001_01.scene-spec.json",
+        "dialogue": "script/vk001_01_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_archive.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_arrive.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_brand.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_evidence.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_recovered.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_retry.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_success.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_02_upload.scene-spec.json",
+        "dialogue": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": "scenes/vk001_03.scene-spec.json",
+        "dialogue": "script/vk001_03_manifest.json"
+      }
+    ],
+    "worlds": [
+      "world/love-actually.world.json"
+    ],
+    "localizations": [
+      {
+        "spec": {
+          "namespace": "vk001",
+          "dialogue": "vk001_01"
+        },
+        "manifest": "script/vk001_01_manifest.json"
+      },
+      {
+        "spec": {
+          "namespace": "vk001",
+          "dialogue": "vk001_02"
+        },
+        "manifest": "script/vk001_02_manifest.json"
+      },
+      {
+        "spec": {
+          "namespace": "vk001",
+          "dialogue": "vk001_03"
+        },
+        "manifest": "script/vk001_03_manifest.json"
+      }
+    ],
+    "assets": {
+      "mod\\velvet_crash\\textures\\npc_burst_00_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_00_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_00_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_00_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_00_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_00_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_00_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_00_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_01_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_01_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_01_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_01_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_01_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_01_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_01_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_01_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_02_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_02_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_02_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_02_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_02_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_02_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_02_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_02_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_03_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_03_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_03_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_03_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_03_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_03_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_03_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_03_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_04_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_04_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_04_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_04_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_04_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_04_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_04_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_04_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_05_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_05_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_05_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_05_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_05_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_05_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_05_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_05_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_06_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_06_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_06_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_06_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_06_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_06_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_06_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_06_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_07_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_07_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_07_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_07_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_07_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_07_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_07_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_07_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_08_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_08_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_08_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_08_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_08_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_08_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_08_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_08_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_09_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_09_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_09_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_09_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_09_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_09_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_09_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_09_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_10_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_10_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_10_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_10_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_10_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_10_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_10_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_10_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_11_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_11_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_11_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_11_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_11_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_11_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_11_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_11_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_12_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_12_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_12_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_12_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_12_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_12_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_12_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_12_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_13_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_13_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_13_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_13_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_13_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_13_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_13_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_13_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_14_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_14_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_14_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_14_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_14_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_14_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_14_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_14_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_15_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_15_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_15_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_15_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_15_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_15_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_burst_15_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_burst_15_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hearts_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hearts_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hearts_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hearts_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hearts_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hearts_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hearts_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hearts_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_00_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_00_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_00_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_00_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_00_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_00_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_00_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_00_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_01_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_01_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_01_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_01_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_01_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_01_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_01_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_01_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_02_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_02_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_02_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_02_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_02_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_02_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_02_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_02_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_03_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_03_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_03_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_03_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_03_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_03_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_03_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_03_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_04_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_04_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_04_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_04_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_04_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_04_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_04_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_04_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_05_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_05_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_05_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_05_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_05_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_05_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_05_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_05_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_06_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_06_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_06_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_06_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_06_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_06_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_06_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_06_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_07_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_07_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_07_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_07_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_07_d.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_07_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\npc_hold_07_m.xbm": {
+        "path": "fx/velvet-crash/textures/npc_hold_07_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_00_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_00_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_00_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_00_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_00_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_00_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_00_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_00_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_01_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_01_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_01_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_01_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_01_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_01_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_01_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_01_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_02_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_02_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_02_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_02_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_02_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_02_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_02_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_02_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_03_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_03_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_03_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_03_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_03_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_03_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_03_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_03_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_04_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_04_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_04_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_04_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_04_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_04_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_04_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_04_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_05_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_05_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_05_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_05_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_05_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_05_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_05_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_05_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_06_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_06_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_06_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_06_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_06_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_06_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_06_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_06_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_07_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_07_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_07_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_07_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_07_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_07_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_07_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_07_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_08_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_08_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_08_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_08_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_08_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_08_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_08_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_08_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_09_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_09_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_09_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_09_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_09_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_09_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_09_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_09_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_10_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_10_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_10_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_10_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_10_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_10_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_10_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_10_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_11_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_11_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_11_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_11_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_11_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_11_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_11_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_11_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_12_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_12_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_12_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_12_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_12_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_12_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_12_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_12_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_13_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_13_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_13_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_13_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_13_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_13_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_13_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_13_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_14_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_14_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_14_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_14_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_14_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_14_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_14_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_14_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_15_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_15_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_15_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_15_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_15_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_15_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_burst_15_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_burst_15_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hearts_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hearts_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hearts_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hearts_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hearts_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hearts_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hearts_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hearts_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_00_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_00_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_00_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_00_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_00_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_00_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_00_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_00_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_01_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_01_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_01_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_01_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_01_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_01_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_01_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_01_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_02_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_02_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_02_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_02_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_02_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_02_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_02_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_02_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_03_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_03_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_03_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_03_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_03_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_03_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_03_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_03_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_04_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_04_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_04_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_04_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_04_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_04_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_04_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_04_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_05_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_05_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_05_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_05_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_05_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_05_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_05_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_05_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_06_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_06_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_06_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_06_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_06_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_06_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_06_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_06_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_07_bows_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_07_bows_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_07_bows_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_07_bows_m.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_07_d.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_07_d.xbm"
+      },
+      "mod\\velvet_crash\\textures\\v_hold_07_m.xbm": {
+        "path": "fx/velvet-crash/textures/v_hold_07_m.xbm"
+      },
+      "mod\\vk001\\localization\\en-us\\lipsync\\love-actually.anims": {
+        "path": "lipsync/love-actually.anims"
+      },
+      "mod\\vk001\\ui\\heartbreaker_1080p.xbm": {
+        "path": "ui/heartbreaker_1080p.xbm"
+      },
+      "mod\\vk001\\ui\\heartbreaker.xbm": {
+        "path": "ui/heartbreaker.xbm"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_hello.wem": {
+        "path": "voice/wem/vk001_01_velvet_hello.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hello_f.wem": {
+        "path": "voice/wem/vk001_01_v_hello_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hello_m.wem": {
+        "path": "voice/wem/vk001_01_v_hello_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_job.wem": {
+        "path": "voice/wem/vk001_01_velvet_job.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hack_f.wem": {
+        "path": "voice/wem/vk001_01_v_hack_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_hack_m.wem": {
+        "path": "voice/wem/vk001_01_v_hack_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_hack.wem": {
+        "path": "voice/wem/vk001_01_velvet_hack.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_recover_f.wem": {
+        "path": "voice/wem/vk001_01_v_recover_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_recover_m.wem": {
+        "path": "voice/wem/vk001_01_v_recover_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_recover.wem": {
+        "path": "voice/wem/vk001_01_velvet_recover.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_name_f.wem": {
+        "path": "voice/wem/vk001_01_v_name_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_name_m.wem": {
+        "path": "voice/wem/vk001_01_v_name_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_name.wem": {
+        "path": "voice/wem/vk001_01_velvet_name.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_accept_f.wem": {
+        "path": "voice/wem/vk001_01_v_accept_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_accept_m.wem": {
+        "path": "voice/wem/vk001_01_v_accept_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_route.wem": {
+        "path": "voice/wem/vk001_01_velvet_route.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_bows.wem": {
+        "path": "voice/wem/vk001_01_velvet_bows.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_later_f.wem": {
+        "path": "voice/wem/vk001_01_v_later_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_v_later_m.wem": {
+        "path": "voice/wem/vk001_01_v_later_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_01_velvet_later.wem": {
+        "path": "voice/wem/vk001_01_velvet_later.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_arrive.wem": {
+        "path": "voice/wem/vk001_02_velvet_arrive.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_ledger_f.wem": {
+        "path": "voice/wem/vk001_02_v_ledger_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_ledger_m.wem": {
+        "path": "voice/wem/vk001_02_v_ledger_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_ledger.wem": {
+        "path": "voice/wem/vk001_02_velvet_ledger.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_archive_f.wem": {
+        "path": "voice/wem/vk001_02_v_archive_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_archive_m.wem": {
+        "path": "voice/wem/vk001_02_v_archive_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_archive.wem": {
+        "path": "voice/wem/vk001_02_velvet_archive.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_recovery.wem": {
+        "path": "voice/wem/vk001_02_velvet_recovery.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_copy_f.wem": {
+        "path": "voice/wem/vk001_02_v_copy_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_copy_m.wem": {
+        "path": "voice/wem/vk001_02_v_copy_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_patch.wem": {
+        "path": "voice/wem/vk001_02_velvet_patch.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_brand_f.wem": {
+        "path": "voice/wem/vk001_02_v_brand_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_brand_m.wem": {
+        "path": "voice/wem/vk001_02_v_brand_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_brand.wem": {
+        "path": "voice/wem/vk001_02_velvet_brand.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_success.wem": {
+        "path": "voice/wem/vk001_02_velvet_success.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_success_f.wem": {
+        "path": "voice/wem/vk001_02_v_success_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_v_success_m.wem": {
+        "path": "voice/wem/vk001_02_v_success_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_exit.wem": {
+        "path": "voice/wem/vk001_02_velvet_exit.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_02_velvet_retry.wem": {
+        "path": "voice/wem/vk001_02_velvet_retry.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_return.wem": {
+        "path": "voice/wem/vk001_03_velvet_return.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_question_f.wem": {
+        "path": "voice/wem/vk001_03_v_question_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_question_m.wem": {
+        "path": "voice/wem/vk001_03_v_question_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_friend.wem": {
+        "path": "voice/wem/vk001_03_velvet_friend.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_cost.wem": {
+        "path": "voice/wem/vk001_03_velvet_cost.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_truth.wem": {
+        "path": "voice/wem/vk001_03_velvet_truth.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_sincere_f.wem": {
+        "path": "voice/wem/vk001_03_v_sincere_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_sincere_m.wem": {
+        "path": "voice/wem/vk001_03_v_sincere_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_sincere.wem": {
+        "path": "voice/wem/vk001_03_velvet_sincere.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_tease_f.wem": {
+        "path": "voice/wem/vk001_03_v_tease_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_tease_m.wem": {
+        "path": "voice/wem/vk001_03_v_tease_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_tease.wem": {
+        "path": "voice/wem/vk001_03_velvet_tease.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_tease_soft_f.wem": {
+        "path": "voice/wem/vk001_03_v_tease_soft_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_tease_soft_m.wem": {
+        "path": "voice/wem/vk001_03_v_tease_soft_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_friend_f.wem": {
+        "path": "voice/wem/vk001_03_v_friend_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_friend_m.wem": {
+        "path": "voice/wem/vk001_03_v_friend_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_friend_now.wem": {
+        "path": "voice/wem/vk001_03_velvet_friend_now.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_reward.wem": {
+        "path": "voice/wem/vk001_03_velvet_reward.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_reward_f.wem": {
+        "path": "voice/wem/vk001_03_v_reward_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_reward_m.wem": {
+        "path": "voice/wem/vk001_03_v_reward_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_close.wem": {
+        "path": "voice/wem/vk001_03_velvet_close.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_friend_contact_f.wem": {
+        "path": "voice/wem/vk001_03_v_friend_contact_f.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_v_friend_contact_m.wem": {
+        "path": "voice/wem/vk001_03_v_friend_contact_m.wem"
+      },
+      "mod\\vk001\\localization\\en-us\\vo\\vk001_03_velvet_friend_contact.wem": {
+        "path": "voice/wem/vk001_03_velvet_friend_contact.wem"
+      }
+    },
+    "tweaks": {
+      "r6/tweaks/velvet-kade/velvet_crash_protocol.yaml": "../../tweaks/velvet_crash_protocol.yaml",
+      "r6/tweaks/velvet-kade/vk001_love_actually.yaml": "../../tweaks/vk001_love_actually.yaml",
+      "r6/tweaks/velvet-kade/z_vk001_heartbreaker_icon.yaml": "../../tweaks/z_vk001_heartbreaker_icon.yaml",
+      "r6/tweaks/velvet-kade/faction_ghostline.yaml": "../../tweaks/faction_ghostline.yaml"
+    }
+  }
+}
